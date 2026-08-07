@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0A0C0B;
+  color:white;
+  font-family: 'Noto sans hk', sans-serif;
+}
+
+/* NAVBAR */
+nav{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: #141615;
+}
+
+.nome {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.nome p:first-child {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.nome p:last-child {
+    font-size: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+span{
+  color:#4B818D;
+}
+
+.logo img {
+    width: 60px;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-bottom:10px;
+}
+
+/* Efeito de sublinhado ao passar o mouse */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B818D;
+    transition: width 0.2s ease-in-out;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+/* MAIN */
+
+main {
+    flex: 1;
+}
+
+/* TURMA */
+/* DOCENTE */
+/* GRADE */
+/* ROADMAP */
+/* ESTUDANTES */
+
+
+/* FOOTER */
+
+footer {
+    background-color: #141615;
+    padding: 2rem 5rem;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
