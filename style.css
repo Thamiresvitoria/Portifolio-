@@ -106,7 +106,7 @@ nav a.active::after {
 main {
     flex: 1;
     padding-top: 100px; 
-    margin: 4rem 2rem;
+    margin: 2rem 2rem;
 }
 
 section {
@@ -133,6 +133,7 @@ section {
     line-height: 1.5;
     margin-bottom: 2rem;
     width: 50%;
+    margin-left:0.5rem;
 }
 
 .turma-header img{
