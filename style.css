@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -105,21 +103,33 @@ nav a.active::after {
 
 main {
     flex: 1;
-    padding-top: 100px; 
-    margin: 2rem 2rem;
+    padding-top: 100px; /* ajuste conforme a altura real do seu nav */
 }
 
 section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 100px; /* mesmo valor acima, evita a nav cobrir o topo da seção */
 }
 
-/* TURMA */ 
+/* TURMA */
 
 .turma {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+}
+
+.turma-topo {
+    display: flex;
+    align-items: center;
     justify-content: space-around;
-    padding: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.turma-header{
+    flex: 1;
+    min-height: 280px;
 }
 
 .turma-header h1{
@@ -132,18 +142,31 @@ section {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    width: 50%;
-    margin-left:0.5rem;
+    width: 80%;
+    margin-left: 0.5rem;
 }
 
-.turma-header img{
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    border: 2px solid #4B818D;
+.turma-imagem{
+    flex: 1;
+    min-width: 380px;
+    max-width: 900px;
+    border-radius: 12px;
+    border: 2px solid rgb(75, 129, 141);
 }
+
+.turma-imagem:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+}
+
+.turma-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
 /* DOCENTE */
 /* GRADE */
 /* ROADMAP */
