@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -80,7 +81,7 @@ nav a.active::after {
 
 main {
     flex: 1;
-    padding-top: 100px; /* ajuste conforme a altura real do seu nav */
+    padding-top: 95px; /* ajuste conforme a altura real do seu nav */
 }
 
 section {
@@ -92,28 +93,76 @@ section {
 .quem-somos-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+    background-color: #222222;
+
 }
 
 .quem-somos-header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
+.btn-a-turma,
+.btn-os-estudantes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.55rem;
+    height: 36px;
+    min-width: 0;
+    background-color: #4B818D;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-a-turma:hover,
+.btn-os-estudantes:hover {
+    background-color: #6092a1;
+    transform: translateY(-1px);
+}
+
+.quem-somos-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.btn-a-turma:active,
+.btn-os-estudantes:active {
+    transform: translateY(0);
+}
 .quem-somos-texto{
     flex: 1;
-    min-height: 280px;
-    font-family: 'Noto Sans HK', sans-serif;
+    min-width: 300px;
 }
+
+.quem-somos-texto h1{
+    font-size: 60px;
+}
+
+.quem-somos-texto span{
+    font-family: 'Sura', serif;
+
+}
+
+.quem-somos-texto p{
+    font-family: 'Sura', serif;
+}
+
 
 .quem-somos-imagem{
     flex: 1;
-    min-width: 380px;
-    max-width: 900px;
+    width: 680px;
 }
 
 .quem-somos-imagem:hover {
@@ -134,7 +183,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 0.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
 }
 

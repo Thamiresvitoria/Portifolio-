@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/Assets/Logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="../Assets/Logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <title>Portfólio - Turma 130</title>
 </head>
@@ -18,8 +18,8 @@
         <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
       </div>
       <ul class="menu">
-        <li><a href="/pages/index.html" class="active">Início</a></li>
-        <li><a href="/pages/turma.html">Turma</a></li>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="turma.html">Turma</a></li>
         <li><a href="#docente">Docente</a></li>
         <li><a href="#grade">Grade</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
@@ -30,39 +30,39 @@
 
   <!-- Pagina principal-->
   <main>
-    <section id="inicio"></section>
+    <section id="inicio">
+      <section id="QuemSomos">
+        <div class="quem-somos-container">
+          <div class="quem-somos-header">
+            <div class="quem-somos-texto">
+              <h1>QUEM SOMOS</h1>
+              <span class="turma-header-span">
+                Bem-vindo(a) à página da <b>Turma 130</b> do Programa
+                <b>Transforme-se!</b>
+              </span>
+              <p>
+                Aqui você conhecerá um pouco da nossa trajetória, dos estudantes, da docente e dos projetos que fizeram
+                parte da nossa formação. Esta página reúne os momentos e aprendizados que marcaram nossa jornada na
+                tecnologia.
+              </p>
+              <div class="quem-somos-buttons">
+                <a class="btn-a-turma" href="turma.html">CONHEÇA A TURMA<img src="../Assets/arrow_right.svg"
+                    alt="Seta para a direita"></a>
+                <a class="btn-os-estudantes" href="#estudantes">CONHEÇA OS ESTUDANTES<img
+                    src="../Assets/arrow_right.svg" alt="Seta para a direita"></a>
+              </div>
+            </div>
 
-    <section id="QuemSomos">
-      <div class="quem-somos-container">
-        <div class="quem-somos-header">
-          <div class="quem-somos-texto">
-            <h1>QUEM SOMOS</h1>
-            <span class="turma-header-span">Bem-vindo(a) à página da <b>Turma 130</b> do Programa <b>Transforme-se!</b></span>
-            <p>
-              A turma 130 é formada por jovens talentos que compartilham o
-              mesmo objetivo: se desenvolver na área de tecnologia e gerar
-              impacto positivo no mundo.
-            </p>
+            <img class="quem-somos-imagem" src="../Assets/Quem_Somos_Turma130.png" alt="Foto da turma 130" />
           </div>
-
-          <img class="quem-somos-imagem" src="../Assets/Quem_Somos_Turma130.png" alt="Foto da turma 130" />
         </div>
-    </section>
-    <section id="docente">
-
+      </section>
     </section>
 
-    <section id="grade">
-    </section>
-
-    <section id="roadmap">
-    </section>
-
-    <section id="estudantes">
-    </section>
-
-
-
+    <section id="docente"></section>
+    <section id="grade"></section>
+    <section id="roadmap"></section>
+    <section id="estudantes"></section>
   </main>
 
   <footer>
@@ -70,6 +70,6 @@
   </footer>
 </body>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 
 </html>
