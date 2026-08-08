@@ -16,7 +16,7 @@ body{
   flex-direction: column;
   background-color: #0A0C0B;
   color:white;
-  font-family: 'Noto sans hk', sans-serif;
+  font-family: 'Noto Sans HK', sans-serif;
 }
 
 /* NAVBAR */
@@ -27,38 +27,12 @@ nav{
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  padding: 1rem 4rem;
   background-color: #141615;
 }
 
-.nome {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-    font-weight: bold;
-}
-
-.nome p:first-child {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.nome p:last-child {
-    font-size: 12px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-span{
-  color:#4B818D;
-}
-
-.logo img {
-    width: 60px;
+#logo_navbar_img {
+    width: 135px;
 }
 
 ul {
@@ -77,6 +51,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     padding-bottom: 8px;
+    font-size: 16px;
 }
 
 /* Barrinha */
@@ -108,6 +83,39 @@ main {
 
 section {
     scroll-margin-top: 100px; /* mesmo valor acima, evita a nav cobrir o topo da seção */
+}
+
+/* QUEM SOMOS - TELA HOME / PRINCIPAL */
+
+.quem-somos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+}
+
+.quem-somos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.quem-somos-texto{
+    flex: 1;
+    min-height: 280px;
+}
+
+.quem-somos-imagem{
+    flex: 1;
+    min-width: 380px;
+    max-width: 900px;
+}
+
+.quem-somos-imagem:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* TURMA */
