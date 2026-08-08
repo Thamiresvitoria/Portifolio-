@@ -188,7 +188,7 @@ section {
 #resumos {
     display: flex;
     justify-content: center;
-    padding: 3rem 10rem;
+    padding: 2rem 10rem;
     background-color: #0A0C0B;
 }
 
@@ -198,7 +198,7 @@ section {
     grid-template-areas:
         "programa resumo"
         "inferior inferior";
-    gap: 30px;
+    gap: 35px;
     width: 100%;
 }
 
@@ -217,35 +217,70 @@ section {
     flex-wrap: wrap;
 }
 
-.grade,
-.docente,
-.roadmap {
-    flex: 1;
-    min-width: 260px;
-}
-
 .programa-header,
 .resumo-turma,
 .grade,
 .docente,
-.roadmap {
+.roadmap,
+.card {
+    position: relative; 
     border: 1px solid #4B818D;
     border-radius: 31px;
-    padding: 2rem;
+    padding: 20px;
     background-color: #141615;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
 }
 
+.programa-header:hover,
+.resumo-turma:hover,
+.grade:hover,
+.docente:hover,
+.roadmap:hover,
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(75, 129, 141, 0.18);
+    border-color: #6aa0ab;
+}
+
+.grade,
+.docente,
+.roadmap {
+    flex: 1;
+    min-width: 280px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    flex: 1 1 220px;
+    min-width: 220px;
+    border-radius: 24px;
+}
+
+/* Título dos cards SEM seta (Sobre o Programa / Resumo da Turma) */
 .programa-header h1,
-.resumo-turma h1,
+.resumo-turma h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+/* Título dos cards COM seta (Grade / Docente / Roadmap) */
 .grade h1,
 .docente h1,
 .roadmap h1 {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    text-align: left;
     font-size: 24px;
-    letter-spacing: 0.5px;
     margin-bottom: 1rem;
+    padding-right: 40px; /* espaço reservado pro texto não encostar na seta */
 }
 
 .programa-header h1 img,
@@ -255,6 +290,14 @@ section {
 .roadmap h1 img {
     width: 50px;
     height: 50px;
+    flex-shrink: 0;
+}
+.arrow-right {
+    position: absolute;
+    top: 21px; 
+    right: 20px; 
+    width: 50px !important;
+    height: 50px !important;
 }
 
 .programa-header p,
@@ -267,13 +310,6 @@ section {
     color: #D9D9D9;
     text-align: justify;
 }
-
-.grade h1,
-.docente h1,
-.roadmap h1 {
-    justify-content: space-between;
-}
-
 
 /* RESUMO DA TURMA - grid de números */
 
@@ -292,6 +328,11 @@ section {
     text-align: center;
     position: relative;
     padding: 3px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.resumo-item:hover {
+    transform: translateY(-2px);
 }
 
 .resumo-item img:not(.linha) {
@@ -423,6 +464,6 @@ footer p {
     }
 
     .resumo-item .linha {
-        display: none; /* nas telas menores os itens empilham, então a linha vertical não faz sentido */
+        display: none; 
     }
 }
