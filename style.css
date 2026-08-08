@@ -93,17 +93,18 @@ section {
 .quem-somos-container {
     display: flex;
     flex-direction: column;
-    background-color: #222222;
-    padding: 1rem 8rem; /* ajuste conforme o padding do resto do site */
+    background-color: #222222;/* ajuste conforme o padding do resto do site */
+    padding-left: 10rem;
+    padding-right: 6rem;
 
 }
 
 .quem-somos-header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 2rem;
+    align-items: center; /* centraliza verticalmente, como no print */
+    justify-content: space-between;
+    flex-wrap: nowrap; /* não deixa quebrar linha */
+    gap: 2rem;
 }
 
 .btn-a-turma,
@@ -148,8 +149,10 @@ section {
 }
 .quem-somos-texto{
     flex: 1;
-    min-width: 1000px;
+    min-width: 0; /* permite encolher, evita empurrar a imagem */
+    padding: 4rem 0;
 }
+
 
 .quem-somos-texto h1{
     font-size: 60px;
@@ -166,9 +169,13 @@ section {
 }
 
 .quem-somos-imagem{
-    flex: 2;
-    min-width: 500px;
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    max-width: 2000px;
+    height: auto;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .quem-somos-imagem:hover {
@@ -182,7 +189,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+    padding: 2rem 10rem; /* ajuste conforme o padding do resto do site */
 }
 
 .turma-topo {
