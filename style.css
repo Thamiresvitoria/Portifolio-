@@ -149,7 +149,7 @@ section {
 .turma-imagem{
     flex: 1;
     min-width: 380px;
-    max-width: 900px;
+    max-width: 600px;
     border-radius: 12px;
     border: 2px solid rgb(75, 129, 141);
 }
@@ -162,11 +162,64 @@ section {
 
 .turma-cards {
     display: flex;
-    gap: 1rem;
+    gap: 8rem;
     flex-wrap: wrap;
+    max-width: 100%;     
+    gap: 2rem;
 }
 
+.card {
+    flex: 1;
+    min-width: 160px;
+    max-width: 300px;
+    height: 130px;
+    background-color: #1C1E1D;
+    border: 1px solid #4B818D;
+    border-radius: 16px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.3);
+}
+
+.card-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-titulo h3{
+     font-size: 1.2rem;
+     margin: 0;
+     font-weight:200;
+}
+
+.card-titulo i{
+    font-size: 1.5rem;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #4B818D;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+}
+
+.card p{
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-subtitulo{
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color:grey;
+}
 /* DOCENTE */
 /* GRADE */
 /* ROADMAP */
