@@ -151,6 +151,8 @@ section {
     flex: 1;
     min-width: 0; /* permite encolher, evita empurrar a imagem */
     padding: 4rem 0;
+    text-align: justify;
+    
 }
 
 
@@ -169,8 +171,8 @@ section {
 }
 
 .quem-somos-imagem{
-    flex: 1;
-    min-width: 0;
+    flex: 1.9;
+    min-width: 1000px;
     width: 100%;
     max-width: 2000px;
     height: auto;
