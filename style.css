@@ -32,6 +32,7 @@ nav{
   align-items: center;
   padding: 1rem 4rem;
   background-color: #141615;
+  z-index: 10;
 }
 
 #logo_navbar_img {
@@ -93,17 +94,16 @@ section {
 .quem-somos-container {
     display: flex;
     flex-direction: column;
-    background-color: #222222;/* ajuste conforme o padding do resto do site */
+    background-color: #222222;
     padding-left: 10rem;
     padding-right: 6rem;
-
 }
 
 .quem-somos-header {
     display: flex;
-    align-items: center; /* centraliza verticalmente, como no print */
+    align-items: center; /* centraliza verticalmente */
     justify-content: space-between;
-    flex-wrap: nowrap; /* não deixa quebrar linha */
+    flex-wrap: nowrap; /* não deixa quebrar linha em telas grandes */
     gap: 2rem;
 }
 
@@ -147,14 +147,13 @@ section {
 .btn-os-estudantes:active {
     transform: translateY(0);
 }
+
 .quem-somos-texto{
     flex: 1;
     min-width: 0; /* permite encolher, evita empurrar a imagem */
     padding: 4rem 0;
     text-align: justify;
-    
 }
-
 
 .quem-somos-texto h1{
     font-size: 60px;
@@ -162,7 +161,6 @@ section {
 
 .quem-somos-texto span{
     font-family: 'Sura', serif;
-
 }
 
 .quem-somos-texto p{
@@ -172,9 +170,9 @@ section {
 
 .quem-somos-imagem{
     flex: 1.9;
-    min-width: 1000px;
+    min-width: 0; /* deixa o flex controlar o tamanho de verdade */
     width: 100%;
-    max-width: 2000px;
+    max-width: 800px;
     height: auto;
     border-radius: 12px;
     object-fit: cover;
@@ -183,6 +181,148 @@ section {
 .quem-somos-imagem:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
+}
+
+/* RESUMOS - CARDS ABAIXO DO QUEM SOMOS */
+
+#resumos {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 10rem;
+    background-color: #0A0C0B;
+}
+
+.programa-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "programa resumo"
+        "inferior inferior";
+    gap: 30px;
+    width: 100%;
+}
+
+.programa-header {
+    grid-area: programa;
+}
+
+.resumo-turma {
+    grid-area: resumo;
+}
+
+.linha-inferior {
+    grid-area: inferior;
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.grade,
+.docente,
+.roadmap {
+    flex: 1;
+    min-width: 260px;
+}
+
+.programa-header,
+.resumo-turma,
+.grade,
+.docente,
+.roadmap {
+    border: 1px solid #4B818D;
+    border-radius: 31px;
+    padding: 2rem;
+    background-color: #141615;
+}
+
+.programa-header h1,
+.resumo-turma h1,
+.grade h1,
+.docente h1,
+.roadmap h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.programa-header h1 img,
+.resumo-turma h1 img,
+.grade h1 img,
+.docente h1 img,
+.roadmap h1 img {
+    width: 50px;
+    height: 50px;
+}
+
+.programa-header p,
+.grade p,
+.docente p,
+.roadmap p {
+    font-family: 'Sura', serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #D9D9D9;
+}
+
+.grade h1,
+.docente h1,
+.roadmap h1 {
+    justify-content: space-between;
+}
+
+.seta-card {
+    margin-left: auto;
+    color: #4B818D;
+    font-size: 0.9rem;
+}
+
+/* RESUMO DA TURMA - grid de números */
+
+.resumo-turma-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.resumo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.resumo-item img:not(.linha) {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.3rem;
+}
+
+/* Linha separadora (linha.svg) entre os itens */
+.resumo-item .linha {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: auto;
+}
+
+.resumo-numero {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.resumo-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    color: #B5B5B5;
 }
 
 /* TURMA */
@@ -260,4 +400,36 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .quem-somos-header {
+        flex-wrap: wrap;
+    }
+
+    .quem-somos-imagem {
+        max-width: 100%;
+    }
+
+    .programa-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "programa"
+            "resumo"
+            "inferior";
+    }
+
+    .linha-inferior {
+        flex-direction: column;
+    }
+
+    .resumo-turma-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resumo-item .linha {
+        display: none; /* nas telas menores os itens empilham, então a linha vertical não faz sentido */
+    }
 }
