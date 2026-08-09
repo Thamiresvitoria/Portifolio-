@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +11,23 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
 }
 
 body{
@@ -90,33 +110,120 @@ section {
 .quem-somos-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+    background-color: #222222;
+    padding-left: 10rem;
+    padding-right: 6rem;
 }
 
 .quem-somos-header {
     display: flex;
+    align-items: center; /* centraliza verticalmente */
+    justify-content: space-between;
+    flex-wrap: nowrap; /* não deixa quebrar linha em telas grandes */
+    gap: 2rem;
+}
+
+.btn-a-turma,
+.btn-os-estudantes {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 2rem;
+    height: 50px;
+    min-width: 0;
+    background-color: #4B818D;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 4.43px;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.btn-a-turma:hover,
+.btn-os-estudantes:hover {
+    background-color: #09313d;
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+    transform: translateY(-1px);
+}
+
+.quem-somos-buttons {
+    display: flex;
+    gap: 23px;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.quem-somos-buttons a img {
+    padding-left: 8px;
+}
+
+.btn-a-turma:active,
+.btn-os-estudantes:active {
+    transform: translateY(0);
 }
 
 .quem-somos-texto{
     flex: 1;
-    min-height: 280px;
+    min-width: 0; /* permite encolher, evita empurrar a imagem */
+    padding: 4rem 0;
+    text-align: justify;
+}
+
+.quem-somos-texto h1{
+    font-size: 50px;
+}
+
+.quem-somos-texto span{
+    font-family: 'Sura', serif;
+}
+
+.quem-somos-texto p{
+    font-family: 'Sura', serif;
+    max-width: 600px;
 }
 
 .quem-somos-imagem{
-    flex: 1;
-    min-width: 380px;
-    max-width: 900px;
+    flex: 1.9;
+    min-width: 0; /* deixa o flex controlar o tamanho de verdade */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 .quem-somos-imagem:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
 }
+
+/* RESUMOS - CARDS ABAIXO DO QUEM SOMOS */
+
+.resumos {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 10rem;
+    background-color: #0A0C0B;
+}
+
+.programa-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "programa resumo"
+        "inferior inferior";
+    gap: 35px;
+    width: 100%;
+}
+
+.programa-header {
+    grid-area: programa;
+}
+
+
 
 /* TURMA */
 
@@ -176,7 +283,7 @@ section {
     gap: 2rem;
 }
 
-.card {
+.card-principal {
     flex: 1;
     min-width: 160px;
     max-width: 300px;
@@ -188,7 +295,7 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card-principal:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(75, 129, 141, 0.3);
 }
