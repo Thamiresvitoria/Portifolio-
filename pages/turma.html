@@ -2,82 +2,218 @@
 <html lang="Pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/Assets/Logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Portfólio - Turma 130</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/Assets/Logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Portifolio - Turma 130</title>
 </head>
 
 <body>
 
-    <!-- Navbar do projeto-->
-    <header>
-        <nav>
-            <div class="logo">
-                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="turma.html" class="active">Turma</a></li>
-                <li><a href="docente.html">Docente</a></li>
-                <li><a href="grade.html">Grade</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
-                <li><a href="estudantes.html">Estudantes</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar do projeto-->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./Assets/Logo_navbar.svg" alt="Logo do Portifólio">
+      </div>
+      <ul class="menu">
+        <li><a href="#inicio" class="active">Home</a></li>
+        <li><a href="#turma">Turma</a></li>
+        <li><a href="#docente">Docente</a></li>
+        <li><a href="#grade">Grade</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#estudantes">Estudantes</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Pagina principal-->
+  <main>
 
-    <!-- Pagina principal-->
-    <main>
+     <section id="inicio">
+      <section id="QuemSomos">
+        <div class="quem-somos-container">
+          <div class="quem-somos-header">
+            <div class="quem-somos-texto">
+              <h1>QUEM SOMOS</h1>
+              <span class="turma-header-span">
+                Bem-vindo(a) à página da <b>Turma 130</b> do Programa
+                <b>Transforme-se!</b>
+              </span>
 
-        <section id="inicio">
-
-        </section>
-
-        <section id="turma">
-
-            <div class="turma">
-
-                <div class="turma-topo">
-
-                    <div class="turma-header">
-                        <h1>TURMA 130</h1>
-                        <p>A turma 130 é formada por jovens talentos que compartilham o mesmo objetivo: se desenvolver
-                            na área de tecnologia e gerar impacto positivo no mundo.</p>
-                    </div>
-
-                    <img class="turma-imagem" src="../Assets/foto_zeromei.jpg" alt="Foto da turma 130">
-
-                </div>
-
-                <!-- Cards curso, período, etc.. -->
-                <div class="turma-cards">
-
-                    <div class="card">
-                        <h3>CURSO</h3>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <p>Desenvolvimento Front-End</p>
-                    </div>
-
-                    <div class="card">
-                        <h3>CURSO</h3>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <p>Desenvolvimento Front-End</p>
-                    </div>
-
-                </div>
-
+              <br>
+              </br>
+              <p>
+                Aqui você conhecerá um pouco da nossa trajetória, dos estudantes, da docente e dos projetos que fizeram
+                parte da nossa formação. Esta página reúne os momentos e aprendizados que marcaram nossa jornada na
+                tecnologia.
+              </p>
+              <div class="quem-somos-buttons">
+                <a class="btn-a-turma" href="turma.html">CONHEÇA A TURMA<img src="../Assets/arrow_right.svg"
+                    alt="Seta para a direita"></a>
+                <a class="btn-os-estudantes" href="estudantes.html">OS ESTUDANTES<img src="../Assets/arrow_right.svg"
+                    alt="Seta para a direita"></a>
+              </div>
             </div>
 
+            <img class="quem-somos-imagem" src="../Assets/Quem_Somos_Turma130.png" alt="Foto da turma 130" />
+          </div>
+        </div>
+      </section>
 
-    </main>
+      <section id="resumos">
+        <div class="resumos">
+        <div class="programa-container">
 
-    <footer>
-        <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
-    </footer>
+          <div class="programa-header">
+            <h1><img src="../Assets/Estrelas.svg" alt="Ícone de estrelas">SOBRE O PROGRAMA</h1>
+            <p>
+              O Transforme-se proporciona uma formação completa em tecnologia, com aulas presenciais, mentorias, apoio
+              financeiro para transporte e alimentação e acompanhamento durante toda a jornada. O objetivo é ampliar o
+              acesso à educação tecnológica e criar oportunidades reais de inserção profissional para jovens em situação
+              de vulnerabilidade social.
+            </p>
+          </div>
+
+          <div class="resumo-turma">
+            <h1><img src="../Assets/tres_pessoas.svg" alt="Ícone de três pessoas">RESUMO DA TURMA</h1>
+            <div class="resumo-turma-grid">
+              <div class="resumo-item">
+                <i><img src="../Assets/pessoas.svg" alt="Ícone de estudantes"></i>
+                <span class="resumo-numero">25</span>
+                <span class="resumo-label">ESTUDANTES</span>
+                <img class="linha" src="../Assets/linha.svg" alt="">
+              </div>
+              <div class="resumo-item">
+                <i><img src="../Assets/livro.svg" alt="Ícone de livro"></i>
+                <span class="resumo-numero">264H</span>
+                <span class="resumo-label">CARGA HORÁRIA</span>
+                <img class="linha" src="../Assets/linha.svg" alt="">
+              </div>
+              <div class="resumo-item">
+                <i><img src="../Assets/grade_2.svg" alt="Ícone de grade"></i>
+                <span class="resumo-numero">7</span>
+                <span class="resumo-label">DISCIPLINAS</span>
+                <img class="linha" src="../Assets/linha.svg" alt="">
+              </div>
+              <div class="resumo-item">
+                <i><img src="../Assets/pessoa_pensante.svg" alt="Ícone de pessoa pensando"></i>
+                <span class="resumo-numero">1</span>
+                <span class="resumo-label">DOCENTE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="linha-inferior">
+            <a class="grade" href="grade.html">
+              <h1><img src="../Assets/grade.svg" alt="Ícone de grade">CONHEÇA A GRADE<img class="arrow-right"
+                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+              <p>
+                A formação reúne conteúdos fundamentais para quem deseja iniciar uma carreira em tecnologia, incluindo
+                lógica de programação, desenvolvimento Front-end, informática, educação financeira e desenvolvimento de
+                competências profissionais, preparando os estudantes para os desafios do mercado de trabalho.
+              </p>
+            </a>
+
+            <a class="docente" href="docente.html">
+              <h1><img src="../Assets/pessoa_codigo.svg" alt="Ícone de pessoa no código">CONHEÇA A DOCENTE <img class="arrow-right"
+                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+              <p>
+                A turma é acompanhada por uma docente responsável por conduzir as aulas, incentivar o aprendizado
+                colaborativo e orientar os estudantes durante todo o processo de formação, contribuindo para o
+                desenvolvimento técnico e profissional de cada participante.
+              </p>
+            </a>
+
+            <a class="roadmap" href="roadmap.html">
+              <h1><img src="../Assets/planeta.svg" alt="Ícone de planeta">NOSSA JORNADA<img class="arrow-right"
+                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+              <p>
+                Ao longo de sete meses, os estudantes participam de uma experiência de aprendizagem que combina teoria,
+                prática, mentorias e desenvolvimento de projetos. A jornada fortalece conhecimentos técnicos,
+                habilidades
+                interpessoais e prepara os alunos para oportunidades no mercado de tecnologia.
+              </p>
+            </a>
+          </div>
+        </div>
+        </div>
+
+    <section id="turma">
+
+      <div class="turma">
+
+        <div class="turma-topo">
+
+          <div class="turma-header">
+            <h1>TURMA 130</h1>
+            <p>A turma 130 é formada por jovens talentos que compartilham o mesmo objetivo: se desenvolver na área de tecnologia e gerar impacto positivo no mundo.</p>
+          </div>
+
+          <img class="turma-imagem" src="./Assets/foto_zeromei.jpg" alt="Foto da turma 130">
+
+        </div>
+
+        <!-- Cards curso, período, etc.. -->
+        <div class="turma-cards">
+
+          <div class="card-principal">
+            <div class="card-titulo">
+              <h3>CURSO</h3>
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <p>Desenvolvimento Front-End</p>
+          </div>
+
+          <div class="card-principal">
+            <div class="card-titulo">
+              <h3>PERÍODO</h3>
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <p>07/05/2026 até 15/08/2026</p>
+        </div>
+
+         <div class="card-principal">
+            <div class="card-titulo">
+              <h3>CARGA HORÁRIA</h3>
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <p>264h</p>
+            <span class="card-subtitulo">Total em disciplinas</span>
+        </div>
+
+         <div class="card-principal">
+            <div class="card-titulo">
+              <h3>LOCAL</h3>
+              <i class="fa-solid fa-map-marker-alt"></i>
+            </div>
+            <p> Senac - Santo Amaro</p>
+        </div>
+
+      </div>
+
+    </section>
+    <section id="docente">
+
+    </section>
+
+    <section id="grade">
+    </section>
+
+    <section id="roadmap">
+    </section>
+
+    <section id="estudantes">
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
+  </footer>
 </body>
 
 <script src="script.js"></script>
