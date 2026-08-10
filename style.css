@@ -129,11 +129,8 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     padding: 0 1rem;
-=======
     padding: 0.5rem 2rem;
->>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
     height: 50px;
     min-width: 0;
     background-color: #4B818D;
@@ -148,12 +145,9 @@ section {
 
 .btn-a-turma:hover,
 .btn-os-estudantes:hover {
-<<<<<<< HEAD
     background-color: #6092a1;
-=======
     background-color: #09313d;
     box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
->>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
     transform: translateY(-1px);
 }
 
@@ -182,11 +176,7 @@ section {
 }
 
 .quem-somos-texto h1{
-<<<<<<< HEAD
     font-size: 60px;
-=======
-    font-size: 50px;
->>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
 }
 
 .quem-somos-texto span{
@@ -215,11 +205,8 @@ section {
 
 /* RESUMOS - CARDS ABAIXO DO QUEM SOMOS */
 
-<<<<<<< HEAD
 #resumos {
-=======
-.resumos {
->>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
+
     display: flex;
     justify-content: center;
     padding: 2rem 10rem;
@@ -240,7 +227,6 @@ section {
     grid-area: programa;
 }
 
-<<<<<<< HEAD
 .resumo-turma {
     grid-area: resumo;
 }
@@ -393,9 +379,7 @@ section {
     font-size: 12px;
     color: #ffffff;
 }
-=======
 
->>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
 
 /* TURMA */
 
