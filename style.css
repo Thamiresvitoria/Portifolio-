@@ -387,14 +387,14 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 5rem; /* ajuste conforme o padding do resto do site */
+    padding: 4rem 5rem; /* ajuste conforme o padding do resto do site */
 }
 
 .turma-topo {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 0.5rem;
+    gap: 5rem;
     flex-wrap: wrap;
 }
 
@@ -404,13 +404,13 @@ section {
 }
 
 .turma-header h1{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     line-height: 1.5;
     letter-spacing: 2px;
 }
 
 .turma-header p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 2rem;
     width: 80%;
@@ -437,6 +437,8 @@ section {
     flex-wrap: wrap;
     max-width: 100%;     
     gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
 }
 
 .card-principal {
@@ -513,6 +515,8 @@ footer p {
 }
 
 /* RESPONSIVO */
+
+
 
 @media (max-width: 900px) {
     .quem-somos-header {
