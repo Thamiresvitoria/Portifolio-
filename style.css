@@ -129,7 +129,11 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     padding: 0 1rem;
+=======
+    padding: 0.5rem 2rem;
+>>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
     height: 50px;
     min-width: 0;
     background-color: #4B818D;
@@ -144,7 +148,12 @@ section {
 
 .btn-a-turma:hover,
 .btn-os-estudantes:hover {
+<<<<<<< HEAD
     background-color: #6092a1;
+=======
+    background-color: #09313d;
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+>>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
     transform: translateY(-1px);
 }
 
@@ -173,7 +182,11 @@ section {
 }
 
 .quem-somos-texto h1{
+<<<<<<< HEAD
     font-size: 60px;
+=======
+    font-size: 50px;
+>>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
 }
 
 .quem-somos-texto span{
@@ -202,7 +215,11 @@ section {
 
 /* RESUMOS - CARDS ABAIXO DO QUEM SOMOS */
 
+<<<<<<< HEAD
 #resumos {
+=======
+.resumos {
+>>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
     display: flex;
     justify-content: center;
     padding: 2rem 10rem;
@@ -223,6 +240,7 @@ section {
     grid-area: programa;
 }
 
+<<<<<<< HEAD
 .resumo-turma {
     grid-area: resumo;
 }
@@ -375,6 +393,9 @@ section {
     font-size: 12px;
     color: #ffffff;
 }
+=======
+
+>>>>>>> ae969b483e1532bb0eb5934fe4329caff527ff10
 
 /* TURMA */
 
@@ -415,7 +436,7 @@ section {
 .turma-imagem{
     flex: 1;
     min-width: 380px;
-    max-width: 900px;
+    max-width: 600px;
     border-radius: 12px;
     border: 2px solid rgb(75, 129, 141);
 }
@@ -428,11 +449,64 @@ section {
 
 .turma-cards {
     display: flex;
-    gap: 1rem;
+    gap: 8rem;
     flex-wrap: wrap;
+    max-width: 100%;     
+    gap: 2rem;
 }
 
+.card-principal {
+    flex: 1;
+    min-width: 160px;
+    max-width: 300px;
+    height: 130px;
+    background-color: #1C1E1D;
+    border: 1px solid #4B818D;
+    border-radius: 16px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.card-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.3);
+}
+
+.card-titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-titulo h3{
+     font-size: 1.2rem;
+     margin: 0;
+     font-weight:200;
+}
+
+.card-titulo i{
+    font-size: 1.5rem;
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #4B818D;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+}
+
+.card p{
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-subtitulo{
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color:grey;
+}
 /* DOCENTE */
 /* GRADE */
 /* ROADMAP */
