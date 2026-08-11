@@ -84,7 +84,7 @@ nav a::after {
     width: 0;
     height: 2px;
     background-color: #4B818D;
-    transition: width 0.2s ease;
+    transition: width 0.2s ease;    
 }
 
 /* Barrinha do item ativo */
