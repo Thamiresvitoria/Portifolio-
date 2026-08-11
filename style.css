@@ -81,12 +81,9 @@ nav a::after {
     position: absolute;
     left: 0;
     bottom: 0;
-
     width: 0;
     height: 2px;
-
     background-color: #4B818D;
-
     transition: width 0.2s ease;
 }
 
@@ -313,6 +310,7 @@ section {
     height: 50px;
     flex-shrink: 0;
 }
+
 .arrow-right {
     position: absolute;
     top: 21px; 
@@ -494,6 +492,109 @@ section {
     color:grey;
 }
 
+
+.container-objetivo {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+}
+
+.objetivo {
+    flex: 1;
+    min-width: 400px;
+}
+
+.objetivo h2 {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.objetivo ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.objetivo li {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 2px;
+}
+
+.objetivo li::marker {
+    color: #4b818d;
+    font-size: 12px;
+}
+
+.grid-galeria {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.galeria {
+    width: 100%;
+}
+
+.galeria h2 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.galeria-grid img {
+    width: 250PX;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 1px solid #4b818d;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 2px 2px rgba(75, 129, 141)
+}
+
+
+.seta {
+    margin: auto 1rem;
+    width: 30px;
+    height: 45px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.seta img {
+    width: 25px;
+    height: 35px;
+}
+
+.seta-direita img {
+    transform: rotate(180deg);
+}
+
+
+
 /* DOCENTE */
 /* GRADE */
 /* ROADMAP */
@@ -546,4 +647,40 @@ footer p {
     .resumo-item .linha {
         display: none; 
     }
+}
+
+
+
+@media (max-width: 900px) {
+
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .galeria-grid img {
+        height: 140px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seta {
+        width: 30px;
+    }
+
 }
