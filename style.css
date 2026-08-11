@@ -385,7 +385,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 4rem 5rem; /* ajuste conforme o padding do resto do site */
+    padding: 4rem 5rem; 
 }
 
 .turma-topo {
@@ -594,8 +594,14 @@ section {
 }
 
 
-
 /* DOCENTE */
+
+.container-docente{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 5rem; 
+}
 /* GRADE */
 /* ROADMAP */
 /* ESTUDANTES */
