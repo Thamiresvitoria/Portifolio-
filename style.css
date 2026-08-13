@@ -37,6 +37,7 @@ body {
     background-color: #0A0C0B;
     color: white;
     font-family: 'Noto Sans HK', sans-serif;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -53,7 +54,7 @@ nav {
 }
 
 #logo_navbar_img {
-    width: 135px;
+    width: clamp(100px, 10vw, 135px);
 }
 
 ul {
@@ -62,7 +63,7 @@ ul {
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: clamp(18px, 1.8vw, 30px);
     list-style: none;
 }
 
@@ -72,7 +73,7 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     padding-bottom: 8px;
-    font-size: 16px;
+    font-size: clamp(0.82rem, 0.7vw + 0.65rem, 1rem);
 }
 
 /* Barrinha */
@@ -92,12 +93,15 @@ nav a.active::after {
     width: 100%;
 }
 
+.nav-toggle {
+    display: none;
+}
+
 /* MAIN */
 
 main {
     flex: 1;
-    padding-top: 95px;
-    /* ajuste conforme a altura real do seu nav */
+    padding-top: clamp(82px, 7vw, 95px);
 }
 
 section {
@@ -111,18 +115,16 @@ section {
     display: flex;
     flex-direction: column;
     background-color: #222222;
-    padding-left: 10rem;
-    padding-right: 6rem;
+    padding-left: clamp(1.5rem, 3vw, 10rem);
+    padding-right: clamp(1.5rem, 2.5vw, 6rem);
 }
 
 .quem-somos-header {
     display: flex;
     align-items: center;
-    /* centraliza verticalmente */
     justify-content: space-between;
     flex-wrap: nowrap;
-    /* não deixa quebrar linha em telas grandes */
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .btn-a-turma,
@@ -171,13 +173,13 @@ section {
 .quem-somos-texto {
     flex: 1;
     min-width: 0;
-    /* permite encolher, evita empurrar a imagem */
-    padding: 4rem 0;
+    padding: clamp(2rem, 3vw, 4rem) 0;
     text-align: justify;
 }
 
 .quem-somos-texto h1 {
-    font-size: 50px;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 0.95;
 }
 
 .quem-somos-texto span {
@@ -192,9 +194,8 @@ section {
 .quem-somos-imagem {
     flex: 1.9;
     min-width: 0;
-    /* deixa o flex controlar o tamanho de verdade */
     width: 100%;
-    max-width: 800px;
+    max-width: min(800px, 100%);
     height: auto;
     border-radius: 12px;
     object-fit: cover;
@@ -211,7 +212,7 @@ section {
 
     display: flex;
     justify-content: center;
-    padding: 5rem 10rem;
+    padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 4vw, 10rem);
     background-color: #0A0C0B;
 }
 
@@ -270,7 +271,7 @@ section {
 .docente,
 .roadmap {
     flex: 1;
-    min-width: 280px;
+    min-width: min(100%, 280px);
     display: block;
     text-decoration: none;
     color: inherit;
@@ -384,6 +385,246 @@ section {
     color: #ffffff;
 }
 
+@media (max-width: 1368px) {
+    nav {
+        padding: 1rem clamp(1.25rem, 2vw, 2rem);
+    }
+
+    .quem-somos-container {
+        padding-left: clamp(1.5rem, 2vw, 4rem);
+        padding-right: clamp(1.5rem, 2vw, 4rem);
+    }
+
+    .quem-somos-header {
+        gap: 1.5rem;
+    }
+
+    .quem-somos-imagem {
+        max-width: min(620px, 100%);
+    }
+
+    #resumos {
+        padding-left: clamp(1.5rem, 2vw, 3rem);
+        padding-right: clamp(1.5rem, 2vw, 3rem);
+    }
+
+    .docente-container {
+        padding: clamp(2rem, 3vw, 4rem) clamp(1.5rem, 2vw, 4rem);
+    }
+
+    .docente-top {
+        grid-template-columns: minmax(220px, 320px) 1fr minmax(200px, 260px);
+    }
+}
+
+@media (max-width: 1100px) {
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    .quem-somos-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .quem-somos-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quem-somos-texto {
+        padding-top: 2.5rem;
+        text-align: center;
+    }
+
+    .quem-somos-texto p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .quem-somos-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .quem-somos-imagem {
+        max-width: 620px;
+    }
+
+    #resumos {
+        padding: 4rem 2rem;
+    }
+
+    .programa-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "programa"
+            "resumo"
+            "inferior";
+    }
+
+    .linha-inferior {
+        gap: 2rem;
+    }
+
+    .resumo-turma-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        position: fixed;
+        top: 0.6rem;
+        left: 0.6rem;
+        right: 0.6rem;
+        width: auto;
+        padding: 0.7rem 0.9rem;
+        border-radius: 12px;
+        background-color: rgba(20, 22, 21, 0.96);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    #logo_navbar_img {
+        width: 100px;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.28rem;
+        width: 36px;
+        height: 36px;
+        border: none;
+        border-radius: 10px;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        border-radius: 999px;
+        background-color: #FFFFFF;
+    }
+
+    nav ul {
+        position: absolute;
+        top: calc(100% + 0.35rem);
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 0.45rem;
+        padding: 0.7rem;
+        background: rgba(20, 22, 21, 0.98);
+        border-radius: 12px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    nav.is-open ul {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+
+    nav a.active {
+        background-color: rgba(75, 129, 141, 0.15);
+        border-left: 3px solid #4B818D;
+        padding-left: calc(0.8rem - 3px);
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    main {
+        padding-top: 90px;
+    }
+
+    .quem-somos-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .quem-somos-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .quem-somos-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .btn-a-turma,
+    .btn-os-estudantes {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .programa-header,
+    .resumo-turma,
+    .grade,
+    .docente,
+    .roadmap {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .programa-header h1,
+    .resumo-turma h1,
+    .grade h1,
+    .docente h1,
+    .roadmap h1 {
+        font-size: 1.25rem;
+        gap: 0.6rem;
+        padding-right: 2.5rem;
+    }
+
+    .programa-header h1 img,
+    .resumo-turma h1 img,
+    .grade h1 img,
+    .docente h1 img,
+    .roadmap h1 img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .arrow-right {
+        width: 2rem !important;
+        height: 2rem !important;
+        top: 1.3rem;
+        right: 0.8rem;
+    }
+
+    .linha-inferior {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .resumo-turma-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-item .linha {
+        display: none;
+    }
+}
 
 /* TURMA */
 
@@ -541,7 +782,7 @@ section {
     display: flex;
     align-items: center;
     gap: 4px;
-    margin-left: 25rem;
+    margin-left: clamp(0rem, 5vw, 25rem);
 }
 
 .galeria {
@@ -563,7 +804,7 @@ section {
 }
 
 .galeria-grid img {
-    width: 250PX;
+    width: min(100%, 250px);
     height: 130px;
     object-fit: cover;
     border-radius: 18px;
@@ -1046,3 +1287,4 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
