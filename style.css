@@ -500,10 +500,11 @@ section {
 
 
 .container-objetivo {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     display: flex;
     align-items: center;
+    margin-top:1rem;
 }
 
 .objetivo {
@@ -513,13 +514,13 @@ section {
 
 .objetivo h2 {
     color: #ffffff;
-    font-size: 26px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .objetivo ul {
     margin: 0;
-    padding-left: 20px;
+    padding-left: 30px;
     list-style-type: disc;
 }
 
@@ -539,7 +540,8 @@ section {
     flex: 1.5;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
+    margin-left: 25rem;
 }
 
 .galeria {
