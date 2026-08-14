@@ -84,7 +84,7 @@ nav a::after {
     width: 0;
     height: 2px;
     background-color: #4B818D;
-    transition: width 0.2s ease;    
+    transition: width 0.2s ease;
 }
 
 /* Barrinha do item ativo */
@@ -500,11 +500,10 @@ section {
 
 
 .container-objetivo {
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1900px;
     display: flex;
     align-items: center;
-    margin-top:1rem;
 }
 
 .objetivo {
@@ -514,13 +513,13 @@ section {
 
 .objetivo h2 {
     color: #ffffff;
-    font-size: 36px;
+    font-size: 26px;
     margin-bottom: 20px;
 }
 
 .objetivo ul {
     margin: 0;
-    padding-left: 30px;
+    padding-left: 20px;
     list-style-type: disc;
 }
 
@@ -540,8 +539,7 @@ section {
     flex: 1.5;
     display: flex;
     align-items: center;
-    gap: 4px;
-    margin-left: 25rem;
+    gap: 2px;
 }
 
 .galeria {
@@ -574,7 +572,8 @@ section {
 .galeria-grid img:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);;
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+    ;
 }
 
 
@@ -625,7 +624,7 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
     align-items: start;
-    margin-top:15px;
+    margin-top: 15px;
 }
 
 .card-experiencia,
@@ -643,7 +642,8 @@ section {
 }
 
 .docente-foto img:hover {
-    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);;
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+    ;
     transform: translateY(-4px);
 }
 
@@ -654,19 +654,19 @@ section {
 }
 
 i:has(+ h2) {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 i:has(+ h2) img {
-  width: 50px;
-  height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
-i:has(+ h2) + h2 {
-  display: inline;
+i:has(+ h2)+h2 {
+    display: inline;
 }
 
 .docente-info .subtitulo {
@@ -682,12 +682,13 @@ i:has(+ h2) + h2 {
     text-align: center;
 }
 
-.icones-sociais img{
+.icones-sociais img {
     width: 30px;
     height: 30px;
 }
 
-#um, #dois {
+#um,
+#dois {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -699,14 +700,17 @@ i:has(+ h2) + h2 {
     box-sizing: border-box;
 }
 
-#um img, #dois img,
-#um svg, #dois svg {
+#um img,
+#dois img,
+#um svg,
+#dois svg {
     width: 40px;
     height: 40px;
     display: block;
 }
 
-#um:hover, #dois:hover {
+#um:hover,
+#dois:hover {
     box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
     transform: translateY(-4px);
 }
@@ -726,140 +730,141 @@ i:has(+ h2) + h2 {
 /* Tecnologia    */
 
 .docente-tecnologias {
-  background: #111;
-  border: 1px solid #4B818D;
-  border-radius: 16px;
-  padding: 24px;
-  width: 280px;
-  box-sizing: border-box;
+    background: #111;
+    border: 1px solid #4B818D;
+    border-radius: 16px;
+    padding: 24px;
+    width: 280px;
+    box-sizing: border-box;
 }
 
-.docente-tecnologias:hover{
+.docente-tecnologias:hover {
     box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
     transform: translateY(-4px);
 }
 
 .docente-tecnologias .titulo-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .docente-tecnologias .titulo-card img {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 
 .docente-tecnologias h2 {
-  margin: 0;
-  font-size: 1.4rem;
+    margin: 0;
+    font-size: 1.4rem;
 }
 
 .grid-icones {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
 .grid-icones img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .grid-icones img:hover {
-  transform: translateY(-6px) scale(1.1);
-  filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
+    transform: translateY(-6px) scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
 }
 
 /* Experiência */
 
 .card-experiencia {
-  background: #111;
-  border: 1px solid #4B818D;
-  border-radius: 16px;
-  padding: 24px;
-  width: 340px;
-  box-sizing: border-box;
+    background: #111;
+    border: 1px solid #4B818D;
+    border-radius: 16px;
+    padding: 24px;
+    width: 340px;
+    box-sizing: border-box;
 }
-.card-experiencia:hover{
+
+.card-experiencia:hover {
     box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
     transform: translateY(-4px);
 }
 
 .titulo-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .icone-diamante {
-  width: 35px;
-  height: 35px;
+    width: 35px;
+    height: 35px;
 }
 
 .titulo-card h2 {
-  margin: 0;
-  font-size: 1.3rem;
+    margin: 0;
+    font-size: 1.3rem;
 }
 
 .timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 
 .timeline-item {
-  position: relative;
-  padding-left: 24px;
-  padding-bottom: 20px;
+    position: relative;
+    padding-left: 24px;
+    padding-bottom: 20px;
 }
 
 .timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  background: #4B818D;
-  border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: #4B818D;
+    border-radius: 50%;
 }
 
 .timeline-item::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 16px;
-  width: 2px;
-  height: calc(100% - 10px);
-  background: rgba(45, 212, 191, 0.3);
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 16px;
+    width: 2px;
+    height: calc(100% - 10px);
+    background: rgba(45, 212, 191, 0.3);
 }
 
 
 .timeline-item:last-child::after {
-  display: none;
+    display: none;
 }
 
 
 .timeline-item h3 {
-  font-size: 0.95rem;
-  font-weight: bold;
-  margin: 0 0 2px 0;
-  color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 0 0 2px 0;
+    color: #fff;
 }
 
 
 .timeline-item .data {
-  font-size: 0.75rem;
-  color: #999;
+    font-size: 0.75rem;
+    color: #999;
 }
 
 /* Atuação */
@@ -867,12 +872,12 @@ i:has(+ h2) + h2 {
 /* Padrão base compartilhado pelos cards */
 .card-area-atuacao,
 .card-formacao {
-  background: #111;
-  border: 1px solid #4B818D;
-  border-radius: 16px;
-  padding: 24px;
-  width: 320px;
-  box-sizing: border-box;
+    background: #111;
+    border: 1px solid #4B818D;
+    border-radius: 16px;
+    padding: 24px;
+    width: 320px;
+    box-sizing: border-box;
 }
 
 .card-area-atuacao:hover,
@@ -882,80 +887,485 @@ i:has(+ h2) + h2 {
 }
 
 .titulo-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
 }
 
 .icone-card {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0; 
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
 }
 
 .titulo-card h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  white-space: nowrap; 
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 /* Lista de Área de Atuação */
 .lista-pills {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .lista-pills li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 20px;
-  background: #111;
-  border: 1px solid #4B818D;
-  border-radius: 31px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    background: #111;
+    border: 1px solid #4B818D;
+    border-radius: 31px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .lista-pills li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
-  border-color: #4B818D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+    border-color: #4B818D;
 }
 
 .lista-pills li img {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
 }
 
 .lista-pills li span {
-  font-size: 0.95rem;
-  color: #fff;
+    font-size: 0.95rem;
+    color: #fff;
 }
 
 /* Formação */
 .card-formacao h3 {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0 0 6px 0;
-  color: #fff;
-  line-height: 1.4;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+    color: #fff;
+    line-height: 1.4;
 }
 
 .card-formacao .data {
-  font-size: 0.85rem;
-  color: #999;
+    font-size: 0.85rem;
+    color: #999;
 }
 
 /* GRADE */
 /* ROADMAP */
+
 /* ESTUDANTES */
 
+#estudante {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 5rem;
+}
+
+
+.container-estudante {
+    width: 90%;
+    justify-content: center;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+.estudante-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #FFFFFF;
+    text-align: start;
+}
+
+.estudante-header p {
+    color: #B5B5B5;
+    margin-bottom: 5rem;
+    text-align: start;
+}
+
+/* FILTRO*/
+
+.filtros-estudante {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    margin: 2.5rem auto;
+    justify-content: center;
+}
+
+
+/*  BARRA DE PESQUISA*/
+
+.pesquisa-estudante {
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    margin-left: 5rem;
+}
+
+.pesquisa-estudante i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4B818D;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.pesquisa-estudante input {
+    width: 100%;
+    height: 45px;
+    padding: 0 1rem 0 2.8rem;
+    box-sizing: border-box;
+    background-color: #1C1E1D;
+    color: #FFFFFF;
+    border: 1px solid #4B818D;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95rem;
+
+    transition: 0.3s ease;
+}
+
+.pesquisa-estudante input::placeholder {
+    color: #888888;
+}
+
+.pesquisa-estudante input:focus {
+    border-color: #4B818D;
+    box-shadow:
+        0 0 10px rgba(75, 129, 141, 0.25);
+}
+
+
+/* FILTROS SELECT */
+
+.filtros-estudante .selects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filtros-estudante select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 45px;
+    min-width: 200px;
+    /* aumentei de 165px pra 200px */
+    padding: 0 2.5rem 0 1rem;
+    background-color: #1C1E1D;
+    color: #FFFFFF;
+    border: 1px solid #4B818D;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%234B818D' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+}
+
+.filtros-estudante select:hover {
+    border-color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.filtros-estudante select:focus {
+    border-color: #4B818D;
+    box-shadow:
+        0 0 10px rgba(75, 129, 141, 0.25);
+}
+
+.filtros-estudante select option {
+    background-color: #1C1E1D;
+    color: #FFFFFF;
+}
+
+/* CARROSSEL */
+
+.carousel {
+    margin-top:3.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+/* ÁREA DOS CARDS */
+
+.carousel-window {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+
+}
+
+
+/* GRID DOS CARDS: 3 colunas x 2 linhas = 6 por página */
+
+.cards-alunos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 1rem;
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.cards-alunos.carrossel-animando {
+    opacity: 1;
+}
+
+
+/* CARD DO ESTUDANTE */
+
+.cards-aluno {
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+    padding: 2.5rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141615;
+    border-radius: 14px;
+    border: 1px solid #4B818D;
+    text-align: left;
+    transition:
+        transform 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}
+
+.cards-aluno:hover {
+    transform: scale(1.03);
+    border-color: #4B818D;
+    box-shadow: 0 4px 12px rgba(75, 129, 141, 0.25);
+}
+
+
+/* TOPO: AVATAR + NOME */
+
+.aluno-topo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.9rem;
+}
+
+.img img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #4B818D;
+    color: #FFFFFF;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    margin-bottom: 0.6rem;
+}
+
+.aluno-topo h2 {
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+}
+
+.aluno-topo span {
+    color: #BDBDBD;
+    font-size: 0.72rem;
+}
+
+
+/* BLOCO DE INFORMAÇÕES */
+
+.aluno-info {
+    width: 100%;
+    text-align: left;
+}
+
+.aluno-info h3 {
+    color: #4B818D;
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    margin-top: 0.6rem;
+    margin-bottom: 0.1rem;
+}
+
+.aluno-info > div:first-child h3 {
+    margin-top: 0;
+}
+
+.aluno-info p {
+    color: #BDBDBD;
+    font-size: 0.72rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+/* LINKS (GITHUB / LINKEDIN) */
+
+.aluno-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+}
+
+.aluno-links a {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    padding: 0.45rem 0.5rem;
+
+    background-color: #4B818D;
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.aluno-links a:hover {
+    background-color: #3a6873;
+    transform: translateY(-2px);
+}
+
+.aluno-links a[href*="github"]::before {
+    content: "\f09b";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+.aluno-links a[href*="linkedin"]::before {
+    content: "\f08c";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+
+/* BOTÕES DO CARROSSEL (setas) */
+
+.carousel-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #1C1E1D;
+    color: #FFFFFF;
+
+    border: 1px solid #4B818D;
+    border-radius: 50%;
+
+    font-size: 1.2rem;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    margin-top: 100px; /* alinha verticalmente com o meio dos cards */
+
+    transition: 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #4B818D;
+    transform: scale(1.08);
+}
+
+.carousel-btn.anterior::before {
+    content: "\f104";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.carousel-btn.proximo::before {
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+
+/* INDICADORES */
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.indicador {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #555555;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.indicador.ativo {
+    width: 22px;
+    border-radius: 8px;
+    background-color: #4B818D;
+}
+
+
+/* NENHUM RESULTADO */
+
+.nenhum-estudante {
+    grid-column: 1 / -1;
+    color: #FFFFFF;
+    padding: 3rem;
+}
 
 /* FOOTER */
 
@@ -972,77 +1382,3 @@ footer p {
 }
 
 /* RESPONSIVO */
-
-
-
-@media (max-width: 900px) {
-    .quem-somos-header {
-        flex-wrap: wrap;
-    }
-
-    .quem-somos-imagem {
-        max-width: 100%;
-    }
-
-    .programa-container {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "programa"
-            "resumo"
-            "inferior";
-    }
-
-    .linha-inferior {
-        flex-direction: column;
-    }
-
-    .resumo-turma-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .resumo-item .linha {
-        display: none;
-    }
-}
-
-
-
-@media (max-width: 900px) {
-
-    .galeria-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-}
-
-
-@media (max-width: 650px) {
-
-    .galeria-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .galeria-grid img {
-        height: 140px;
-    }
-
-}
-
-
-@media (max-width: 450px) {
-
-    .galeria-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .seta {
-        width: 30px;
-    }
-
-}
-
-@media (max-width: 900px) {
-    .docente-container {
-        grid-template-columns: 1fr;
-    }
-}
