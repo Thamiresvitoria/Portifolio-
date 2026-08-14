@@ -1100,13 +1100,13 @@ i:has(+ h2)+h2 {
 /* CARROSSEL */
 
 .carousel {
-    margin-top:3.5rem;
+    margin-top: 3.5rem;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 
@@ -1125,7 +1125,7 @@ i:has(+ h2)+h2 {
 .cards-alunos {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr );
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     transition:
         opacity 0.4s ease,
@@ -1182,20 +1182,22 @@ i:has(+ h2)+h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-    background-color: #4B818D;
+    border: 1px solid #4B818D;
     color: #FFFFFF;
-
     font-size: 0.85rem;
     font-weight: 700;
-
     margin-bottom: 0.6rem;
+}
+
+.img img:hover {
+    box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
+    transform: translateY(-4px);
 }
 
 .aluno-topo h2 {
     color: #FFFFFF;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 0.2rem;
@@ -1203,7 +1205,7 @@ i:has(+ h2)+h2 {
 
 .aluno-topo span {
     color: #BDBDBD;
-    font-size: 0.72rem;
+    font-size: 0.80rem;
 }
 
 
@@ -1216,14 +1218,13 @@ i:has(+ h2)+h2 {
 
 .aluno-info h3 {
     color: #4B818D;
-    font-size: 0.7rem;
+    font-size: 0.80rem;
     font-weight: 600;
-
     margin-top: 0.6rem;
     margin-bottom: 0.1rem;
 }
 
-.aluno-info > div:first-child h3 {
+.aluno-info>div:first-child h3 {
     margin-top: 0;
 }
 
@@ -1237,53 +1238,34 @@ i:has(+ h2)+h2 {
 
 /* LINKS (GITHUB / LINKEDIN) */
 
-.aluno-links {
-    width: 100%;
+.redes-sociais{
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    margin-top: 0.9rem;
 }
-
-.aluno-links a {
+.redes-sociais-btn {
     width: 100%;
-    box-sizing: border-box;
-
     display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    box-sizing: border-box;
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-
-    padding: 0.45rem 0.5rem;
-
+    padding: 0.7rem 5rem;
     background-color: #4B818D;
     color: #FFFFFF;
-
     border-radius: 6px;
-
     cursor: pointer;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
-    text-decoration: none;
-
     transition: 0.3s ease;
+    border: #4B818D
 }
 
-.aluno-links a:hover {
+
+.redes-sociais-btn:hover {
     background-color: #3a6873;
     transform: translateY(-2px);
-}
-
-.aluno-links a[href*="github"]::before {
-    content: "\f09b";
-    font-family: "Font Awesome 6 Brands";
-    font-weight: 400;
-}
-
-.aluno-links a[href*="linkedin"]::before {
-    content: "\f08c";
-    font-family: "Font Awesome 6 Brands";
-    font-weight: 400;
 }
 
 
@@ -1308,7 +1290,8 @@ i:has(+ h2)+h2 {
     cursor: pointer;
     flex-shrink: 0;
 
-    margin-top: 100px; /* alinha verticalmente com o meio dos cards */
+    margin-top: 100px;
+    /* alinha verticalmente com o meio dos cards */
 
     transition: 0.3s ease;
 }
