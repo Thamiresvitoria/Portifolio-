@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <title>Portfólio - Turma 130</title>
 </head>
@@ -17,13 +17,18 @@
       <div class="logo">
         <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
       </div>
-      <ul class="menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="menu" id="menuList">
         <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="turma.html">Turma</a></li>
-        <li><a href="docente.html">Docente</a></li>
-        <li><a href="grade.html">Grade</a></li>
-        <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a href="estudantes.html">Estudantes</a></li>
+        <li><a href="./pages/turma.html">Turma</a></li>
+        <li><a href="./pages/docente.html">Docente</a></li>
+        <li><a href="./pages/grade.html">Grade</a></li>
+        <li><a href="./pages/roadmap.html">Roadmap</a></li>
+        <li><a href="./pages/estudantes.html">Estudantes</a></li>
       </ul>
     </nav>
   </header>
@@ -124,7 +129,7 @@
               </p>
             </a>
 
-            <a class="roadmap" href="roadmap.html">
+            <a class="nossa-jornada" href="roadmap.html">
               <h1><img src="../Assets/planeta.svg" alt="Ícone de planeta">NOSSA JORNADA<img class="arrow-right"
                   src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
               <p>
@@ -144,8 +149,9 @@
   <footer>
     <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
   </footer>
+ 
 </body>
 
-<script src="../script.js"></script>
+<script src="script.js"></script>
 
 </html>

@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../grade.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <title>Grade Curricular - Turma 130</title>
@@ -17,23 +16,25 @@
 
 <body>
 
-    <!-- HEADER -->
+    <!-- Navbar do projeto-->
     <header>
         <nav>
-
             <div class="logo">
-                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portfólio">
+                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
             </div>
-
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu" id="menuList">
+                <li><a href="../index.html" >Início</a></li>
                 <li><a href="turma.html">Turma</a></li>
                 <li><a href="docente.html">Docente</a></li>
                 <li><a href="grade.html" class="active">Grade</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href=".roadmap.html">Roadmap</a></li>
                 <li><a href="estudantes.html">Estudantes</a></li>
             </ul>
-
         </nav>
     </header>
 
@@ -123,7 +124,7 @@
 
                                 <div class="tecnologia">
                                     <div class="tecnologia-icone css">
-                                         <img src="../Assets/css-3-svgrepo-com.svg" alt="">
+                                        <img src="../Assets/css-3-svgrepo-com.svg" alt="">
                                     </div>
 
                                     <p>CSS3</p>
@@ -160,32 +161,32 @@
                             <div class="competencias-grid">
 
                                 <div class="competencia">
-                                    <span class="icone">▣</span>
+                                    <i class="icone"> <img src="../Assets/PC.svg" alt="Icone pc"></i>
                                     Operar sistemas operacionais
                                 </div>
 
                                 <div class="competencia">
-                                    <span class="icone">♧</span>
+                                    <i class="icone"> <img src="../Assets/paleta.svg" alt="Icone pc"></i>
                                     Criar interface no Figma
                                 </div>
 
                                 <div class="competencia">
-                                    <span class="icone">▣</span>
+                                    <i class="icone"> <img src="../Assets/pagina_vazia.svg" alt="Icone pc"></i>
                                     Utilizar aplicativos de escritório
                                 </div>
 
                                 <div class="competencia">
-                                    <span class="icone">♧</span>
+                                    <i class="icone"> <img src="../Assets/pessoas_junto.svg" alt="Icone pc"></i>
                                     Trabalhar em equipe
                                 </div>
 
                                 <div class="competencia">
-                                    <span class="icone">♜</span>
+                                    <i class="icone"> <img src="../Assets/mobile-dev-mode.svg" alt="Icone pc"></i>
                                     Desenvolver páginas web
                                 </div>
 
                                 <div class="competencia">
-                                    <span class="icone">♕</span>
+                                    <i class="icone"> <img src="../Assets/lampada.svg" alt="Icone pc"></i>
                                     Resolver problemas
                                 </div>
 
@@ -212,5 +213,7 @@
 
 
 </body>
+
+<script src="../script.js"></script>
 
 </html>

@@ -10,17 +10,24 @@
 </head>
 
 <body>
+
+    <!-- Navbar do projeto-->
     <header>
         <nav>
             <div class="logo">
                 <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
             </div>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu" id="menuList">
+                <li><a href="../index.html" >Início</a></li>
                 <li><a href="turma.html">Turma</a></li>
                 <li><a href="docente.html" class="active">Docente</a></li>
                 <li><a href="grade.html">Grade</a></li>
-                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href=".roadmap.html">Roadmap</a></li>
                 <li><a href="estudantes.html">Estudantes</a></li>
             </ul>
         </nav>
