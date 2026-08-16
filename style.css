@@ -958,7 +958,272 @@ i:has(+ h2)+h2 {
 }
 
 /* GRADE */
+
+/* ================================
+   GRADE CURRICULAR
+================================ */
+
+.grade {
+    min-height: 100vh;
+    padding: 100px 6% 70px;
+    background: #0A0C0B;
+}
+
+.grade-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+
+.grade-header {
+    margin-bottom: 35px;
+}
+
+.grade-header h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.grade-header p {
+    margin: 4px 0 0 2px;
+    color: #858585;
+    font-size: 0.95rem;
+}
+
+
+/* ================================
+   GRID PRINCIPAL
+================================ */
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 34px;
+}
+
+
+/* ================================
+   TÍTULOS
+================================ */
+
+.grade h2 {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin: 0 0 12px;
+    font-weight: 800;
+}
+
+
+/* ================================
+   DISCIPLINAS
+================================ */
+
+.disciplina-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.disciplina {
+    min-height: 34px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8px 15px;
+
+    border: 1px solid #28535c;
+    border-radius: 20px;
+
+    background: #111514;
+
+    color: #d6d6d6;
+
+    font-size: 0.72rem;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.disciplina:hover {
+    transform: translateX(5px);
+    border-color: #4B818D;
+    background: #151b1a;
+}
+
+.disciplina span {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+
+/* ================================
+   LADO DIREITO
+================================ */
+
+.grade-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* ================================
+   TECNOLOGIAS
+================================ */
+
+.tecnologias-lista {
+    display: flex;
+    gap: 10px;
+}
+
+.tecnologia {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #28535c;
+    border-radius: 15px;
+
+    background: #111514;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tecnologia:hover {
+    transform: translateY(-6px);
+    border-color: #4B818D;
+}
+
+.tecnologia p {
+    margin: 7px 0 0;
+
+    color: #FFFFFF;
+
+    font-size: 0.7rem;
+}
+
+
+/* ÍCONES */
+
+.tecnologia-icone {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.html {
+    background: #F15A29;
+    color: #FFFFFF;
+}
+
+.css {
+    background: #1685C4;
+    color: #FFFFFF;
+}
+
+.javascript {
+    background: #F7DF1E;
+    color: #111;
+    font-size: 1rem;
+}
+
+.figma {
+    background: #FFFFFF;
+    color: #111;
+}
+
+
+/* ================================
+   COMPETÊNCIAS
+================================ */
+
+.competencias-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.competencia {
+    min-height: 28px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border: 1px solid #28535c;
+    border-radius: 18px;
+
+    background: #111514;
+
+    color: #d6d6d6;
+
+    font-size: 0.7rem;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.competencia:hover {
+    border-color: #4B818D;
+    transform: translateY(-2px);
+}
+
+.icone {
+    margin-right: 8px;
+
+    color: #4B818D;
+
+    font-size: 0.85rem;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+
+    background: #0A0C0B;
+
+    color: #777;
+
+    font-size: 0.75rem;
+}
+
+
+
 /* ROADMAP */
+
+/* COLOCA AQUI OS CODIGOS CSS */
 
 /* ESTUDANTES */
 
@@ -1365,3 +1630,59 @@ footer p {
 }
 
 /* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .grade {
+        padding: 90px 5% 50px;
+    }
+
+    .grade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-direita {
+        gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .grade-header h1 {
+        font-size: 2rem;
+    }
+
+    .tecnologias-lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tecnologia {
+        width: 100%;
+    }
+
+    .competencias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .disciplina {
+        font-size: 0.68rem;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .grade-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .grade {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+}
