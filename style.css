@@ -959,13 +959,11 @@ i:has(+ h2)+h2 {
 
 /* GRADE */
 
-/* ================================
-   GRADE CURRICULAR
-================================ */
-
-.grade {
-    min-height: 100vh;
-    padding: 100px 6% 70px;
+#grade {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 5rem;
     background: #0A0C0B;
 }
 
@@ -974,10 +972,6 @@ i:has(+ h2)+h2 {
     margin: 0 auto;
 }
 
-
-/* ================================
-   CABEÇALHO
-================================ */
 
 .grade-header {
     margin-bottom: 35px;
@@ -988,7 +982,7 @@ i:has(+ h2)+h2 {
     color: #FFFFFF;
     font-size: 2.8rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    align-items: start;
 }
 
 .grade-header p {
@@ -998,32 +992,23 @@ i:has(+ h2)+h2 {
 }
 
 
-/* ================================
-   GRID PRINCIPAL
-================================ */
-
 .grade-grid {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
-    gap: 34px;
+    gap: 80px;
 }
 
 
-/* ================================
-   TÍTULOS
-================================ */
 
-.grade h2 {
+.grade-grid h2 {
     color: #FFFFFF;
-    font-size: 1.3rem;
-    margin: 0 0 12px;
+    font-size: 2rem;
+    margin: 1rem 8px;
     font-weight: 800;
 }
 
 
-/* ================================
-   DISCIPLINAS
-================================ */
+/* DISCIPLINAS */
 
 .disciplina-lista {
     display: flex;
@@ -1032,22 +1017,16 @@ i:has(+ h2)+h2 {
 }
 
 .disciplina {
-    min-height: 34px;
-
+    min-height: 50px;
+    width: 600px;
     display: flex;
     align-items: center;
-
-    padding: 8px 15px;
-
+    padding: 8px 25px;
     border: 1px solid #28535c;
     border-radius: 20px;
-
     background: #111514;
-
     color: #d6d6d6;
-
-    font-size: 0.72rem;
-
+    font-size: 1rem;
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -1063,13 +1042,11 @@ i:has(+ h2)+h2 {
 .disciplina span {
     color: #FFFFFF;
     font-weight: bold;
-    margin-right: 3px;
+    margin-right: 15px;
 }
 
 
-/* ================================
-   LADO DIREITO
-================================ */
+/* LADO DIREITO */
 
 .grade-direita {
     display: flex;
@@ -1078,9 +1055,7 @@ i:has(+ h2)+h2 {
 }
 
 
-/* ================================
-   TECNOLOGIAS
-================================ */
+/* TECNOLOGIAS*/
 
 .tecnologias-lista {
     display: flex;
@@ -1090,21 +1065,18 @@ i:has(+ h2)+h2 {
 .tecnologia {
     width: 82px;
     height: 82px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border: 1px solid #28535c;
     border-radius: 15px;
-
-    background: #111514;
-
     transition:
         transform 0.3s ease,
         border-color 0.3s ease;
 }
+
+
 
 .tecnologia:hover {
     transform: translateY(-6px);
@@ -1122,45 +1094,24 @@ i:has(+ h2)+h2 {
 
 /* ÍCONES */
 
-.tecnologia-icone {
+.tecnologia-icone img {
     width: 38px;
     height: 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 5px;
-
     font-weight: 900;
     font-size: 1.3rem;
 }
 
-.html {
-    background: #F15A29;
-    color: #FFFFFF;
-}
-
-.css {
-    background: #1685C4;
-    color: #FFFFFF;
-}
-
-.javascript {
-    background: #F7DF1E;
-    color: #111;
-    font-size: 1rem;
-}
-
-.figma {
-    background: #FFFFFF;
-    color: #111;
+.tecnologia-icone img:hover {
+    transform: translateY(-6px) scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
 }
 
 
-/* ================================
-   COMPETÊNCIAS
-================================ */
+/* COMPETÊNCIAS*/
 
 .competencias-grid {
     display: grid;
@@ -1203,24 +1154,6 @@ i:has(+ h2)+h2 {
     font-size: 0.85rem;
 }
 
-
-/* ================================
-   FOOTER
-================================ */
-
-footer {
-    text-align: center;
-    padding: 25px;
-
-    background: #0A0C0B;
-
-    color: #777;
-
-    font-size: 0.75rem;
-}
-
-
-
 /* ROADMAP */
 
 /* COLOCA AQUI OS CODIGOS CSS */
@@ -1228,10 +1161,11 @@ footer {
 /* ESTUDANTES */
 
 #estudante {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     padding: 4rem 5rem;
+    background: #0A0C0B;
 }
 
 
@@ -1503,10 +1437,11 @@ footer {
 
 /* LINKS (GITHUB / LINKEDIN) */
 
-.redes-sociais{
+.redes-sociais {
     display: flex;
     flex-direction: column;
 }
+
 .redes-sociais-btn {
     width: 100%;
     display: flex;
