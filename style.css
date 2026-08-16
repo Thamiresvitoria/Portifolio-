@@ -1223,7 +1223,756 @@ footer {
 
 /* ROADMAP */
 
-/* COLOCA AQUI OS CODIGOS CSS */
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+/* Remove margens e espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Configurações principais da página */
+body {
+    background: #080c0b;
+    color: #ffffff;
+
+    /* Fonte principal */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Altura mínima da tela */
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.header {
+    height: 72px;
+
+    background: #111514;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 47px;
+
+    border-bottom: 1px solid #151b1a;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Ícone da logo */
+.logo_navbar {
+    color: #6c9ba0;
+
+    font-size: 20px;
+}
+
+
+/* Área de textos da logo */
+.logo-text {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.1;
+}
+
+
+/* Nome principal */
+.logo-text strong {
+    font-size: 8px;
+
+    color: #ffffff;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Subtítulo */
+.logo-text small {
+    font-size: 6px;
+
+    color: #6c9ba0;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* Links do menu */
+.menu a {
+    position: relative;
+
+    color: #d5d5d5;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+
+/* Efeito quando passa o mouse */
+.menu a:hover {
+    color: #72b7c0;
+}
+
+
+/* Página atual */
+.menu a.active {
+    color: #ffffff;
+}
+
+
+/* Linha abaixo da página atual */
+.menu a.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -8px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #6daeb5;
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.main {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    flex: 1;
+
+    padding: 18px 0 35px;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.title-section {
+    margin-bottom: 25px;
+}
+
+
+/* Título ROADMAP */
+.title-section h1 {
+    font-size: 35px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 4px;
+}
+
+
+/* Descrição abaixo do título */
+.title-section p {
+    color: #8d8f8e;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 4px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Linha horizontal atrás dos círculos */
+.roadmap-line {
+    position: absolute;
+
+    top: 23px;
+
+    left: 20px;
+
+    right: 20px;
+
+    height: 1px;
+
+    background: #1d4145;
+
+    z-index: 0;
+}
+
+
+/* Cada etapa */
+.step {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   ÍCONES DAS ETAPAS
+========================================================= */
+
+.step-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 7px;
+
+    border-radius: 50%;
+
+    border: 1px solid #2e6870;
+
+    background: #0b1110;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+/* Número da UC */
+.step > strong {
+    display: block;
+
+    color: #438a99;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    border-radius: 10px;
+
+    font-size: 5px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.3px;
+
+    margin-bottom: 5px;
+}
+
+
+/* Status concluído */
+.status.concluido {
+    color: #4fc07c;
+
+    background: rgba(40, 130, 80, 0.15);
+}
+
+
+/* Status em desenvolvimento */
+.status.desenvolvimento {
+    color: #58aeb8;
+
+    background: rgba(50, 130, 140, 0.15);
+}
+
+
+/* Status a fazer */
+.status.fazer {
+    color: #d29b56;
+
+    background: rgba(180, 110, 30, 0.15);
+}
+
+
+/* Descrição de cada etapa */
+.step p {
+    color: #a4a5a4;
+
+    font-family: Georgia, serif;
+
+    font-size: 7px;
+
+    line-height: 1.3;
+
+    padding: 0 2px;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+
+.details-card {
+    position: relative;
+
+    min-height: 170px;
+
+    border: 1px solid #28545a;
+
+    border-radius: 15px;
+
+    background: #101514;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1px 1.35fr;
+
+    gap: 18px;
+
+    padding: 18px 30px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DA UC
+========================================================= */
+
+.uc-information {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-start;
+}
+
+
+/* Ícone da UC dentro do card */
+.details-icon {
+    flex-shrink: 0;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #315e64;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* Área textual */
+.details-text {
+    flex: 1;
+}
+
+
+/* Número da UC */
+.uc-number {
+    display: block;
+
+    color: #4a99aa;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    margin-bottom: 2px;
+}
+
+
+/* Título da UC */
+.details-text h2 {
+    font-size: 13px;
+
+    line-height: 1.15;
+
+    margin-bottom: 4px;
+
+    max-width: 150px;
+}
+
+
+/* Texto explicativo */
+.details-text p {
+    color: #9d9f9e;
+
+    font-family: Georgia, serif;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   DIVISÓRIA
+========================================================= */
+
+.divider {
+    width: 1px;
+
+    height: 120px;
+
+    background: #2b3735;
+}
+
+
+/* =========================================================
+   ALUNO DESTAQUE
+========================================================= */
+
+.student-highlight {
+    min-width: 0;
+}
+
+
+/* Título "Aluno Destaque" */
+.highlight-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Estrela */
+.highlight-title i {
+    color: #5c9aa3;
+
+    font-size: 20px;
+}
+
+
+/* Texto */
+.highlight-title span {
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* Conteúdo do aluno */
+.student-content {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   FOTO DO ALUNO
+========================================================= */
+
+.student-photo {
+    width: 102px;
+
+    height: 102px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 7px;
+
+    background: #252a28;
+}
+
+
+/* Imagem */
+.student-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO ALUNO
+========================================================= */
+
+.student-info h3 {
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Texto do aluno */
+.student-info p {
+    color: #a6a8a7;
+
+    font-family: Georgia, serif;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   SETAS
+========================================================= */
+
+.arrow {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #397984;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Seta esquerda */
+.arrow.left {
+    left: -38px;
+}
+
+
+/* Seta direita */
+.arrow.right {
+    right: -38px;
+}
+
+
+/* Efeito hover */
+.arrow:hover {
+    color: #72c3cd;
+
+    transform: translateY(-50%) scale(1.15);
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer {
+    height: 24px;
+
+    background: #111514;
+
+    border-top: 1px solid #151b1a;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #555957;
+
+    font-size: 5px;
+}
+
+
+/* Texto principal do rodapé */
+.footer p {
+    margin: 0;
+}
+
+
+/* Texto secundário */
+.footer small {
+    font-size: 4px;
+
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+/*
+    Quando a tela ficar menor que 800px,
+    diminuímos o tamanho do conteúdo.
+*/
+
+@media (max-width: 800px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .main {
+        max-width: 90%;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 7px;
+    }
+
+    .roadmap {
+        overflow-x: auto;
+
+        grid-template-columns: repeat(7, 100px);
+
+        padding-bottom: 10px;
+    }
+
+    .details-card {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+}
+
+
+/*
+    Em celulares, o menu é reduzido
+    para evitar que os elementos fiquem apertados.
+*/
+
+@media (max-width: 600px) {
+
+    .header {
+        height: auto;
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .title-section h1 {
+        font-size: 28px;
+    }
+
+    .details-card {
+        padding: 18px;
+    }
+
+    .arrow.left {
+        left: -20px;
+    }
+
+    .arrow.right {
+        right: -20px;
+    }
+
+}
 
 /* ESTUDANTES */
 
