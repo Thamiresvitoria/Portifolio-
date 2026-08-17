@@ -1042,10 +1042,53 @@
         font-family: 'Sura';
     }
 
+    /* GRADE */
 
-    /* DISCIPLINAS */
+    #grade {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 5rem;
+        background: #0A0C0B;
+    }
 
-    .disciplina-lista {
+    .grade-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grade-header {
+        margin-bottom: 35px;
+    }
+
+    .grade-header h1 {
+        margin: 0;
+        color: #FFFFFF;
+        font-size: 2.8rem;
+        font-weight: 800;
+        align-items: start;
+    }
+
+    .grade-header p {
+        margin: 4px 0 0 2px;
+        color: #858585;
+        font-size: 0.95rem;
+    }
+
+    .grade-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+        gap: 80px;
+    }
+
+    .grade-grid h2 {
+        color: #FFFFFF;
+        font-size: 2rem;
+        margin: 1rem 8px;
+        font-weight: 800;
+    }
+
+     .disciplina-lista {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1145,7 +1188,6 @@
         filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
     }
 
-
     /* COMPETÊNCIAS*/
 
     .competencias-grid {
@@ -1187,6 +1229,8 @@
         color: #4B818D;
 
     }
+
+
 
     /* ROADMAP */
 
@@ -3096,4 +3140,101 @@
     img[src*="Ewerton"] {
         object-position: top;
         transform: scale(1.1);
+    }
+
+    /* =========================================================
+   RESPONSIVIDADE - GRADE
+========================================================= */
+
+    @media (max-width: 768px) {
+
+        /* FORMAÇÃO */
+        .card-formacao h3 {
+            width: auto;
+            max-width: 100%;
+        }
+
+        /* DISCIPLINAS */
+        .disciplina {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 8px 15px;
+        }
+
+        /* LADO DIREITO */
+        .grade-direita {
+            width: 100%;
+        }
+
+        /* TECNOLOGIAS */
+        .tecnologias-lista {
+            width: 100%;
+            gap: 8px;
+        }
+
+        .tecnologia {
+            width: 72px;
+            height: 72px;
+        }
+
+        .tecnologia-icone img {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* COMPETÊNCIAS */
+        .competencias-grid {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .competencia {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+
+        /* DISCIPLINAS */
+        .disciplina {
+            min-height: 48px;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+        }
+
+        .disciplina span {
+            margin-right: 10px;
+        }
+
+        /* TECNOLOGIAS */
+        .tecnologias-lista {
+            gap: 8px;
+        }
+
+        .tecnologia {
+            width: 65px;
+            height: 65px;
+        }
+
+        .tecnologia-icone img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .tecnologia p {
+            font-size: 0.65rem;
+        }
+
+        /* COMPETÊNCIAS */
+        .competencias-grid {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .competencia {
+            font-size: 0.85rem;
+        }
     }
