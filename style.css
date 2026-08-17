@@ -684,10 +684,11 @@
     .docente-foto img {
         width: 100%;
         max-width: 300px;
-        border-radius: 31px;
+        border-radius: 25.29px;
         object-fit: cover;
-        border: 2px solid #4B818D;
+        border: 1px solid #4B818D;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 20px;
     }
 
     .docente-foto img:hover {
@@ -856,7 +857,7 @@
         grid-template-columns: repeat(3, minmax(280px, 340px));
         justify-content: center;
         align-items: start;
-        gap: 40px;
+        gap: 60px;
         width: 100%;
         margin-top: 15px;
     }
@@ -952,8 +953,9 @@
     }
 
     .timeline-item .data {
-        font-size: 0.75rem;
+        font-size: 0.80rem;
         color: #999;
+        font-family: 'Sura';
     }
 
     /* =========================================================
@@ -982,7 +984,6 @@
     }
 
     .titulo-card h2 {
-    
         font-size: 1.3rem;
         white-space: nowrap;
 
@@ -1029,16 +1030,16 @@
 ========================================================= */
 
     .card-formacao h3 {
-        font-size: 1rem;
+        font-size: 0.90rem;
         font-weight: bold;
-        margin: 0 0 6px;
         color: #fff;
-        line-height: 1.4;
+        width: 310px;
     }
 
     .card-formacao .data {
         font-size: 0.85rem;
         color: #999;
+        font-family: 'Sura';
     }
 
 
