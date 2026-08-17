@@ -767,6 +767,8 @@
     .docente-info p {
         line-height: 1.6;
         color: #ddd;
+        font-family: 'Sura';
+        text-align: justify;
     }
 
     /* Tecnologia    */
