@@ -40,7 +40,7 @@ const dadosUC = {
         icone: "fa-shield-halved",
         alunoNome: "A DEFINIR",
         alunoTexto: "EM BREVE",
-        alunoFoto: "../Assets/logo_navbar.svg"
+        alunoFoto: "../Assets/imagem_padrão.jpg"
     },
     uc5: {
         titulo: "Codificar Front-End de aplicações web",
@@ -50,7 +50,7 @@ const dadosUC = {
         icone: "fa-vector-square",
         alunoNome: "A DEFINIR",
         alunoTexto: "EM BREVE",
-        alunoFoto: "../Assets/logo_navbar.svg"
+        alunoFoto: "../Assets/imagem_padrão.jpg"
     },
     uc6: {
         titulo: "Publicar aplicações web",
@@ -60,7 +60,7 @@ const dadosUC = {
         icone: "fa-code",
         alunoNome: "A DEFINIR",
         alunoTexto: "EM BREVE",
-        alunoFoto: "../Assets/logo_navbar.svg"
+        alunoFoto: "../Assets/imagem_padrão.jpg"
     },
     uc7: {
         titulo: "Projeto Integrador - Desenvolvedor Front-end",
@@ -70,7 +70,7 @@ const dadosUC = {
         icone: "fa-globe",
         alunoNome: "A DEFINIR",
         alunoTexto: "EM BREVE",
-        alunoFoto: "../Assets/logo_navbar.svg"
+        alunoFoto: "../Assets/imagem_padrão.jpg"
     }
 };
 
