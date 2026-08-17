@@ -1649,12 +1649,12 @@ svg {
 }
 
 
-/* GRID DOS CARDS: 3 colunas x 2 linhas = 6 por página */
+/* GRID DOS CARDS: 4 colunas x 1 linha = 4 por página */
 
 .cards-alunos {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     transition:
         opacity 0.4s ease,
@@ -1717,6 +1717,7 @@ svg {
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
+    object-fit: cover;
 }
 
 .img img:hover {
@@ -1798,13 +1799,37 @@ svg {
     transform: translateY(-2px);
 }
 
+.redes-sociais-btn a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.redes-sociais-btn a::before {
+    font-size: 1.1rem;
+}
+
+.redes-sociais-btn:nth-child(1) a::before {
+    content: "\f09b";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
+.redes-sociais-btn:nth-child(2) a::before {
+    content: "\f08c";
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+}
+
 
 /* BOTÕES DO CARROSSEL (setas) */
 
 .carousel-btn {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
 
     display: flex;
     align-items: center;
@@ -1816,11 +1841,11 @@ svg {
     border: 1px solid #4B818D;
     border-radius: 50%;
 
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     flex-shrink: 0;
 
-    margin-top: 100px;
+    margin-top: 250px;
     /* alinha verticalmente com o meio dos cards */
 
     transition: 0.3s ease;

@@ -20,7 +20,7 @@ const indicadores = document.querySelector("#indicadores");
 // CONFIGURAÇÃO
 // ========================================
 
-const CARDS_POR_PAGINA = 6;
+const CARDS_POR_PAGINA = 4;
 
 let cardsFiltrados = [];
 
@@ -417,7 +417,8 @@ filtroFormacao.addEventListener(
 
 
 // ========================================
-// INICIAR
+// INICIAR - Ordenação alfabética por padrão
 // ========================================
 
+ordem.value = "az";
 filtrarEstudantes();
