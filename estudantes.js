@@ -17,6 +17,45 @@ const indicadores = document.querySelector("#indicadores");
 
 
 // ========================================
+// CHECAGEM DE SEGURANÇA
+// Se algum elemento não for encontrado, avisa no console
+// exatamente qual ID está faltando, em vez de travar silenciosamente.
+// ========================================
+
+const elementosNecessarios = {
+    "#pesquisa": pesquisa,
+    "#ordem": ordem,
+    "#filtroCurso": filtroCurso,
+    "#filtroInteresse": filtroInteresse,
+    "#filtroFormacao": filtroFormacao,
+    "#cardsAlunos": container,
+    "#anterior": botaoAnterior,
+    "#proximo": botaoProximo,
+    "#indicadores": indicadores
+};
+
+let faltando = false;
+
+for (const [seletor, elemento] of Object.entries(elementosNecessarios)) {
+    if (!elemento) {
+        console.error(
+            `[estudantes.js] Elemento não encontrado no HTML: ${seletor}. ` +
+            `Verifique se o id está escrito exatamente assim no estudantes.html.`
+        );
+        faltando = true;
+    }
+}
+
+if (faltando) {
+    console.error(
+        "[estudantes.js] Script interrompido: um ou mais elementos essenciais " +
+        "não foram encontrados. A ordenação e os filtros não vão funcionar até isso ser corrigido."
+    );
+    throw new Error("estudantes.js: elementos essenciais ausentes no HTML.");
+}
+
+
+// ========================================
 // CONFIGURAÇÃO
 // ========================================
 
@@ -31,6 +70,8 @@ let paginaAtual = 0;
 const cardsOriginais = [
     ...container.querySelectorAll(".cards-aluno")
 ];
+
+console.log(`[estudantes.js] ${cardsOriginais.length} cards de alunos encontrados.`);
 
 
 // ========================================
@@ -90,7 +131,8 @@ function filtrarEstudantes() {
 
 
     // ========================================
-    // ORDEM ALFABÉTICA
+    // ORDEM ALFABÉTICA (usa o nome já sem espaços nas pontas,
+    // já que o textContent do h2 pode vir com quebras de linha do HTML)
     // ========================================
 
     if (ordem.value === "az") {
@@ -98,10 +140,10 @@ function filtrarEstudantes() {
         cardsFiltrados.sort((a, b) => {
 
             const nomeA =
-                a.querySelector("h2").textContent;
+                a.querySelector("h2").textContent.trim();
 
             const nomeB =
-                b.querySelector("h2").textContent;
+                b.querySelector("h2").textContent.trim();
 
 
             return nomeA.localeCompare(
@@ -126,10 +168,10 @@ function filtrarEstudantes() {
         cardsFiltrados.sort((a, b) => {
 
             const nomeA =
-                a.querySelector("h2").textContent;
+                a.querySelector("h2").textContent.trim();
 
             const nomeB =
-                b.querySelector("h2").textContent;
+                b.querySelector("h2").textContent.trim();
 
 
             return nomeB.localeCompare(
@@ -193,7 +235,7 @@ function atualizarCarrossel() {
 
 
     // ========================================
-    // PEGAR OS 6 CARDS DA PÁGINA
+    // PEGAR OS CARDS DA PÁGINA
     // ========================================
 
     const inicio =
@@ -209,7 +251,7 @@ function atualizarCarrossel() {
 
 
     // ========================================
-    // ADICIONAR OS 6 CARDS
+    // ADICIONAR OS CARDS
     // ========================================
 
     cardsDaPagina.forEach(card => {
@@ -422,3 +464,5 @@ filtroFormacao.addEventListener(
 
 ordem.value = "az";
 filtrarEstudantes();
+
+console.log("[estudantes.js] Inicializado com sucesso, ordem A→Z aplicada.");
