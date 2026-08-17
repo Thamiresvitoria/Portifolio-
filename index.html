@@ -1,157 +1,473 @@
 <!doctype html>
-<html lang="Pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="icon" href="./Assets/Logo_navbar.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <title>Portfólio - Turma 130</title>
 </head>
 
 <body>
-  <!-- Navbar do projeto-->
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
   <header>
     <nav>
+
       <div class="logo">
-        <img id="logo_navbar_img" src="./Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
+        <a href="./index.html">
+          <img
+            id="logo_navbar_img"
+            src="./Assets/Logo_navbar.svg"
+            alt="Logo do Portfólio"
+          />
+        </a>
       </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
+
       <ul class="menu" id="menuList">
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="./pages/turma.html">Turma</a></li>
-        <li><a href="./pages/docente.html">Docente</a></li>
-        <li><a href="./pages/grade.html">Grade</a></li>
-        <li><a href="./pages/roadmap.html">Roadmap</a></li>
-        <li><a href="./pages/estudantes.html">Estudantes</a></li>
+
+        <li>
+          <a href="./index.html" class="active">
+            Início
+          </a>
+        </li>
+
+        <li>
+          <a href="./pages/turma.html">
+            Turma
+          </a>
+        </li>
+
+        <li>
+          <a href="./pages/docente.html">
+            Docente
+          </a>
+        </li>
+
+        <li>
+          <a href="./pages/grade.html">
+            Grade
+          </a>
+        </li>
+
+        <li>
+          <a href="./pages/roadmap.html">
+            Roadmap
+          </a>
+        </li>
+
+        <li>
+          <a href="./pages/estudantes.html">
+            Estudantes
+          </a>
+        </li>
+
       </ul>
+
     </nav>
   </header>
 
-  <!-- Pagina principal-->
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
   <main>
+
     <section id="inicio">
+
+      <!-- =========================
+           QUEM SOMOS
+      ========================== -->
       <section id="QuemSomos">
+
         <div class="quem-somos-container">
+
           <div class="quem-somos-header">
+
             <div class="quem-somos-texto">
+
               <h1>QUEM SOMOS</h1>
+
               <span class="turma-header-span">
-                Bem-vindo(a) à página da <b>Turma 130</b> do Programa
+                Bem-vindo(a) à página da
+                <b>Turma 130</b>
+                do Programa
                 <b>Transforme-se!</b>
               </span>
 
               <br>
-              </br>
+
               <p>
-                Aqui você conhecerá um pouco da nossa trajetória, dos estudantes, da docente e dos projetos que fizeram
-                parte da nossa formação. Esta página reúne os momentos e aprendizados que marcaram nossa jornada na
-                tecnologia.
+                Aqui você conhecerá um pouco da nossa trajetória,
+                dos estudantes, da docente e dos projetos que fizeram
+                parte da nossa formação. Esta página reúne os momentos
+                e aprendizados que marcaram nossa jornada na tecnologia.
               </p>
+
+
+              <!-- BOTÕES -->
               <div class="quem-somos-buttons">
-                <a class="btn-a-turma" href="./pages/turma.html">CONHEÇA A TURMA<img src="../Assets/arrow_right.svg"
-                    alt="Seta para a direita"></a>
-                <a class="btn-os-estudantes" href="./pages/estudantes.html">OS ESTUDANTES<img src="../Assets/arrow_right.svg"
-                    alt="Seta para a direita"></a>
+
+                <a
+                  class="btn-a-turma"
+                  href="./pages/turma.html"
+                >
+                  CONHEÇA A TURMA
+
+                  <img
+                    src="./Assets/arrow_right.svg"
+                    alt="Seta para a direita"
+                  />
+                </a>
+
+
+                <a
+                  class="btn-os-estudantes"
+                  href="./pages/estudantes.html"
+                >
+                  OS ESTUDANTES
+
+                  <img
+                    src="./Assets/arrow_right.svg"
+                    alt="Seta para a direita"
+                  />
+                </a>
+
               </div>
+
             </div>
 
-            <img class="quem-somos-imagem" src="./Assets/Quem_Somos_Turma130.png" alt="Foto da turma 130" />
+
+            <!-- IMAGEM DA TURMA -->
+            <img
+              class="quem-somos-imagem"
+              src="./Assets/Quem_Somos_Turma130.png"
+              alt="Foto da turma 130"
+            />
+
           </div>
+
         </div>
+
       </section>
 
+
+      <!-- =========================
+           RESUMOS
+      ========================== -->
       <section id="resumos">
+
         <div class="programa-container">
 
+
+          <!-- =========================
+               SOBRE O PROGRAMA
+          ========================== -->
           <div class="programa-header">
-            <h1><img src="../Assets/Estrelas.svg" alt="Ícone de estrelas">SOBRE O PROGRAMA</h1>
+
+            <h1>
+              <img
+                src="./Assets/Estrelas.svg"
+                alt="Ícone de estrelas"
+              />
+
+              SOBRE O PROGRAMA
+            </h1>
+
             <p>
-              O Transforme-se proporciona uma formação completa em tecnologia, com aulas presenciais, mentorias, apoio
-              financeiro para transporte e alimentação e acompanhamento durante toda a jornada. O objetivo é ampliar o
-              acesso à educação tecnológica e criar oportunidades reais de inserção profissional para jovens em situação
-              de vulnerabilidade social.
+              O Transforme-se proporciona uma formação completa em
+              tecnologia, com aulas presenciais, mentorias, apoio
+              financeiro para transporte e alimentação e acompanhamento
+              durante toda a jornada. O objetivo é ampliar o acesso à
+              educação tecnológica e criar oportunidades reais de
+              inserção profissional para jovens em situação de
+              vulnerabilidade social.
             </p>
+
           </div>
 
+
+          <!-- =========================
+               RESUMO DA TURMA
+          ========================== -->
           <div class="resumo-turma">
-            <h1><img src="../Assets/tres_pessoas.svg" alt="Ícone de três pessoas">RESUMO DA TURMA</h1>
+
+            <h1>
+
+              <img
+                src="./Assets/tres_pessoas.svg"
+                alt="Ícone de três pessoas"
+              />
+
+              RESUMO DA TURMA
+
+            </h1>
+
+
             <div class="resumo-turma-grid">
+
+
+              <!-- ESTUDANTES -->
               <div class="resumo-item">
-                <i><img src="../Assets/pessoas.svg" alt="Ícone de estudantes"></i>
-                <span class="resumo-numero">25</span>
-                <span class="resumo-label">ESTUDANTES</span>
-                <img class="linha" src="../Assets/linha.svg" alt="">
+
+                <i>
+                  <img
+                    src="./Assets/pessoas.svg"
+                    alt="Ícone de estudantes"
+                  />
+                </i>
+
+                <span class="resumo-numero">
+                  25
+                </span>
+
+                <span class="resumo-label">
+                  ESTUDANTES
+                </span>
+
+                <img
+                  class="linha"
+                  src="./Assets/linha.svg"
+                  alt=""
+                />
+
               </div>
+
+
+              <!-- CARGA HORÁRIA -->
               <div class="resumo-item">
-                <i><img src="../Assets/livro.svg" alt="Ícone de livro"></i>
-                <span class="resumo-numero">264H</span>
-                <span class="resumo-label">CARGA HORÁRIA</span>
-                <img class="linha" src="../Assets/linha.svg" alt="">
+
+                <i>
+                  <img
+                    src="./Assets/livro.svg"
+                    alt="Ícone de livro"
+                  />
+                </i>
+
+                <span class="resumo-numero">
+                  264H
+                </span>
+
+                <span class="resumo-label">
+                  CARGA HORÁRIA
+                </span>
+
+                <img
+                  class="linha"
+                  src="./Assets/linha.svg"
+                  alt=""
+                />
+
               </div>
+
+
+              <!-- DISCIPLINAS -->
               <div class="resumo-item">
-                <i><img src="../Assets/grade_2.svg" alt="Ícone de grade"></i>
-                <span class="resumo-numero">7</span>
-                <span class="resumo-label">DISCIPLINAS</span>
-                <img class="linha" src="../Assets/linha.svg" alt="">
+
+                <i>
+                  <img
+                    src="./Assets/grade_2.svg"
+                    alt="Ícone de grade"
+                  />
+                </i>
+
+                <span class="resumo-numero">
+                  7
+                </span>
+
+                <span class="resumo-label">
+                  DISCIPLINAS
+                </span>
+
+                <img
+                  class="linha"
+                  src="./Assets/linha.svg"
+                  alt=""
+                />
+
               </div>
+
+
+              <!-- DOCENTE -->
               <div class="resumo-item">
-                <i><img src="../Assets/pessoa_pensante.svg" alt="Ícone de pessoa pensando"></i>
-                <span class="resumo-numero">1</span>
-                <span class="resumo-label">DOCENTE</span>
+
+                <i>
+                  <img
+                    src="./Assets/pessoa_pensante.svg"
+                    alt="Ícone de pessoa pensando"
+                  />
+                </i>
+
+                <span class="resumo-numero">
+                  1
+                </span>
+
+                <span class="resumo-label">
+                  DOCENTE
+                </span>
+
               </div>
+
             </div>
+
           </div>
 
+
+          <!-- =========================
+               CARDS INFERIORES
+          ========================== -->
           <div class="linha-inferior">
-            <a class="grade" href="./pages/grade.html">
-              <h1><img src="../Assets/grade.svg" alt="Ícone de grade">CONHEÇA A GRADE<img class="arrow-right"
-                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+
+
+            <!-- GRADE -->
+            <a
+              class="grade"
+              href="./pages/grade.html"
+            >
+
+              <h1>
+
+                <img
+                  src="./Assets/grade.svg"
+                  alt="Ícone de grade"
+                />
+
+                CONHEÇA A GRADE
+
+                <img
+                  class="arrow-right"
+                  src="./Assets/arrow_right.svg"
+                  alt="Ícone de seta"
+                />
+
+              </h1>
+
               <p>
-                A formação reúne conteúdos fundamentais para quem deseja iniciar uma carreira em tecnologia, incluindo
-                lógica de programação, desenvolvimento Front-end, informática, educação financeira e desenvolvimento de
-                competências profissionais, preparando os estudantes para os desafios do mercado de trabalho.
+                A formação reúne conteúdos fundamentais para quem deseja
+                iniciar uma carreira em tecnologia, incluindo lógica de
+                programação, desenvolvimento Front-end, informática,
+                educação financeira e desenvolvimento de competências
+                profissionais, preparando os estudantes para os desafios
+                do mercado de trabalho.
               </p>
+
             </a>
 
-            <a class="docente" href="./pages/docente.html">
-              <h1><img src="../Assets/pessoa_codigo.svg" alt="Ícone de pessoa no código">CONHEÇA A DOCENTE <img class="arrow-right"
-                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+
+            <!-- DOCENTE -->
+            <a
+              class="docente"
+              href="./pages/docente.html"
+            >
+
+              <h1>
+
+                <img
+                  src="./Assets/pessoa_codigo.svg"
+                  alt="Ícone de pessoa no código"
+                />
+
+                CONHEÇA A DOCENTE
+
+                <img
+                  class="arrow-right"
+                  src="./Assets/arrow_right.svg"
+                  alt="Ícone de seta"
+                />
+
+              </h1>
+
               <p>
-                A turma é acompanhada por uma docente responsável por conduzir as aulas, incentivar o aprendizado
-                colaborativo e orientar os estudantes durante todo o processo de formação, contribuindo para o
-                desenvolvimento técnico e profissional de cada participante.
+                A turma é acompanhada por uma docente responsável por
+                conduzir as aulas, incentivar o aprendizado colaborativo
+                e orientar os estudantes durante todo o processo de
+                formação, contribuindo para o desenvolvimento técnico
+                e profissional de cada participante.
               </p>
+
             </a>
 
-            <a class="nossa-jornada" href="./pages/roadmap.html">
-              <h1><img src="../Assets/planeta.svg" alt="Ícone de planeta">NOSSA JORNADA<img class="arrow-right"
-                  src="../Assets/arrow_right.svg" alt="Ícone de seta"></h1>
+
+            <!-- NOSSA JORNADA -->
+            <a
+              class="nossa-jornada"
+              href="./pages/roadmap.html"
+            >
+
+              <h1>
+
+                <img
+                  src="./Assets/planeta.svg"
+                  alt="Ícone de planeta"
+                />
+
+                NOSSA JORNADA
+
+                <img
+                  class="arrow-right"
+                  src="./Assets/arrow_right.svg"
+                  alt="Ícone de seta"
+                />
+
+              </h1>
+
               <p>
-                Ao longo de sete meses, os estudantes participam de uma experiência de aprendizagem que combina teoria,
-                prática, mentorias e desenvolvimento de projetos. A jornada fortalece conhecimentos técnicos,
-                habilidades
-                interpessoais e prepara os alunos para oportunidades no mercado de tecnologia.
+                Ao longo de sete meses, os estudantes participam de uma
+                experiência de aprendizagem que combina teoria, prática,
+                mentorias e desenvolvimento de projetos. A jornada
+                fortalece conhecimentos técnicos, habilidades
+                interpessoais e prepara os alunos para oportunidades
+                no mercado de tecnologia.
               </p>
+
             </a>
+
           </div>
 
         </div>
+
       </section>
+
     </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
-  </footer>
- 
-</body>
 
-<script src="script.js"></script>
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
+
+    <p>
+      © 2026 Transforme-se 130.
+      Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+  <script src="./script.js"></script>
+
+</body>
 
 </html>
