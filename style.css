@@ -1255,6 +1255,19 @@
         align-items: center;
         text-align: center;
         cursor: pointer;
+}
+
+    .step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 35px; 
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(to right, #4B818D 50%, transparent 50%);
+        background-size: 12px 2px;
+        background-repeat: repeat-x;
+        z-index: -1; 
     }
 
     .step-icon {
@@ -1283,6 +1296,11 @@
         filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
         transform: translateY(-4px);
     }
+
+    .step.active::after,
+    .step:hover::after {
+        background-image: linear-gradient(to right, #6ab6c4 50%, transparent 50%);
+}
 
     .step strong {
         color: #FFFFFF;
