@@ -1458,7 +1458,7 @@
         background-color: #141615;
         border: 1px solid #2A2C2B;
         border-radius: 20px;
-        padding: 3rem;
+        padding: 2rem 2.5rem;
     }
 
     .highlight-title {
@@ -1466,7 +1466,7 @@
         align-items: center;
         gap: 0.5rem;
         color: #e6c94a;
-        font-size: 1rem;
+        font-size: 1.50rem;
         font-weight: 700;
         letter-spacing: 0.5px;
         margin-bottom: 1rem;
@@ -1478,16 +1478,17 @@
 
     .student-content {
         display: flex;
-        gap: 1.2rem;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .student-photo {
         flex-shrink: 0;
-        width: 110px;
-        height: 110px;
+        width: 180px;
+        height: 220px;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 12px;
         border: 1px solid #4B818D;
     }
 
@@ -1497,51 +1498,22 @@
         object-fit: cover;
     }
 
+    .student-info {
+        flex: 1;
+        min-width: 0;
+    }
+
     .student-info h3 {
         color: #FFFFFF;
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
     }
 
     .student-info p {
         color: #B5B5B5;
-        font-size: 0.78rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.7;
     }
-
-
-    /* ESTUDANTES */
-
-    #estudante {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 4rem 5rem;
-        background: #0A0C0B;
-    }
-
-
-    .container-estudante {
-        width: 90%;
-        justify-content: center;
-        margin: 2rem auto;
-        text-align: center;
-    }
-
-
-    .estudante-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        color: #FFFFFF;
-        text-align: start;
-    }
-
-    .estudante-header p {
-        color: #B5B5B5;
-        margin-bottom: 5rem;
-        text-align: start;
-    }
-
     /* FILTRO*/
 
     .filtros-estudante {
