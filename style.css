@@ -469,7 +469,7 @@
         border: 1px solid rgb(75, 129, 141);
         object-position: center 90%;
         object-fit: cover;
-        height: 300px; 
+        height: 300px;
         margin-right: 90px;
     }
 
@@ -528,7 +528,7 @@
         border-radius: 5px;
     }
 
-    .card-principal p{
+    .card-principal p {
         font-family: 'Sura', serif;
 
     }
@@ -646,38 +646,44 @@
 
     /* DOCENTE */
 
+    /* =========================================================
+   DOCENTE
+========================================================= */
+
     .docente-container {
         display: flex;
         flex-direction: column;
         gap: 40px;
         padding: 60px 80px;
         color: #fff;
-        max-width: 100%;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
     }
+
+    /* =========================================================
+   PARTE SUPERIOR
+========================================================= */
 
     .docente-top {
         display: grid;
-        grid-template-columns: 350px 1fr 280px;
+        grid-template-columns: 300px minmax(400px, 1fr) 280px;
         gap: 40px;
         align-items: start;
-    }
-
-    .docente-bottom {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-        align-items: start;
-        margin-top: 15px;
-    }
-
-    .card-experiencia,
-    .card-area-atuacao,
-    .card-formacao {
         width: 100%;
+    }
+
+    /* Foto */
+
+    .docente-foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .docente-foto img {
         width: 100%;
+        max-width: 300px;
         border-radius: 31px;
         object-fit: cover;
         border: 2px solid #4B818D;
@@ -689,26 +695,15 @@
         transform: translateY(-4px);
     }
 
+    /* Informações */
+
+    .docente-info {
+        min-width: 0;
+    }
+
     .docente-info h1 {
         font-size: 2.2rem;
-        margin-bottom: 4px;
-        margin: 0;
-    }
-
-    i:has(+ h2) {
-        display: inline-flex;
-        align-items: center;
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-
-    i:has(+ h2) img {
-        width: 50px;
-        height: 50px;
-    }
-
-    i:has(+ h2)+h2 {
-        display: inline;
+        margin: 0 0 4px;
     }
 
     .docente-info .subtitulo {
@@ -716,6 +711,24 @@
         font-size: 0.9rem;
         margin-bottom: 16px;
     }
+
+    .docente-info h2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .docente-info p {
+        line-height: 1.6;
+        color: #ddd;
+        font-family: 'Sura', serif;
+        text-align: justify;
+        width: 100%;
+        max-width: 650px;
+    }
+
+    /* Ícones sociais */
 
     .icones-sociais {
         display: flex;
@@ -734,10 +747,9 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         border: 2px solid #4B818D;
-        padding: 25px;
         border-radius: 5px;
         box-sizing: border-box;
     }
@@ -746,8 +758,8 @@
     #dois img,
     #um svg,
     #dois svg {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: block;
     }
 
@@ -757,29 +769,40 @@
         transform: translateY(-4px);
     }
 
-    .docente-info h2 {
-        display: flex;
+    /* =========================================================
+   TÍTULOS DOS CARDS
+========================================================= */
+
+    i:has(+ h2) {
+        display: inline-flex;
         align-items: center;
-        gap: 8px;
-        margin-bottom: 12px;
+        vertical-align: middle;
+        margin-right: 10px;
     }
 
-    .docente-info p {
-        line-height: 1.6;
-        color: #ddd;
-        font-family: 'Sura';
-        text-align: justify;
+    i:has(+ h2) img {
+        width: 50px;
+        height: 50px;
     }
 
-    /* Tecnologia    */
+    i:has(+ h2)+h2 {
+        display: inline;
+    }
+
+    /* =========================================================
+   TECNOLOGIAS
+========================================================= */
 
     .docente-tecnologias {
         background: #111;
         border: 1px solid #4B818D;
         border-radius: 16px;
         padding: 24px;
-        width: 280px;
+        width: 100%;
+        max-width: 280px;
         box-sizing: border-box;
+        justify-self: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .docente-tecnologias:hover {
@@ -824,15 +847,41 @@
         filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
     }
 
-    /* Experiência */
+    /* =========================================================
+   PARTE INFERIOR
+========================================================= */
+
+    .docente-bottom {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(280px, 340px));
+        justify-content: center;
+        align-items: start;
+        gap: 40px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Todos os cards */
+
+    .card-experiencia,
+    .card-area-atuacao,
+    .card-formacao {
+        width: 100%;
+        max-width: 340px;
+        justify-self: center;
+        box-sizing: border-box;
+    }
+
+    /* =========================================================
+   EXPERIÊNCIA
+========================================================= */
 
     .card-experiencia {
         background: #111;
         border: 1px solid #4B818D;
         border-radius: 16px;
         padding: 24px;
-        width: 340px;
-        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card-experiencia:hover {
@@ -864,7 +913,6 @@
         position: relative;
     }
 
-
     .timeline-item {
         position: relative;
         padding-left: 24px;
@@ -892,49 +940,39 @@
         background: rgba(45, 212, 191, 0.3);
     }
 
-
     .timeline-item:last-child::after {
         display: none;
     }
 
-
     .timeline-item h3 {
         font-size: 0.95rem;
         font-weight: bold;
-        margin: 0 0 2px 0;
+        margin: 0 0 2px;
         color: #fff;
     }
-
 
     .timeline-item .data {
         font-size: 0.75rem;
         color: #999;
     }
 
-    /* Atuação */
+    /* =========================================================
+   ÁREA DE ATUAÇÃO
+========================================================= */
 
-    /* Padrão base compartilhado pelos cards */
     .card-area-atuacao,
     .card-formacao {
         background: #111;
         border: 1px solid #4B818D;
         border-radius: 16px;
         padding: 24px;
-        width: 320px;
-        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card-area-atuacao:hover,
     .card-formacao:hover {
         box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
         transform: translateY(-4px);
-    }
-
-    .titulo-card {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 16px;
     }
 
     .icone-card {
@@ -944,12 +982,12 @@
     }
 
     .titulo-card h2 {
-        margin: 0;
-        font-size: 1.2rem;
+    
+        font-size: 1.3rem;
         white-space: nowrap;
+
     }
 
-    /* Lista de Área de Atuação */
     .lista-pills {
         list-style: none;
         margin: 0;
@@ -967,13 +1005,12 @@
         background: #111;
         border: 1px solid #4B818D;
         border-radius: 31px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .lista-pills li:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(75, 129, 141, 0.2);
-        border-color: #4B818D;
     }
 
     .lista-pills li img {
@@ -987,11 +1024,14 @@
         color: #fff;
     }
 
-    /* Formação */
+    /* =========================================================
+   FORMAÇÃO
+========================================================= */
+
     .card-formacao h3 {
         font-size: 1rem;
         font-weight: bold;
-        margin: 0 0 6px 0;
+        margin: 0 0 6px;
         color: #fff;
         line-height: 1.4;
     }
@@ -999,56 +1039,6 @@
     .card-formacao .data {
         font-size: 0.85rem;
         color: #999;
-    }
-
-    /* GRADE */
-
-    #grade {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 4rem 5rem;
-        background: #0A0C0B;
-    }
-
-    .grade-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-
-    .grade-header {
-        margin-bottom: 35px;
-    }
-
-    .grade-header h1 {
-        margin: 0;
-        color: #FFFFFF;
-        font-size: 2.8rem;
-        font-weight: 800;
-        align-items: start;
-    }
-
-    .grade-header p {
-        margin: 4px 0 0 2px;
-        color: #858585;
-        font-size: 0.95rem;
-    }
-
-
-    .grade-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.25fr;
-        gap: 80px;
-    }
-
-
-
-    .grade-grid h2 {
-        color: #FFFFFF;
-        font-size: 2rem;
-        margin: 1rem 8px;
-        font-weight: 800;
     }
 
 
@@ -1118,8 +1108,8 @@
         border: 1px solid #28535c;
         border-radius: 15px;
         transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+            transform 0.3s ease,
+            border-color 0.3s ease;
     }
 
 
@@ -1232,48 +1222,48 @@
    ROADMAP
 ========================================================= */
 
-#main {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 4rem 5rem;
-}
+    #main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 4rem 5rem;
+    }
 
-/* =========================================================
+    /* =========================================================
    TÍTULO
 ========================================================= */
 
-.title-section {
-    padding: 4rem 5rem 2rem;
-}
+    .title-section {
+        padding: 4rem 5rem 2rem;
+    }
 
-.title-section h1 {
-    font-size: 2.5rem;
-    color: #FFFFFF;
-    margin-bottom: 0.5rem;
-}
+    .title-section h1 {
+        font-size: 2.5rem;
+        color: #FFFFFF;
+        margin-bottom: 0.5rem;
+    }
 
-.title-section p {
-    color: #B5B5B5;
-    font-size: 0.95rem;
-}
+    .title-section p {
+        color: #B5B5B5;
+        font-size: 0.95rem;
+    }
 
-/* =========================================================
+    /* =========================================================
    LINHA DO TEMPO / ROADMAP
 ========================================================= */
 
-.roadmap {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 2rem 5rem;
-    width: 100%;
-    flex-wrap: nowrap;
-}
+    .roadmap {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem 5rem;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
 
-/*
+    /*
 .roadmap-line {
     position: absolute;
     top: 35px;
@@ -1290,848 +1280,838 @@
 }
 */
 
-/* =========================================================
+    /* =========================================================
    CADA ETAPA
 ========================================================= */
 
-.step {
-    position: relative;
-    z-index: 1;
+    .step {
+        position: relative;
+        z-index: 1;
 
-    flex: 1;
-    min-width: 0;
+        flex: 1;
+        min-width: 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
 
-    cursor: pointer;
+        cursor: pointer;
 
-    font-family: 'Noto Sans HK', sans-serif;
-}
+        font-family: 'Noto Sans HK', sans-serif;
+    }
 
-/* Linha entre as etapas */
+    /* Linha entre as etapas */
 
-.step:not(:last-child)::after {
-    content: "";
+    .step:not(:last-child)::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    top: 35px;
-    left: 50%;
+        top: 35px;
+        left: 50%;
 
-    width: 100%;
-    height: 2px;
+        width: 100%;
+        height: 2px;
 
-    background-image: linear-gradient(
-        to right,
-        #4B818D 50%,
-        transparent 50%
-    );
+        background-image: linear-gradient(to right,
+                #4B818D 50%,
+                transparent 50%);
 
-    background-size: 12px 2px;
-    background-repeat: repeat-x;
+        background-size: 12px 2px;
+        background-repeat: repeat-x;
 
-    z-index: -1;
-}
+        z-index: -1;
+    }
 
-/* =========================================================
+    /* =========================================================
    ÍCONE DA ETAPA
 ========================================================= */
 
-.step-icon {
-    width: 70px;
-    height: 70px;
+    .step-icon {
+        width: 70px;
+        height: 70px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    background-color: #1C1E1D;
+        background-color: #1C1E1D;
 
-    border: 2px solid #4B818D;
-    border-radius: 50%;
+        border: 2px solid #4B818D;
+        border-radius: 50%;
 
-    font-size: 1.4rem;
-    color: #FFFFFF;
+        font-size: 1.4rem;
+        color: #FFFFFF;
 
-    margin-bottom: 0.7rem;
+        margin-bottom: 0.7rem;
 
-    transition:
-        width 0.3s ease,
-        height 0.3s ease,
-        background-color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        filter 0.3s ease;
-}
+        transition:
+            width 0.3s ease,
+            height 0.3s ease,
+            background-color 0.3s ease,
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            filter 0.3s ease;
+    }
 
-/* Etapa ativa / hover */
+    /* Etapa ativa / hover */
 
-.step.active .step-icon,
-.step:hover .step-icon {
-    width: 80px;
-    height: 80px;
+    .step.active .step-icon,
+    .step:hover .step-icon {
+        width: 80px;
+        height: 80px;
 
-    font-size: 1.6rem;
+        font-size: 1.6rem;
 
-    border-color: #6ab6c4;
-    background-color: #4B818D;
+        border-color: #6ab6c4;
+        background-color: #4B818D;
 
-    filter: drop-shadow(
-        0 4px 8px rgba(45, 212, 191, 0.4)
-    );
+        filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
 
-    transform: translateY(-4px);
-}
+        transform: translateY(-4px);
+    }
 
-/* Linha ativa */
+    /* Linha ativa */
 
-.step.active::after,
-.step:hover::after {
-    background-image: linear-gradient(
-        to right,
-        #6ab6c4 50%,
-        transparent 50%
-    );
-}
+    .step.active::after,
+    .step:hover::after {
+        background-image: linear-gradient(to right,
+                #6ab6c4 50%,
+                transparent 50%);
+    }
 
-/* =========================================================
+    /* =========================================================
    TEXTO DAS ETAPAS
 ========================================================= */
 
-.step strong {
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-}
+    .step strong {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
 
-.step p {
-    color: #B5B5B5;
+    .step p {
+        color: #B5B5B5;
 
-    font-family: 'Sura', serif;
+        font-family: 'Sura', serif;
 
-    font-size: 0.75rem;
-    line-height: 1.4;
+        font-size: 0.75rem;
+        line-height: 1.4;
 
-    max-width: 150px;
+        max-width: 150px;
 
-    margin-top: 0.4rem;
+        margin-top: 0.4rem;
 
-    text-align: center;
-}
+        text-align: center;
+    }
 
-/* =========================================================
+    /* =========================================================
    STATUS
 ========================================================= */
 
-.status {
-    display: inline-block;
-
-    padding: 0.5rem 0.8rem;
-
-    border-radius: 999px;
-
-    font-size: 0.65rem;
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    white-space: nowrap;
-}
-
-.status.concluido {
-    background-color: rgba(46, 204, 113, 0.15);
-    color: #2ecc71;
-}
-
-.status.desenvolvimento {
-    background-color: rgba(75, 129, 141, 0.2);
-    color: #6ab6c4;
-
-    padding: 0.5rem 1.2rem;
-}
-
-.status.fazer {
-    background-color: rgba(230, 168, 51, 0.15);
-    color: #e6a833;
-}
-
-/* =========================================================
-   CARD DE DETALHES
-========================================================= */
-
-.details-card {
-    display: flex;
-    align-items: stretch;
-
-    gap: 1.5rem;
-
-    margin: 0 5rem 4rem;
-
-    width: calc(100% - 10rem);
-
-    flex-wrap: nowrap;
-}
-
-/* =========================================================
-   SETAS
-========================================================= */
-
-.arrow {
-    width: 42px;
-    height: 42px;
-
-    min-width: 42px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    align-self: center;
-
-    background-color: #1C1E1D;
-
-    color: #FFFFFF;
-
-    border: 1px solid #4B818D;
-    border-radius: 50%;
-
-    font-size: 1rem;
-
-    cursor: pointer;
-
-    flex-shrink: 0;
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.arrow:hover {
-    background-color: #4B818D;
-
-    transform: scale(1.08);
-
-    box-shadow:
-        0 4px 10px rgba(75, 129, 141, 0.25);
-}
-
-/* =========================================================
-   INFORMAÇÕES DA UC
-========================================================= */
-
-.uc-information {
-    flex: 1;
-
-    min-width: 0;
-
-    display: flex;
-    align-items: flex-start;
-
-    gap: 1.5rem;
-
-    background-color: #141615;
-
-    border: 1px solid #2A2C2B;
-
-    border-radius: 20px;
-
-    padding: 2.5rem;
-
-    flex-wrap: nowrap;
-}
-
-/* Ícone da UC */
-
-.details-icon {
-    flex-shrink: 0;
-
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #1C1E1D;
-
-    border: 2px solid #4B818D;
-
-    border-radius: 50%;
-
-    font-size: 1.3rem;
-
-    color: #4B818D;
-
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.details-icon:hover {
-    color: #FFFFFF;
-
-    background-color: #4B818D;
-
-    filter: drop-shadow(
-        0 4px 8px rgba(45, 212, 191, 0.4)
-    );
-
-    transform: translateY(-4px);
-}
-
-/* Texto da UC */
-
-.details-text {
-    min-width: 0;
-    flex: 1;
-}
-
-.uc-number {
-    display: inline-block;
-
-    color: #4B818D;
-
-    font-weight: 700;
-
-    font-size: 0.85rem;
-
-    margin-bottom: 0.3rem;
-}
-
-.details-text h2 {
-    color: #FFFFFF;
-
-    font-size: 1.3rem;
-
-    margin-bottom: 0.5rem;
-
-    line-height: 1.4;
-}
-
-.details-text .status {
-    margin-bottom: 0.5rem;
-}
-
-.details-text p {
-    color: #B5B5B5;
-
-    font-family: 'Sura', serif;
-
-    font-size: 0.85rem;
-
-    line-height: 1.6;
-
-    margin-top: 0.8rem;
-}
-
-/* =========================================================
-   DIVISOR
-========================================================= */
-
-.divider {
-    width: 1px;
-
-    align-self: stretch;
-
-    background: linear-gradient(
-        90deg,
-        rgba(20, 22, 21, 1) 0%,
-        rgba(75, 129, 141, 1) 50%,
-        rgba(0, 0, 0, 1) 100%
-    );
-}
-
-/* =========================================================
-   ALUNO DESTAQUE
-========================================================= */
-
-.student-highlight {
-    flex: 1;
-
-    min-width: 0;
-
-    background-color: #141615;
-
-    border: 1px solid #2A2C2B;
-
-    border-radius: 20px;
-
-    padding: 2rem 2.5rem;
-}
-
-.highlight-title {
-    display: flex;
-    align-items: center;
-
-    gap: 0.5rem;
-
-    color: #e6c94a;
-
-    font-size: 1.5rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-
-    margin-bottom: 1rem;
-}
-
-.highlight-title i {
-    color: #e6c94a;
-}
-
-/* =========================================================
-   CONTEÚDO DO ALUNO
-========================================================= */
-
-.student-content {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 1.5rem;
-
-    width: 100%;
-}
-
-/* Foto */
-
-.student-photo {
-    flex-shrink: 0;
-
-    width: 180px;
-    height: 220px;
-
-    overflow: hidden;
-
-    border-radius: 12px;
-
-    border: 1px solid #4B818D;
-}
-
-.student-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-/* Informações */
-
-.student-info {
-    flex: 1;
-
-    min-width: 0;
-}
-
-.student-info h3 {
-    color: #FFFFFF;
-
-    font-size: 1.4rem;
-
-    margin-bottom: 0.8rem;
-}
-
-.student-info p {
-    color: #B5B5B5;
-
-    font-size: 0.9rem;
-
-    line-height: 1.7;
-
-    font-family: 'Sura', serif;
-
-    text-align: justify;
-}
-
-
-/* =========================================================
-   RESPONSIVIDADE
-   ========================================================= */
-
-
-/* =========================================================
-   NOTEBOOK / TABLET GRANDE
-   1200px
-========================================================= */
-
-@media (max-width: 1200px) {
-
-    #main {
-        padding: 3rem 3rem;
-    }
-
-    .title-section {
-        padding: 3rem 3rem 1.5rem;
-    }
-
-    .roadmap {
-        padding: 2rem 2rem;
-        gap: 0.5rem;
-    }
-
-    .step-icon {
-        width: 62px;
-        height: 62px;
-    }
-
-    .step.active .step-icon,
-    .step:hover .step-icon {
-        width: 72px;
-        height: 72px;
-    }
-
-    .step strong {
-        font-size: 1rem;
-    }
-
-    .step p {
-        font-size: 0.7rem;
-        max-width: 120px;
-    }
-
     .status {
-        font-size: 0.58rem;
-        padding: 0.45rem 0.65rem;
+        display: inline-block;
+
+        padding: 0.5rem 0.8rem;
+
+        border-radius: 999px;
+
+        font-size: 0.65rem;
+        font-weight: 700;
+
+        letter-spacing: 0.5px;
+
+        white-space: nowrap;
     }
 
-    .details-card {
-        margin: 0 2rem 3rem;
-        width: calc(100% - 4rem);
-    }
-
-    .uc-information {
-        padding: 2rem;
-    }
-
-    .student-highlight {
-        padding: 2rem;
-    }
-
-    .student-photo {
-        width: 150px;
-        height: 190px;
-    }
-
-}
-
-
-/* =========================================================
-   TABLET
-   1024px
-========================================================= */
-
-@media (max-width: 1024px) {
-
-    #main {
-        padding: 2.5rem 2rem;
-    }
-
-    .title-section {
-        padding: 2.5rem 2rem 1rem;
-    }
-
-    .title-section h1 {
-        font-size: 2.2rem;
-    }
-
-    /* Roadmap passa para duas linhas */
-
-    .roadmap {
-        display: grid;
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        gap: 2.5rem 1rem;
-
-        padding: 2rem 1rem;
-    }
-
-    .step {
-        min-width: 0;
-    }
-
-    /* Remove a linha horizontal em tablet */
-
-    .step:not(:last-child)::after {
-        display: none;
-    }
-
-    .step-icon {
-        width: 65px;
-        height: 65px;
-    }
-
-    .step.active .step-icon,
-    .step:hover .step-icon {
-        width: 72px;
-        height: 72px;
-    }
-
-    .step p {
-        max-width: 150px;
-    }
-
-    /* Card de detalhes */
-
-    .details-card {
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 1.5rem;
-
-        margin: 0 1rem 3rem;
-
-        width: calc(100% - 2rem);
-    }
-
-    .arrow {
-        display: none;
-    }
-
-    .uc-information {
-        min-height: 100%;
-    }
-
-    .student-highlight {
-        min-height: 100%;
-    }
-
-    .divider {
-        display: none;
-    }
-
-    .student-content {
-        flex-direction: column;
-    }
-
-    .student-photo {
-        width: 160px;
-        height: 190px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE GRANDE
-   768px
-========================================================= */
-
-@media (max-width: 768px) {
-
-    #main {
-        padding: 2rem 1rem;
-        gap: 1rem;
-    }
-
-    /* Título */
-
-    .title-section {
-        padding: 2rem 0.5rem 1rem;
-    }
-
-    .title-section h1 {
-        font-size: 2rem;
-    }
-
-    .title-section p {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
-    /* Roadmap */
-
-    .roadmap {
-        display: grid;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 2rem 1rem;
-
-        padding: 1.5rem 0.5rem;
-    }
-
-    .step {
-        width: 100%;
-    }
-
-    .step:not(:last-child)::after {
-        display: none;
-    }
-
-    .step-icon {
-        width: 60px;
-        height: 60px;
-
-        font-size: 1.2rem;
-    }
-
-    .step.active .step-icon,
-    .step:hover .step-icon {
-        width: 68px;
-        height: 68px;
-
-        font-size: 1.4rem;
-    }
-
-    .step strong {
-        font-size: 1rem;
-    }
-
-    .step p {
-        max-width: 150px;
-
-        font-size: 0.72rem;
-    }
-
-    .status {
-        font-size: 0.55rem;
-
-        padding: 0.4rem 0.6rem;
-
-        max-width: 100%;
-        white-space: normal;
+    .status.concluido {
+        background-color: rgba(46, 204, 113, 0.15);
+        color: #2ecc71;
     }
 
     .status.desenvolvimento {
-        padding: 0.4rem 0.7rem;
+        background-color: rgba(75, 129, 141, 0.2);
+        color: #6ab6c4;
+
+        padding: 0.5rem 1.2rem;
     }
 
-    /* =====================================================
-       CARD DE DETALHES NO MOBILE
-    ===================================================== */
+    .status.fazer {
+        background-color: rgba(230, 168, 51, 0.15);
+        color: #e6a833;
+    }
+
+    /* =========================================================
+   CARD DE DETALHES
+========================================================= */
 
     .details-card {
         display: flex;
+        align-items: stretch;
 
-        flex-direction: column;
+        gap: 1.5rem;
 
-        gap: 1rem;
+        margin: 0 5rem 4rem;
 
-        margin: 0 0.5rem 2rem;
+        width: calc(100% - 10rem);
 
-        width: calc(100% - 1rem);
+        flex-wrap: nowrap;
     }
 
-    /* =====================================================
-       INFORMAÇÕES DA UC
-    ===================================================== */
-
-    .uc-information {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-
-        padding: 1.5rem;
-
-        gap: 1rem;
-    }
-
-    .details-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .details-text {
-        width: 100%;
-    }
-
-    .details-text h2 {
-        font-size: 1.15rem;
-    }
-
-    .details-text p {
-        font-size: 0.8rem;
-
-        text-align: center;
-    }
-
-    /* =====================================================
-       ALUNO DESTAQUE
-    ===================================================== */
-
-    .student-highlight {
-        width: 100%;
-
-        padding: 1.5rem;
-
-        text-align: center;
-    }
-
-    .highlight-title {
-        justify-content: center;
-
-        font-size: 1.2rem;
-    }
-
-    .student-content {
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 1rem;
-    }
-
-    .student-photo {
-        width: 150px;
-        height: 180px;
-    }
-
-    .student-info {
-        width: 100%;
-    }
-
-    .student-info h3 {
-        font-size: 1.2rem;
-    }
-
-    .student-info p {
-        font-size: 0.8rem;
-
-        line-height: 1.6;
-
-        text-align: center;
-    }
-
-    .divider {
-        display: none;
-    }
-
-    /* =====================================================
-       SETAS
-    ===================================================== */
+    /* =========================================================
+   SETAS
+========================================================= */
 
     .arrow {
-        display: flex;
-
         width: 42px;
         height: 42px;
 
         min-width: 42px;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         align-self: center;
+
+        background-color: #1C1E1D;
+
+        color: #FFFFFF;
+
+        border: 1px solid #4B818D;
+        border-radius: 50%;
+
+        font-size: 1rem;
+
+        cursor: pointer;
+
+        flex-shrink: 0;
+
+        transition:
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
     }
 
-    /*
+    .arrow:hover {
+        background-color: #4B818D;
+
+        transform: scale(1.08);
+
+        box-shadow:
+            0 4px 10px rgba(75, 129, 141, 0.25);
+    }
+
+    /* =========================================================
+   INFORMAÇÕES DA UC
+========================================================= */
+
+    .uc-information {
+        flex: 1;
+
+        min-width: 0;
+
+        display: flex;
+        align-items: flex-start;
+
+        gap: 1.5rem;
+
+        background-color: #141615;
+
+        border: 1px solid #2A2C2B;
+
+        border-radius: 20px;
+
+        padding: 2.5rem;
+
+        flex-wrap: nowrap;
+    }
+
+    /* Ícone da UC */
+
+    .details-icon {
+        flex-shrink: 0;
+
+        width: 55px;
+        height: 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #1C1E1D;
+
+        border: 2px solid #4B818D;
+
+        border-radius: 50%;
+
+        font-size: 1.3rem;
+
+        color: #4B818D;
+
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .details-icon:hover {
+        color: #FFFFFF;
+
+        background-color: #4B818D;
+
+        filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
+
+        transform: translateY(-4px);
+    }
+
+    /* Texto da UC */
+
+    .details-text {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .uc-number {
+        display: inline-block;
+
+        color: #4B818D;
+
+        font-weight: 700;
+
+        font-size: 0.85rem;
+
+        margin-bottom: 0.3rem;
+    }
+
+    .details-text h2 {
+        color: #FFFFFF;
+
+        font-size: 1.3rem;
+
+        margin-bottom: 0.5rem;
+
+        line-height: 1.4;
+    }
+
+    .details-text .status {
+        margin-bottom: 0.5rem;
+    }
+
+    .details-text p {
+        color: #B5B5B5;
+
+        font-family: 'Sura', serif;
+
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+
+        margin-top: 0.8rem;
+    }
+
+    /* =========================================================
+   DIVISOR
+========================================================= */
+
+    .divider {
+        width: 1px;
+
+        align-self: stretch;
+
+        background: linear-gradient(90deg,
+                rgba(20, 22, 21, 1) 0%,
+                rgba(75, 129, 141, 1) 50%,
+                rgba(0, 0, 0, 1) 100%);
+    }
+
+    /* =========================================================
+   ALUNO DESTAQUE
+========================================================= */
+
+    .student-highlight {
+        flex: 1;
+
+        min-width: 0;
+
+        background-color: #141615;
+
+        border: 1px solid #2A2C2B;
+
+        border-radius: 20px;
+
+        padding: 2rem 2.5rem;
+    }
+
+    .highlight-title {
+        display: flex;
+        align-items: center;
+
+        gap: 0.5rem;
+
+        color: #e6c94a;
+
+        font-size: 1.5rem;
+
+        font-weight: 700;
+
+        letter-spacing: 0.5px;
+
+        margin-bottom: 1rem;
+    }
+
+    .highlight-title i {
+        color: #e6c94a;
+    }
+
+    /* =========================================================
+   CONTEÚDO DO ALUNO
+========================================================= */
+
+    .student-content {
+        display: flex;
+
+        align-items: flex-start;
+
+        gap: 1.5rem;
+
+        width: 100%;
+    }
+
+    /* Foto */
+
+    .student-photo {
+        flex-shrink: 0;
+
+        width: 180px;
+        height: 220px;
+
+        overflow: hidden;
+
+        border-radius: 12px;
+
+        border: 1px solid #4B818D;
+    }
+
+    .student-photo img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+    /* Informações */
+
+    .student-info {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .student-info h3 {
+        color: #FFFFFF;
+
+        font-size: 1.4rem;
+
+        margin-bottom: 0.8rem;
+    }
+
+    .student-info p {
+        color: #B5B5B5;
+
+        font-size: 0.9rem;
+
+        line-height: 1.7;
+
+        font-family: 'Sura', serif;
+
+        text-align: justify;
+    }
+
+
+    /* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+
+    /* =========================================================
+   NOTEBOOK / TABLET GRANDE
+   1200px
+========================================================= */
+
+    @media (max-width: 1200px) {
+
+        #main {
+            padding: 3rem 3rem;
+        }
+
+        .title-section {
+            padding: 3rem 3rem 1.5rem;
+        }
+
+        .roadmap {
+            padding: 2rem 2rem;
+            gap: 0.5rem;
+        }
+
+        .step-icon {
+            width: 62px;
+            height: 62px;
+        }
+
+        .step.active .step-icon,
+        .step:hover .step-icon {
+            width: 72px;
+            height: 72px;
+        }
+
+        .step strong {
+            font-size: 1rem;
+        }
+
+        .step p {
+            font-size: 0.7rem;
+            max-width: 120px;
+        }
+
+        .status {
+            font-size: 0.58rem;
+            padding: 0.45rem 0.65rem;
+        }
+
+        .details-card {
+            margin: 0 2rem 3rem;
+            width: calc(100% - 4rem);
+        }
+
+        .uc-information {
+            padding: 2rem;
+        }
+
+        .student-highlight {
+            padding: 2rem;
+        }
+
+        .student-photo {
+            width: 150px;
+            height: 190px;
+        }
+
+    }
+
+
+    /* =========================================================
+   TABLET
+   1024px
+========================================================= */
+
+    @media (max-width: 1024px) {
+
+        #main {
+            padding: 2.5rem 2rem;
+        }
+
+        .title-section {
+            padding: 2.5rem 2rem 1rem;
+        }
+
+        .title-section h1 {
+            font-size: 2.2rem;
+        }
+
+        /* Roadmap passa para duas linhas */
+
+        .roadmap {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 2.5rem 1rem;
+
+            padding: 2rem 1rem;
+        }
+
+        .step {
+            min-width: 0;
+        }
+
+        /* Remove a linha horizontal em tablet */
+
+        .step:not(:last-child)::after {
+            display: none;
+        }
+
+        .step-icon {
+            width: 65px;
+            height: 65px;
+        }
+
+        .step.active .step-icon,
+        .step:hover .step-icon {
+            width: 72px;
+            height: 72px;
+        }
+
+        .step p {
+            max-width: 150px;
+        }
+
+        /* Card de detalhes */
+
+        .details-card {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 1.5rem;
+
+            margin: 0 1rem 3rem;
+
+            width: calc(100% - 2rem);
+        }
+
+        .arrow {
+            display: none;
+        }
+
+        .uc-information {
+            min-height: 100%;
+        }
+
+        .student-highlight {
+            min-height: 100%;
+        }
+
+        .divider {
+            display: none;
+        }
+
+        .student-content {
+            flex-direction: column;
+        }
+
+        .student-photo {
+            width: 160px;
+            height: 190px;
+        }
+
+    }
+
+
+    /* =========================================================
+   MOBILE GRANDE
+   768px
+========================================================= */
+
+    @media (max-width: 768px) {
+
+        #main {
+            padding: 2rem 1rem;
+            gap: 1rem;
+        }
+
+        /* Título */
+
+        .title-section {
+            padding: 2rem 0.5rem 1rem;
+        }
+
+        .title-section h1 {
+            font-size: 2rem;
+        }
+
+        .title-section p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* Roadmap */
+
+        .roadmap {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 2rem 1rem;
+
+            padding: 1.5rem 0.5rem;
+        }
+
+        .step {
+            width: 100%;
+        }
+
+        .step:not(:last-child)::after {
+            display: none;
+        }
+
+        .step-icon {
+            width: 60px;
+            height: 60px;
+
+            font-size: 1.2rem;
+        }
+
+        .step.active .step-icon,
+        .step:hover .step-icon {
+            width: 68px;
+            height: 68px;
+
+            font-size: 1.4rem;
+        }
+
+        .step strong {
+            font-size: 1rem;
+        }
+
+        .step p {
+            max-width: 150px;
+
+            font-size: 0.72rem;
+        }
+
+        .status {
+            font-size: 0.55rem;
+
+            padding: 0.4rem 0.6rem;
+
+            max-width: 100%;
+            white-space: normal;
+        }
+
+        .status.desenvolvimento {
+            padding: 0.4rem 0.7rem;
+        }
+
+        /* =====================================================
+       CARD DE DETALHES NO MOBILE
+    ===================================================== */
+
+        .details-card {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 1rem;
+
+            margin: 0 0.5rem 2rem;
+
+            width: calc(100% - 1rem);
+        }
+
+        /* =====================================================
+       INFORMAÇÕES DA UC
+    ===================================================== */
+
+        .uc-information {
+            width: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 1.5rem;
+
+            gap: 1rem;
+        }
+
+        .details-icon {
+            width: 55px;
+            height: 55px;
+        }
+
+        .details-text {
+            width: 100%;
+        }
+
+        .details-text h2 {
+            font-size: 1.15rem;
+        }
+
+        .details-text p {
+            font-size: 0.8rem;
+
+            text-align: center;
+        }
+
+        /* =====================================================
+       ALUNO DESTAQUE
+    ===================================================== */
+
+        .student-highlight {
+            width: 100%;
+
+            padding: 1.5rem;
+
+            text-align: center;
+        }
+
+        .highlight-title {
+            justify-content: center;
+
+            font-size: 1.2rem;
+        }
+
+        .student-content {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 1rem;
+        }
+
+        .student-photo {
+            width: 150px;
+            height: 180px;
+        }
+
+        .student-info {
+            width: 100%;
+        }
+
+        .student-info h3 {
+            font-size: 1.2rem;
+        }
+
+        .student-info p {
+            font-size: 0.8rem;
+
+            line-height: 1.6;
+
+            text-align: center;
+        }
+
+        .divider {
+            display: none;
+        }
+
+        /* =====================================================
+       SETAS
+    ===================================================== */
+
+        .arrow {
+            display: flex;
+
+            width: 42px;
+            height: 42px;
+
+            min-width: 42px;
+
+            align-self: center;
+        }
+
+        /*
        Coloca as duas setas lado a lado.
        Como o HTML possui:
        seta esquerda
@@ -2140,158 +2120,159 @@
        seta direita
     */
 
-    .arrow.left {
-        order: 3;
+        .arrow.left {
+            order: 3;
+        }
+
+        .arrow.right {
+            order: 4;
+        }
+
     }
 
-    .arrow.right {
-        order: 4;
-    }
 
-}
-
-
-/* =========================================================
+    /* =========================================================
    MOBILE PEQUENO
    480px
 ========================================================= */
 
-@media (max-width: 480px) {
+    @media (max-width: 480px) {
 
-    #main {
-        padding: 1.5rem 0.7rem;
-    }
+        #main {
+            padding: 1.5rem 0.7rem;
+        }
 
-    .title-section {
-        padding: 1.5rem 0.3rem 0.5rem;
-    }
+        .title-section {
+            padding: 1.5rem 0.3rem 0.5rem;
+        }
 
-    .title-section h1 {
-        font-size: 1.7rem;
-    }
+        .title-section h1 {
+            font-size: 1.7rem;
+        }
 
-    .title-section p {
-        font-size: 0.78rem;
-    }
+        .title-section p {
+            font-size: 0.78rem;
+        }
 
-    /* =====================================================
+        /* =====================================================
        ROADMAP
     ===================================================== */
 
-    .roadmap {
-        grid-template-columns: 1fr 1fr;
+        .roadmap {
+            grid-template-columns: 1fr 1fr;
 
-        gap: 1.8rem 0.5rem;
+            gap: 1.8rem 0.5rem;
 
-        padding: 1rem 0;
-    }
+            padding: 1rem 0;
+        }
 
-    .step-icon {
-        width: 52px;
-        height: 52px;
+        .step-icon {
+            width: 52px;
+            height: 52px;
 
-        font-size: 1rem;
+            font-size: 1rem;
 
-        margin-bottom: 0.5rem;
-    }
+            margin-bottom: 0.5rem;
+        }
 
-    .step.active .step-icon,
-    .step:hover .step-icon {
-        width: 60px;
-        height: 60px;
+        .step.active .step-icon,
+        .step:hover .step-icon {
+            width: 60px;
+            height: 60px;
 
-        font-size: 1.2rem;
-    }
+            font-size: 1.2rem;
+        }
 
-    .step strong {
-        font-size: 0.9rem;
-    }
+        .step strong {
+            font-size: 0.9rem;
+        }
 
-    .step p {
-        max-width: 125px;
+        .step p {
+            max-width: 125px;
 
-        font-size: 0.65rem;
+            font-size: 0.65rem;
 
-        line-height: 1.35;
-    }
+            line-height: 1.35;
+        }
 
-    .status {
-        font-size: 0.48rem;
+        .status {
+            font-size: 0.48rem;
 
-        padding: 0.35rem 0.5rem;
-    }
+            padding: 0.35rem 0.5rem;
+        }
 
-    .status.desenvolvimento {
-        padding: 0.35rem 0.5rem;
-    }
+        .status.desenvolvimento {
+            padding: 0.35rem 0.5rem;
+        }
 
-    /* =====================================================
+        /* =====================================================
        CARD UC
     ===================================================== */
 
-    .uc-information {
-        padding: 1.2rem;
+        .uc-information {
+            padding: 1.2rem;
 
-        border-radius: 16px;
-    }
+            border-radius: 16px;
+        }
 
-    .details-text h2 {
-        font-size: 1rem;
+        .details-text h2 {
+            font-size: 1rem;
 
-        line-height: 1.4;
-    }
+            line-height: 1.4;
+        }
 
-    .details-text p {
-        font-size: 0.75rem;
+        .details-text p {
+            font-size: 0.75rem;
 
-        line-height: 1.5;
-    }
+            line-height: 1.5;
+        }
 
-    /* =====================================================
+        /* =====================================================
        ALUNO
     ===================================================== */
 
-    .student-highlight {
-        padding: 1.2rem;
+        .student-highlight {
+            padding: 1.2rem;
 
-        border-radius: 16px;
-    }
+            border-radius: 16px;
+        }
 
-    .highlight-title {
-        font-size: 1rem;
+        .highlight-title {
+            font-size: 1rem;
 
-        margin-bottom: 1rem;
-    }
+            margin-bottom: 1rem;
+        }
 
-    .student-photo {
-        width: 130px;
-        height: 160px;
-    }
+        .student-photo {
+            width: 130px;
+            height: 160px;
+        }
 
-    .student-info h3 {
-        font-size: 1.05rem;
-    }
+        .student-info h3 {
+            font-size: 1.05rem;
+        }
 
-    .student-info p {
-        font-size: 0.75rem;
+        .student-info p {
+            font-size: 0.75rem;
 
-        line-height: 1.5;
-    }
+            line-height: 1.5;
+        }
 
-    /* =====================================================
+        /* =====================================================
        SETAS
     ===================================================== */
 
-    .arrow {
-        width: 38px;
-        height: 38px;
+        .arrow {
+            width: 38px;
+            height: 38px;
 
-        min-width: 38px;
+            min-width: 38px;
 
-        font-size: 0.85rem;
+            font-size: 0.85rem;
+        }
+
     }
 
-}
     /* ESTUDANTES */
 
     #estudante {
@@ -2337,7 +2318,7 @@
         flex-wrap: wrap;
     }
 
-     /*  BARRA DE PESQUISA*/
+    /*  BARRA DE PESQUISA*/
 
     .pesquisa-estudante {
         position: relative;
@@ -2371,14 +2352,14 @@
         transition: 0.3s ease;
     }
 
-     .pesquisa-estudante input::placeholder {
+    .pesquisa-estudante input::placeholder {
         color: #888888;
     }
 
     .pesquisa-estudante input:focus {
         border-color: #4B818D;
         box-shadow:
-        0 0 10px rgba(75, 129, 141, 0.25);
+            0 0 10px rgba(75, 129, 141, 0.25);
     }
 
 
@@ -2413,7 +2394,7 @@
         background-size: 12px;
     }
 
-     .filtros-estudante select:hover {
+    .filtros-estudante select:hover {
         border-color: #FFFFFF;
         transform: translateY(-2px);
     }
@@ -2421,7 +2402,7 @@
     .filtros-estudante select:focus {
         border-color: #4B818D;
         box-shadow:
-        0 0 10px rgba(75, 129, 141, 0.25);
+            0 0 10px rgba(75, 129, 141, 0.25);
     }
 
     .filtros-estudante select option {
@@ -2460,8 +2441,8 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
         transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
+            opacity 0.4s ease,
+            transform 0.4s ease;
     }
 
     .cards-alunos.carrossel-animando {
@@ -2485,12 +2466,12 @@
         border: 1px solid #4B818D;
         text-align: left;
         transition:
-        transform 0.3s ease-in-out,
-        box-shadow 0.3s ease-in-out,
-        border-color 0.3s ease-in-out;
+            transform 0.3s ease-in-out,
+            box-shadow 0.3s ease-in-out,
+            border-color 0.3s ease-in-out;
     }
 
-     .cards-aluno:hover {
+    .cards-aluno:hover {
         transform: scale(1.03);
         border-color: #4B818D;
         box-shadow: 0 4px 12px rgba(75, 129, 141, 0.25);
@@ -2570,7 +2551,7 @@
         font-family: 'Sura';
     }
 
-    
+
 
 
     /* LINKS (GITHUB / LINKEDIN) */
@@ -2928,7 +2909,7 @@
 
         .turma-header h1 {
             font-size: 50px;
-            font-family: 'Noto Sans HK', 
+            font-family: 'Noto Sans HK',
         }
 
         .turma-header p {
@@ -3111,7 +3092,7 @@
         }
     }
 
-img[src*="Ewerton"] {
-    object-position: top; 
-    transform: scale(1.1);
-}
+    img[src*="Ewerton"] {
+        object-position: top;
+        transform: scale(1.1);
+    }

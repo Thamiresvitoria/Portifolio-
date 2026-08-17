@@ -4,139 +4,434 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="icon" href="../Assets/Logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../style.css" />
+
     <title>Docente - Turma 130</title>
 </head>
 
 <body>
 
-    <!-- Navbar do projeto-->
+    <!-- ==================== NAVBAR ==================== -->
     <header>
         <nav>
+
             <div class="logo">
-                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
+                <img
+                    id="logo_navbar_img"
+                    src="../Assets/Logo_navbar.svg"
+                    alt="Logo do Portfólio"
+                />
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <ul class="menu" id="menuList">
-                <li><a href="../index.html" >Início</a></li>
-                <li><a href="./turma.html">Turma</a></li>
-                <li><a href="./docente.html" class="active">Docente</a></li>
-                <li><a href="./grade.html">Grade</a></li>
-                <li><a href="./roadmap.html">Roadmap</a></li>
-                <li><a href="./estudantes.html">Estudantes</a></li>
+
+                <li>
+                    <a href="../index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="./turma.html">Turma</a>
+                </li>
+
+                <li>
+                    <a href="./docente.html" class="active">Docente</a>
+                </li>
+
+                <li>
+                    <a href="./grade.html">Grade</a>
+                </li>
+
+                <li>
+                    <a href="./roadmap.html">Roadmap</a>
+                </li>
+
+                <li>
+                    <a href="./estudantes.html">Estudantes</a>
+                </li>
+
             </ul>
+
         </nav>
     </header>
 
+
+    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
     <main>
+
         <section id="docente">
+
             <div class="docente-container">
+
+
+                <!-- ==================== PARTE SUPERIOR ==================== -->
                 <div class="docente-top">
+
+
+                    <!-- FOTO DO DOCENTE -->
                     <div class="docente-foto">
-                        <img src="../Assets/radassila_silva.jpeg" alt="Inst. Radássila Silva">
+
+                        <img
+                            src="../Assets/radassila_silva.jpeg"
+                            alt="Inst. Radássila Silva"
+                        />
+
                     </div>
 
+
+                    <!-- INFORMAÇÕES DO DOCENTE -->
                     <div class="docente-info">
+
                         <h1>INST. RADÁSSILA SILVA</h1>
-                        <p class="subtitulo">PROFISSIONAL QUALIFICADA EM DESENVOLVIMENTO FRONT-END</p>
+
+                        <p class="subtitulo">
+                            PROFISSIONAL QUALIFICADA EM DESENVOLVIMENTO FRONT-END
+                        </p>
+
+
+                        <!-- REDES SOCIAIS -->
                         <div class="icones-sociais">
-                            <i id="um"><a href="https://www.linkedin.com/in/radassilasilva/" target="_blank" rel="noopener noreferrer"><img src="../Assets/linkedIn.svg" alt="Icone do LinkedIn"></a></i>
-                            <i id="dois"><a href="https://github.com/radassila" target="_blank" rel="noopener noreferrer"><img src="../Assets/github.svg" alt="Ícone do GitHub"></a></i>
+
+                            <i id="um">
+
+                                <a
+                                    href="https://www.linkedin.com/in/radassilasilva/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+
+                                    <img
+                                        src="../Assets/linkedIn.svg"
+                                        alt="Ícone do LinkedIn"
+                                    />
+
+                                </a>
+
+                            </i>
+
+
+                            <i id="dois">
+
+                                <a
+                                    href="https://github.com/radassila"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+
+                                    <img
+                                        src="../Assets/github.svg"
+                                        alt="Ícone do GitHub"
+                                    />
+
+                                </a>
+
+                            </i>
+
                         </div>
+
+
+                        <!-- BIOGRAFIA -->
                         <h2>BIOGRAFIA</h2>
-                        <p>Desenvolvedora Front-end formada em Análise e Desenvolvimento de Sistemas, apaixonada por criar interfaces modernas, acessíveis e centradas no usuário. Possui experiência com React, TypeScript e Tailwind CSS, além de atuação como Tech Tutor e Instrutora de TI, compartilhando conhecimento e contribuindo para a formação de novos desenvolvedores. Busca desenvolver soluções que unam qualidade, usabilidade e inovação.</p>
+
+                        <p>
+                            Desenvolvedora Front-end formada em Análise e Desenvolvimento
+                            de Sistemas, apaixonada por criar interfaces modernas,
+                            acessíveis e centradas no usuário. Possui experiência com React,
+                            TypeScript e Tailwind CSS, além de atuação como Tech Tutor e
+                            Instrutora de TI, compartilhando conhecimento e contribuindo
+                            para a formação de novos desenvolvedores. Busca desenvolver
+                            soluções que unam qualidade, usabilidade e inovação.
+                        </p>
+
                     </div>
 
+
+                    <!-- TECNOLOGIAS -->
                     <div class="docente-tecnologias">
+
                         <div class="titulo-card">
-                            <i><img src="../Assets/pincel.svg" alt=""></i>
+
+                            <i>
+                                <img
+                                    src="../Assets/pincel.svg"
+                                    alt=""
+                                />
+                            </i>
+
                             <h2>TECNOLOGIAS</h2>
+
                         </div>
+
+
                         <div class="grid-icones">
-                            <img src="../Assets/html-5-svgrepo-com.svg" alt="HTML5">
-                            <img src="../Assets/css-3-svgrepo-com.svg" alt="CSS3">
-                            <img src="../Assets/javascript-svgrepo-com.svg" alt="JavaScript">
-                            <img src="../Assets/taiwlind.svg" alt="Tailwind">
-                            <img src="../Assets/bootstrap-svgrepo-com 1.svg" alt="Bootstrap">
-                            <img src="../Assets/react-1-logo-svgrepo-com.svg" alt="React">
-                            <img src="../Assets/typescript-svgrepo-com.svg" alt="TypeScript">
-                            <img src="../Assets/ux-design.png" alt="UI">
+
+                            <img
+                                src="../Assets/html-5-svgrepo-com.svg"
+                                alt="HTML5"
+                            />
+
+                            <img
+                                src="../Assets/css-3-svgrepo-com.svg"
+                                alt="CSS3"
+                            />
+
+                            <img
+                                src="../Assets/javascript-svgrepo-com.svg"
+                                alt="JavaScript"
+                            />
+
+                            <img
+                                src="../Assets/taiwlind.svg"
+                                alt="Tailwind CSS"
+                            />
+
+                            <img
+                                src="../Assets/bootstrap-svgrepo-com 1.svg"
+                                alt="Bootstrap"
+                            />
+
+                            <img
+                                src="../Assets/react-1-logo-svgrepo-com.svg"
+                                alt="React"
+                            />
+
+                            <img
+                                src="../Assets/typescript-svgrepo-com.svg"
+                                alt="TypeScript"
+                            />
+
+                            <img
+                                src="../Assets/ux-design.png"
+                                alt="UI/UX Design"
+                            />
+
                         </div>
+
                     </div>
 
-                    <div class="docente-bottom">
-                        <div class="card-experiencia">
-                            <div class="titulo-card">
-                                <i><img class="icone-diamante" src="../Assets/estrela.svg" alt="" class="icone-experiencia"></i>
-                                <h2>EXPERIÊNCIA</h2>
-                            </div>
-
-                            <ul class="timeline">
-                                <li class="timeline-item">
-                                    <h3>Instrutor Pleno de T.I, Senac Brasil</h3>
-                                    <span class="data">Mai, 2026 - Atualmente</span>
-                                </li>
-                                <li class="timeline-item">
-                                    <h3>Tech Tutor, CESAR School</h3>
-                                    <span class="data">Fev, 2025 - Atualmente</span>
-                                </li>
-                                <li class="timeline-item">
-                                    <h3>Desenvolvedor de Front-End, FACEPE</h3>
-                                    <span class="data">Jun de 2025 - Nov, 2025</span>
-                                </li>
-                                <li class="timeline-item">
-                                    <h3>Operador de Telecomunicações, Grupo Provider</h3>
-                                    <span class="data">Mar, 2023 - Mai, 2024</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card-area-atuacao">
-                            <div class="titulo-card">
-                                <i><img src="../Assets/PC.svg" alt="Icone do computador" class="icone-card"></i>
-                                <h2>ÁREA DE ATUAÇÃO</h2>
-                            </div>
-                            <ul class="lista-pills">
-                                <li>
-                                    <img src="../Assets/html-5-svgrepo-com.svg" alt="Icone html">
-                                    <span>Desenvolvimento Front-End</span>
-                                </li>
-                                <li>
-                                    <img src="../Assets/acessibildade.svg" alt="Icone acessibilidade">
-                                    <span>Acessibilidade Web</span>
-                                </li>
-                                <li>
-                                    <img src="../Assets/ux-design.png" alt="Icone UI">
-                                    <span>UX/UI Design</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="card-formacao">
-                            <div class="titulo-card">
-                                <i><img src="../Assets/chapeu.svg" alt="Icone chapeu formatura" class="icone-card"></i>
-                                <h2>FORMAÇÃO</h2>
-                            </div>
-                            <h3>Análise e Desenvolvimento de Sistemas, Centro Universitário Senac</h3>
-                            <span class="data">Jan, 2023 - jul, 2025</span>
-                        </div>
-                    </div>
                 </div>
 
+
+                <!-- ==================== PARTE INFERIOR ==================== -->
+                <div class="docente-bottom">
+
+
+                    <!-- ==================== EXPERIÊNCIA ==================== -->
+                    <div class="card-experiencia">
+
+                        <div class="titulo-card">
+
+                            <i>
+
+                                <img
+                                    class="icone-diamante"
+                                    src="../Assets/estrela.svg"
+                                    alt="Ícone de experiência"
+                                />
+
+                            </i>
+
+                            <h2>EXPERIÊNCIA</h2>
+
+                        </div>
+
+
+                        <ul class="timeline">
+
+
+                            <li class="timeline-item">
+
+                                <h3>
+                                    Instrutor Pleno de T.I, Senac Brasil
+                                </h3>
+
+                                <span class="data">
+                                    Mai, 2026 - Atualmente
+                                </span>
+
+                            </li>
+
+
+                            <li class="timeline-item">
+
+                                <h3>
+                                    Tech Tutor, CESAR School
+                                </h3>
+
+                                <span class="data">
+                                    Fev, 2025 - Atualmente
+                                </span>
+
+                            </li>
+
+
+                            <li class="timeline-item">
+
+                                <h3>
+                                    Desenvolvedor de Front-End, FACEPE
+                                </h3>
+
+                                <span class="data">
+                                    Jun de 2025 - Nov, 2025
+                                </span>
+
+                            </li>
+
+
+                            <li class="timeline-item">
+
+                                <h3>
+                                    Operador de Telecomunicações, Grupo Provider
+                                </h3>
+
+                                <span class="data">
+                                    Mar, 2023 - Mai, 2024
+                                </span>
+
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ==================== ÁREA DE ATUAÇÃO ==================== -->
+                    <div class="card-area-atuacao">
+
+                        <div class="titulo-card">
+
+                            <i>
+
+                                <img
+                                    src="../Assets/PC.svg"
+                                    alt="Ícone do computador"
+                                    class="icone-card"
+                                />
+
+                            </i>
+
+                            <h2>ÁREA DE ATUAÇÃO</h2>
+
+                        </div>
+
+
+                        <ul class="lista-pills">
+
+
+                            <li>
+
+                                <img
+                                    src="../Assets/html-5-svgrepo-com.svg"
+                                    alt="Ícone HTML"
+                                />
+
+                                <span>
+                                    Desenvolvimento Front-End
+                                </span>
+
+                            </li>
+
+
+                            <li>
+
+                                <img
+                                    src="../Assets/acessibildade.svg"
+                                    alt="Ícone de acessibilidade"
+                                />
+
+                                <span>
+                                    Acessibilidade Web
+                                </span>
+
+                            </li>
+
+
+                            <li>
+
+                                <img
+                                    src="../Assets/ux-design.png"
+                                    alt="Ícone UI"
+                                />
+
+                                <span>
+                                    UX/UI Design
+                                </span>
+
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- ==================== FORMAÇÃO ==================== -->
+                    <div class="card-formacao">
+
+                        <div class="titulo-card">
+
+                            <i>
+
+                                <img
+                                    src="../Assets/chapeu.svg"
+                                    alt="Ícone de chapéu de formatura"
+                                    class="icone-card"
+                                />
+
+                            </i>
+
+                            <h2>FORMAÇÃO</h2>
+
+                        </div>
+
+
+                        <h3>
+                            Análise e Desenvolvimento de Sistemas,
+                            Centro Universitário Senac
+                        </h3>
+
+                        <span class="data">
+                            Jan, 2023 - Jul, 2025
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
         </section>
+
     </main>
 
+
+    <!-- ==================== FOOTER ==================== -->
     <footer>
-        <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
+
+        <p>
+            © 2026 Transforme-se 130. Todos os direitos reservados.
+        </p>
+
     </footer>
 
-</body>
 
-<script src="../script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../script.js"></script>
+
+</body>
 
 </html>
