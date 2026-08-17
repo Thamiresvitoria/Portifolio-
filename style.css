@@ -3543,11 +3543,30 @@
     }
 
     .filtros-estudante {
-        flex-direction: column;
-        width: 100%;
-        gap: 0.8rem;
-        margin: 1.5rem auto;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 12px !important;
+        gap: 10px !important;
     }
+
+    .filtros-estudante > * {
+        min-height: 0 !important;
+    }
+
+    .filtros-estudante select,
+    .filtros-estudante .filtro,
+    .filtros-estudante .filtro-select {
+        height: 55px !important;
+        min-height: 55px !important;
+        padding: 0 16px !important;
+        margin: 0 !important;
+    }
+
+    .filtros-estudante label {
+        margin-bottom: 4px !important;
+    }
+}
+
 
     .pesquisa-estudante {
         width: 100%;
