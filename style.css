@@ -3243,3 +3243,506 @@
     }
 
     
+
+/* =========================================================
+   AJUSTES FINAIS DE RESPONSIVIDADE
+   TURMA + ESTUDANTES
+   O DESKTOP ORIGINAL É PRESERVADO.
+========================================================= */
+
+/* ---------- TURMA: TABLET / NOTEBOOK ---------- */
+@media (max-width: 1024px) {
+    .turma {
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .turma-topo {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .turma-header {
+        width: 100%;
+        min-height: auto;
+        margin-left: 0;
+    }
+
+    .turma-header h1 {
+        font-size: clamp(2.2rem, 6vw, 3.4rem);
+    }
+
+    .turma-header p {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .turma-imagem {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        min-height: 260px;
+        margin-right: 0;
+    }
+
+    .turma-cards {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .card-principal {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: none;
+        min-width: 0;
+    }
+
+    .container-objetivo {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .objetivo,
+    .grid-galeria {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .grid-galeria {
+        margin-top: 0;
+    }
+}
+
+/* ---------- ESTUDANTES: TABLET ---------- */
+@media (max-width: 1024px) {
+    #estudante {
+        padding: 3rem 2rem;
+    }
+
+    .container-estudante {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .estudante-header p {
+        margin-bottom: 2.5rem;
+    }
+
+    .filtros-estudante {
+        width: 100%;
+        gap: 1rem;
+        margin: 2rem auto;
+    }
+
+    .pesquisa-estudante {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .filtros-estudante .selects {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .filtros-estudante select {
+        flex: 1 1 200px;
+        min-width: 0;
+    }
+
+    .carousel {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .carousel-window {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .cards-alunos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cards-aluno {
+        min-width: 0;
+    }
+
+    .img img {
+        width: min(170px, 80%);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .carousel-btn {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        margin-top: 210px;
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------- TURMA + ESTUDANTES: MOBILE ---------- */
+@media (max-width: 768px) {
+    /* TURMA */
+    .turma {
+        width: 100%;
+        padding: 2.5rem 1rem;
+        gap: 1.5rem;
+        overflow: hidden;
+    }
+
+    .turma-topo {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .turma-header {
+        width: 100%;
+        margin-left: 0;
+        min-height: auto;
+    }
+
+    .turma-header h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        line-height: 1.1;
+        word-break: normal;
+    }
+
+    .turma-header p {
+        width: 100%;
+        margin: 1rem 0 1.5rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .turma-imagem {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: 240px;
+        margin: 0;
+        border-radius: 24px;
+    }
+
+    .turma-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+    .card-principal {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        height: auto;
+        min-height: 125px;
+        padding: 0.9rem;
+        border-radius: 24px;
+    }
+
+    .card-titulo {
+        gap: 0.5rem;
+    }
+
+    .card-titulo h3 {
+        font-size: 0.95rem;
+    }
+
+    .card-titulo i {
+        font-size: 1.1rem;
+        padding: 0.35rem;
+        flex-shrink: 0;
+    }
+
+    .card-principal p {
+        font-size: 0.78rem;
+    }
+
+    .card-subtitulo {
+        margin-top: 0.7rem;
+        font-size: 0.72rem;
+    }
+
+    .container-objetivo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .objetivo {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .objetivo h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .objetivo li {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .grid-galeria {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        gap: 8px;
+    }
+
+    .galeria-grid img {
+        width: 100%;
+        height: 110px;
+        border-radius: 14px;
+    }
+
+    /* ESTUDANTES */
+    #estudante {
+        width: 100%;
+        padding: 2.5rem 1rem;
+        gap: 1rem;
+        overflow: hidden;
+    }
+
+    .container-estudante {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .estudante-header h1,
+    .estudante-header p {
+        text-align: left;
+    }
+
+    .estudante-header h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .estudante-header p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    .filtros-estudante {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+        margin: 1.5rem auto;
+    }
+
+    .pesquisa-estudante {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pesquisa-estudante input {
+        width: 100%;
+        height: 45px;
+    }
+
+    .filtros-estudante .selects {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .filtros-estudante select {
+        width: 100%;
+        min-width: 0;
+        height: 45px;
+        font-size: 0.8rem;
+    }
+
+    .carousel {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .carousel-window {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .cards-alunos {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .cards-aluno {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .aluno-topo h2 {
+        font-size: 1.05rem;
+    }
+
+    .aluno-topo span {
+        font-size: 0.75rem;
+    }
+
+    .aluno-info p {
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+
+    .redes-sociais-btn {
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .carousel-btn {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        margin-top: 0;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+
+    .carousel-indicators {
+        margin-top: 1rem;
+    }
+}
+
+/* ---------- CELULARES PEQUENOS ---------- */
+@media (max-width: 480px) {
+    /* TURMA */
+    .turma {
+        padding: 2rem 0.8rem;
+    }
+
+    .turma-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .turma-header p {
+        font-size: 0.8rem;
+    }
+
+    .turma-imagem {
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .turma-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-principal {
+        min-height: 110px;
+    }
+
+    .card-titulo h3 {
+        font-size: 0.9rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-grid img {
+        height: 95px;
+    }
+
+    .objetivo h2 {
+        font-size: 1.4rem;
+    }
+
+    .objetivo li {
+        font-size: 0.82rem;
+    }
+
+    /* ESTUDANTES */
+    #estudante {
+        padding: 2rem 0.8rem;
+    }
+
+    .estudante-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .estudante-header p {
+        font-size: 0.78rem;
+    }
+
+    .filtros-estudante .selects {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-estudante select {
+        width: 100%;
+    }
+
+    .carousel {
+        gap: 0.3rem;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 0.9rem;
+    }
+
+    .cards-aluno {
+        padding: 1.2rem 0.9rem;
+    }
+
+    .img img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .aluno-topo h2 {
+        font-size: 1rem;
+    }
+
+    .aluno-topo span {
+        font-size: 0.7rem;
+    }
+
+    .aluno-info h3 {
+        font-size: 0.78rem;
+    }
+
+    .aluno-info p {
+        font-size: 0.7rem;
+    }
+
+    .redes-sociais-btn {
+        font-size: 0.78rem;
+    }
+}
