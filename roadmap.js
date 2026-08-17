@@ -38,9 +38,9 @@ const dadosUC = {
         statusTexto: "EM DESENVOLVIMENTO",
         descricao: "Texto descritivo da UC4 aqui.",
         icone: "fa-shield-halved",
-        alunoNome: "NOME DO ALUNO",
-        alunoTexto: "Texto sobre o destaque do aluno na UC4.",
-        alunoFoto: "../Assets/Fotos_aluno_130/PLACEHOLDER.jpg"
+        alunoNome: "A DEFINIR",
+        alunoTexto: "EM BREVE",
+        alunoFoto: "../Assets/logo_navbar.svg"
     },
     uc5: {
         titulo: "Codificar Front-End de aplicações web",
@@ -48,9 +48,9 @@ const dadosUC = {
         statusTexto: "A FAZER",
         descricao: "Texto descritivo da UC5 aqui.",
         icone: "fa-vector-square",
-        alunoNome: "NOME DO ALUNO",
-        alunoTexto: "Texto sobre o destaque do aluno na UC5.",
-        alunoFoto: "../Assets/Fotos_aluno_130/PLACEHOLDER.jpg"
+        alunoNome: "A DEFINIR",
+        alunoTexto: "EM BREVE",
+        alunoFoto: "../Assets/logo_navbar.svg"
     },
     uc6: {
         titulo: "Publicar aplicações web",
@@ -58,9 +58,9 @@ const dadosUC = {
         statusTexto: "A FAZER",
         descricao: "Texto descritivo da UC6 aqui.",
         icone: "fa-code",
-        alunoNome: "NOME DO ALUNO",
-        alunoTexto: "Texto sobre o destaque do aluno na UC6.",
-        alunoFoto: "../Assets/Fotos_aluno_130/PLACEHOLDER.jpg"
+        alunoNome: "A DEFINIR",
+        alunoTexto: "EM BREVE",
+        alunoFoto: "../Assets/logo_navbar.svg"
     },
     uc7: {
         titulo: "Projeto Integrador - Desenvolvedor Front-end",
@@ -68,9 +68,9 @@ const dadosUC = {
         statusTexto: "A FAZER",
         descricao: "Texto descritivo da UC7 aqui.",
         icone: "fa-globe",
-        alunoNome: "NOME DO ALUNO",
-        alunoTexto: "Texto sobre o destaque do aluno na UC7.",
-        alunoFoto: "../Assets/Fotos_aluno_130/PLACEHOLDER.jpg"
+        alunoNome: "A DEFINIR",
+        alunoTexto: "EM BREVE",
+        alunoFoto: "../Assets/logo_navbar.svg"
     }
 };
 
