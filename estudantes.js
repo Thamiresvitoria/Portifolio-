@@ -17,10 +17,70 @@ const indicadores = document.querySelector("#indicadores");
 
 
 // ========================================
+// CHECAGEM DE SEGURANÇA
+// Se algum elemento não for encontrado, avisa no console
+// exatamente qual ID está faltando, em vez de travar silenciosamente.
+// ========================================
+
+const elementosNecessarios = {
+    "#pesquisa": pesquisa,
+    "#ordem": ordem,
+    "#filtroCurso": filtroCurso,
+    "#filtroInteresse": filtroInteresse,
+    "#filtroFormacao": filtroFormacao,
+    "#cardsAlunos": container,
+    "#anterior": botaoAnterior,
+    "#proximo": botaoProximo,
+    "#indicadores": indicadores
+};
+
+let faltando = false;
+
+for (const [seletor, elemento] of Object.entries(elementosNecessarios)) {
+    if (!elemento) {
+        console.error(
+            `[estudantes.js] Elemento não encontrado no HTML: ${seletor}. ` +
+            `Verifique se o id está escrito exatamente assim no estudantes.html.`
+        );
+        faltando = true;
+    }
+}
+
+if (faltando) {
+    console.error(
+        "[estudantes.js] Script interrompido: um ou mais elementos essenciais " +
+        "não foram encontrados. A ordenação e os filtros não vão funcionar até isso ser corrigido."
+    );
+    throw new Error("estudantes.js: elementos essenciais ausentes no HTML.");
+}
+
+
+// ========================================
 // CONFIGURAÇÃO
 // ========================================
 
-const CARDS_POR_PAGINA = 6;
+// Quantidade de cards por página, de acordo com o tamanho da tela.
+// Isso acompanha os breakpoints do CSS (estudantes.css / estudantes-responsive.css):
+// desktop/tablet largo -> 4 (comportamento original, sem alteração)
+// tablet (<=1024px)     -> 3 (bate com .cards-alunos { grid-template-columns: repeat(3, 1fr); })
+// mobile (<=768px)      -> 2 (bate com .cards-alunos { grid-template-columns: repeat(2, 1fr); })
+function getCardsPorPagina() {
+
+    const largura = window.innerWidth;
+
+    if (largura <= 768) {
+        return 2;
+    }
+
+    if (largura <= 1024) {
+        return 3;
+    }
+
+    return 4;
+
+}
+
+let CARDS_POR_PAGINA = getCardsPorPagina();
 
 let cardsFiltrados = [];
 
@@ -31,6 +91,8 @@ let paginaAtual = 0;
 const cardsOriginais = [
     ...container.querySelectorAll(".cards-aluno")
 ];
+
+console.log(`[estudantes.js] ${cardsOriginais.length} cards de alunos encontrados.`);
 
 
 // ========================================
@@ -90,7 +152,8 @@ function filtrarEstudantes() {
 
 
     // ========================================
-    // ORDEM ALFABÉTICA
+    // ORDEM ALFABÉTICA (usa o nome já sem espaços nas pontas,
+    // já que o textContent do h2 pode vir com quebras de linha do HTML)
     // ========================================
 
     if (ordem.value === "az") {
@@ -98,10 +161,10 @@ function filtrarEstudantes() {
         cardsFiltrados.sort((a, b) => {
 
             const nomeA =
-                a.querySelector("h2").textContent;
+                a.querySelector("h2").textContent.trim();
 
             const nomeB =
-                b.querySelector("h2").textContent;
+                b.querySelector("h2").textContent.trim();
 
 
             return nomeA.localeCompare(
@@ -126,10 +189,10 @@ function filtrarEstudantes() {
         cardsFiltrados.sort((a, b) => {
 
             const nomeA =
-                a.querySelector("h2").textContent;
+                a.querySelector("h2").textContent.trim();
 
             const nomeB =
-                b.querySelector("h2").textContent;
+                b.querySelector("h2").textContent.trim();
 
 
             return nomeB.localeCompare(
@@ -193,7 +256,7 @@ function atualizarCarrossel() {
 
 
     // ========================================
-    // PEGAR OS 6 CARDS DA PÁGINA
+    // PEGAR OS CARDS DA PÁGINA
     // ========================================
 
     const inicio =
@@ -209,7 +272,7 @@ function atualizarCarrossel() {
 
 
     // ========================================
-    // ADICIONAR OS 6 CARDS
+    // ADICIONAR OS CARDS
     // ========================================
 
     cardsDaPagina.forEach(card => {
@@ -417,7 +480,42 @@ filtroFormacao.addEventListener(
 
 
 // ========================================
-// INICIAR
+// RESPONSIVO: recalcula cards por página ao redimensionar
+// Só atualiza o carrossel se o número de cards por página
+// realmente mudou (evita re-renderizar em todo pequeno resize,
+// ex: abrir/fechar teclado no celular).
 // ========================================
 
+let resizeTimeout;
+
+window.addEventListener("resize", () => {
+
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+
+        const novoValor = getCardsPorPagina();
+
+        if (novoValor !== CARDS_POR_PAGINA) {
+
+            CARDS_POR_PAGINA = novoValor;
+
+            paginaAtual = 0;
+
+            atualizarCarrossel();
+
+        }
+
+    }, 200);
+
+});
+
+
+// ========================================
+// INICIAR - Ordenação alfabética por padrão
+// ========================================
+
+ordem.value = "az";
 filtrarEstudantes();
+
+console.log("[estudantes.js] Inicializado com sucesso, ordem A→Z aplicada.");
