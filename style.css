@@ -2743,16 +2743,48 @@
     /* FOOTER */
 
     footer {
-        background-color: #141615;
-        padding: 2rem 5rem;
-        text-align: center;
-        color: #FFFFFF;
-        font-size: 14px;
-    }
+    background-color: #141615;
+    padding: 2rem 5rem;
+    color: #FFFFFF;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
 
-    footer p {
-        margin: 0;
-    }
+footer p {
+    margin: 0;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-logo-link img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo-link:hover {
+    background-color: #4B818D;
+    transform: translateY(-4px);
+}
 
     /* =========================================================
     RESPONSIVO
