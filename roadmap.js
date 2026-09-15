@@ -57,8 +57,8 @@ const dadosUC = {
     descricao: "Nessa etapa, desenvolvemos o portfólio proprio, colocando em prática tudo que aprendemos ao longo da nossa jornada do curso, Já estamos na reta final para terminar.",
     icone: "fa-vector-square",
     alunoNome: "Matheus Marques",
-    alunoTexto: "EM BREVE",
-    alunoFoto: "../Assets/imagem_padrão.jpg",
+    alunoTexto: "Destaca-se pelo comprometimento, dedicação e participação durante o desenvolvimento do PI da turma. Demonstrou ser um excelente líder, apresentando uma oratória surpreendente e grande capacidade de comunicação. Além disso, mostrou-se sempre disposto a ajudar os membros das equipes, oferecendo suporte e contribuindo para a resolução de dificuldades ao longo do projeto.",
+    alunoFoto: "../Assets/Fotos_aluno_130/matheus_marques.jpg",
   },
   uc6: {
     titulo: "Publicar aplicações web",
