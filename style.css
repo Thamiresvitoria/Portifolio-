@@ -1473,30 +1473,22 @@ svg {
   border-color: #28535c!important;
 }
 
-.tag-java {
+.tag-apresentacao {
   color: #ff6d6d !important;
   border-color: #28535c!important;
 }
 
-.tag-spring {
+.tag-equipe {
   color: #36e88a !important;
   border-color: #28535c !important;
 }
 
-.tag-mysql {
+.tag-pratica {
   color: #72b6f5 !important;
   border-color: #28535c !important;
 }
 
-.tag-servicenow {
-  color: #58dddd !important;
-  border-color: #28535c !important;
-}
 
-.tag-api {
-  color: #dd8df4 !important;
-  border-color: #28535c !important;
-}
 
 /* DESCRIÇÃO */
 .projeto-card .projeto-descricao {
