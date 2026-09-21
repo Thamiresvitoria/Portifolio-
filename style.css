@@ -1064,13 +1064,19 @@ i:has(+ h2) + h2 {
   background: #0a0c0b;
 }
 
+/*
+   A grade continua centralizada, mas o container pode ocupar
+   mais espaço para os projetos ficarem em 4 colunas no desktop.
+*/
 .grade-container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1650px;
   margin: 0 auto;
 }
 
 .grade-header {
-  margin-bottom: 35px;
+  max-width: 1200px;
+  margin: 0 auto 35px;
 }
 
 .grade-header h1 {
@@ -1088,7 +1094,11 @@ i:has(+ h2) + h2 {
   font-family: "Sura";
 }
 
+/* GRADE CURRICULAR */
 .grade-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   gap: 80px;
@@ -1139,15 +1149,13 @@ i:has(+ h2) + h2 {
 }
 
 /* LADO DIREITO */
-
 .grade-direita {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* TECNOLOGIAS*/
-
+/* TECNOLOGIAS */
 .tecnologias-lista {
   display: flex;
   gap: 10px;
@@ -1180,7 +1188,6 @@ i:has(+ h2) + h2 {
 }
 
 /* ÍCONES */
-
 .tecnologia-icone img {
   width: 50px;
   height: 50px;
@@ -1197,8 +1204,7 @@ i:has(+ h2) + h2 {
   filter: drop-shadow(0 4px 8px rgba(45, 212, 191, 0.4));
 }
 
-/* COMPETÊNCIAS*/
-
+/* COMPETÊNCIAS */
 .competencias-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1215,7 +1221,6 @@ i:has(+ h2) + h2 {
   background: #111514;
   color: #d6d6d6;
   font-size: 0.9rem;
-  align-items: center;
   text-align: start;
   transition:
     border-color 0.3s ease,
@@ -1236,6 +1241,672 @@ svg {
   align-items: center;
   justify-content: center;
   color: #4b818d;
+}
+
+/* =========================================================
+   PROJETOS DA TURMA
+   FICA ABAIXO DE DISCIPLINAS / TECNOLOGIAS / COMPETÊNCIAS
+========================================================= */
+
+.projetos-turma {
+  width: 100%;
+  margin-top: 85px;
+  padding: 0 0 80px;
+  margin-left: 2rem;
+}
+
+.projetos-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 42px;
+}
+
+
+.projetos-titulo {
+  flex: 1;
+  min-width: 0;
+}
+
+.projetos-label {
+  display: block;
+  color: #4b818d;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.projetos-titulo h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.projetos-titulo p {
+  margin: 12px 0 0;
+  color: #d0d0d0;
+  font-family: "Sura", serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* FILTROS */
+.projetos-filtros {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.filtro-projeto {
+  height: 35px;
+  padding: 0 17px;
+  border: 1px solid #285f6e;
+  border-radius: 20px;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.filtro-projeto:hover {
+  border-color: #28535c;
+  color: #4b818d;
+}
+
+.filtro-projeto.ativo {
+  background: #28535c;
+  border-color: #4b818d;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(28, 213, 228, 0.25);
+}
+
+/* ÁREA */
+.projeto-area {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.projetos-lista {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.projeto-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 319px;
+  padding: 27px 25px 19px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: linear-gradient(145deg, #101716, #0b0f0e);
+  border: 1px solid #285f6e;
+  border-radius: 14px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-5px);
+  border-color: #28535c;
+  box-shadow: 0 10px 30px rgba(75, 129, 141, 0.12);
+}
+
+.projeto-card-topo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.projeto-icone {
+  width: 76px;
+  height: 76px;
+  min-width: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #326f7e;
+  border-radius: 11px;
+  background: #111b1a;
+  color: white;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.projeto-icone i {
+  color: white;
+  margin: 0;
+}
+
+.projeto-card h3 {
+  margin: 0 0 11px;
+  color: #ffffff;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.projeto-equipe {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #d0d0d0;
+  font-family: "Sura", serif;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.projeto-equipe i {
+  color: #4b818d;
+  font-size: 13px;
+}
+
+/* TAGS */
+.projeto-card .projeto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.projeto-card .projeto-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 13px;
+  border: 1px solid;
+  border-radius: 18px;
+  background: transparent;
+  font-family: "Noto Sans HK", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.tag-python {
+  color: white !important;
+  border-color: #28535c !important;
+}
+
+.tag-backend {
+  color: #dd8df4 !important;
+  border-color: #28535c !important;
+}
+
+.tag-database {
+  color: #7dbbf5 !important;
+  border-color: #28535c!important;
+}
+
+.tag-html {
+  color: #54dfdb !important;
+  border-color: #28535c !important;
+}
+
+.tag-css {
+  color: #83d9f7 !important;
+  border-color: #28535c !important;
+}
+
+.tag-javascript {
+  color: #f5d34e !important;
+  border-color: #28535c!important;
+}
+
+.tag-java {
+  color: #ff6d6d !important;
+  border-color: #28535c!important;
+}
+
+.tag-spring {
+  color: #36e88a !important;
+  border-color: #28535c !important;
+}
+
+.tag-mysql {
+  color: #72b6f5 !important;
+  border-color: #28535c !important;
+}
+
+.tag-servicenow {
+  color: #58dddd !important;
+  border-color: #28535c !important;
+}
+
+.tag-api {
+  color: #dd8df4 !important;
+  border-color: #28535c !important;
+}
+
+/* DESCRIÇÃO */
+.projeto-card .projeto-descricao {
+  margin: 18px 0 20px;
+  color: #eeeeee;
+  font-family: "Sura", serif;
+  font-size: 14px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* RODAPÉ */
+.projeto-card .projeto-rodape {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projeto-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: "Sura", serif;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.projeto-status i {
+  color: #4b818d;
+  font-size: 16px;
+  margin: 0;
+}
+
+.projeto-status.concluido {
+  color: white;
+}
+
+.projeto-botao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: "Sura", serif;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.projeto-botao i {
+  color: #4b818d;
+  margin: 0;
+  font-size: 17px;
+}
+
+.projeto-botao:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.projeto-botao:hover i {
+  color: #ffffff;
+}
+
+/* SETAS */
+.projeto-seta {
+  position: absolute;
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #28535c;
+  border-radius: 50%;
+  background: #070b0b;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.projeto-seta i {
+  color: inherit;
+  font-size: 16px;
+  margin: 0;
+}
+
+.projeto-seta:hover {
+  border-color: #4b818d;
+  color: #4b818d;
+  box-shadow: 0 0 15px rgba(50, 210, 225, 0.18);
+  transform: scale(1.05);
+}
+
+.projeto-anterior {
+  left: -62px;
+}
+
+.projeto-proximo {
+  right: -62px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE - GRADE + PROJETOS
+========================================================= */
+
+@media (max-width: 1400px) {
+  .grade-container {
+    max-width: 1300px;
+  }
+
+  .grade-grid {
+    max-width: 1200px;
+  }
+
+  .projetos-lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .projetos-header {
+    flex-wrap: wrap;
+  }
+
+  .projetos-filtros {
+    width: 100%;
+    max-width: none;
+    justify-content: flex-start;
+    margin-left: 102px;
+  }
+
+  .projeto-anterior {
+    left: -15px;
+  }
+
+  .projeto-proximo {
+    right: -15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #grade {
+    padding: 3rem 2rem;
+  }
+
+  .grade-container {
+    max-width: 100%;
+  }
+
+  .grade-grid {
+    max-width: 100%;
+    gap: 45px;
+  }
+
+  .projetos-turma {
+    margin-top: 65px;
+  }
+
+  .projetos-header {
+    align-items: flex-start;
+  }
+
+  .projetos-titulo h2 {
+    font-size: 30px;
+  }
+
+  .projetos-filtros {
+    margin-left: 0;
+  }
+
+  .projeto-anterior {
+    left: -10px;
+  }
+
+  .projeto-proximo {
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #grade {
+    padding: 3rem 1.5rem;
+  }
+
+  .grade-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .disciplina {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px 15px;
+  }
+
+  .grade-direita {
+    width: 100%;
+  }
+
+  .tecnologias-lista {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .tecnologia {
+    width: 72px;
+    height: 72px;
+  }
+
+  .tecnologia-icone img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .competencias-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .competencia {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projetos-turma {
+    margin-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .projetos-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .projetos-icone-titulo {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    font-size: 24px;
+  }
+
+  .projetos-titulo h2 {
+    font-size: 25px;
+  }
+
+  .projetos-titulo p {
+    font-size: 14px;
+  }
+
+  .projetos-filtros {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+
+  .projetos-lista {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .projeto-card {
+    min-height: 300px;
+  }
+
+  .projeto-seta {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #grade {
+    padding: 2.5rem 1rem;
+  }
+
+  .grade-header h1 {
+    font-size: 2rem;
+  }
+
+  .grade-header p {
+    font-size: 0.85rem;
+  }
+
+  .disciplina {
+    min-height: 48px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .disciplina span {
+    margin-right: 10px;
+  }
+
+  .tecnologias-lista {
+    gap: 8px;
+  }
+
+  .tecnologia {
+    width: 65px;
+    height: 65px;
+  }
+
+  .tecnologia-icone img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tecnologia p {
+    font-size: 0.65rem;
+  }
+
+  .competencias-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .competencia {
+    font-size: 0.85rem;
+  }
+
+  .projetos-turma {
+    margin-top: 45px;
+    padding: 0 0 45px;
+  }
+
+  .projetos-icone-titulo {
+    display: none;
+  }
+
+  .projetos-label {
+    font-size: 12px;
+  }
+
+  .projetos-titulo h2 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .projetos-titulo p {
+    font-size: 13px;
+  }
+
+  .projetos-filtros {
+    gap: 7px;
+    margin-top: 5px;
+  }
+
+  .filtro-projeto {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+
+  .projeto-card {
+    min-height: 0;
+    padding: 20px 18px;
+  }
+
+  .projeto-card-topo {
+    gap: 14px;
+  }
+
+  .projeto-icone {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    font-size: 24px;
+  }
+
+  .projeto-card h3 {
+    font-size: 13px;
+  }
+
+  .projeto-equipe {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .projeto-card .projeto-tags {
+    gap: 7px;
+  }
+
+  .projeto-card .projeto-tags span {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .projeto-card .projeto-descricao {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .projeto-card .projeto-rodape {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .projeto-status {
+    font-size: 11px;
+  }
+
+  .projeto-botao {
+    font-size: 12px;
+  }
 }
 
 /* ROADMAP */
