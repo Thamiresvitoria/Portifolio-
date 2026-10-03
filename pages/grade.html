@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Grade curricular, competências, tecnologias e projetos desenvolvidos pela Turma 130.">
+  <meta name="description" content="Grade curricular, competências, tecnologias e projetos desenvolvidos pela Turma 130.">
   <meta name="theme-color" content="#090c0d">
   <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
@@ -14,12 +13,10 @@
 </head>
 
 <body>
+
   <header>
     <nav aria-label="Navegação principal">
-      <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img"
-            src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130"></a></div><button class="menu-toggle"
-        id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList"
-        aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130"></a></div><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="menu" id="menuList">
         <li><a href="../index.html">Início</a></li>
         <li><a href="./turma.html">Turma</a></li>
@@ -30,13 +27,17 @@
       </ul>
     </nav>
   </header>
+
   <main>
+
     <section id="grade" class="grade-container" aria-labelledby="titulo-grade">
       <div class="grade-header">
         <h1 id="titulo-grade">GRADE CURRICULAR</h1>
         <p>Sete unidades para planejar, desenvolver e publicar experiências para a web.</p>
       </div>
+
       <div class="grade-grid">
+
         <article class="disciplinas">
           <h2>UNIDADES CURRICULARES</h2>
           <div class="disciplina-lista">
@@ -49,7 +50,9 @@
             <div class="disciplina"><span>UC7</span>Projeto Integrador — 24h</div>
           </div>
         </article>
+
         <div class="grade-direita">
+
           <article class="tecnologias">
             <h2>TECNOLOGIAS</h2>
             <div class="tecnologias-lista">
@@ -69,8 +72,22 @@
                 <div class="tecnologia-icone"><img src="../Assets/figma-svgrepo-com.svg" alt=""></div>
                 <p>Figma</p>
               </div>
+               <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/bootstrap-svgrepo-com 1.svg" alt=""></div>
+                <p>Bootstrap</p>
+              </div>
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/git-svgrepo-com.svg" alt=""></div>
+                <p>Git</p>
+              </div>
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/github-svgrepo-com.svg" alt=""></div>
+                <p>Github</p>
+              </div>
+              
             </div>
           </article>
+
           <article class="competencias">
             <h2>COMPETÊNCIAS</h2>
             <div class="competencias-grid">
@@ -84,39 +101,31 @@
           </article>
         </div>
       </div>
+
       <section class="projetos-turma" aria-labelledby="titulo-projetos">
         <div class="projetos-header">
           <div class="projetos-titulo"><span class="projetos-label">PROJETOS DA TURMA</span>
             <h2 id="titulo-projetos">APRENDIZADO NA PRÁTICA</h2>
             <p>Filtre por unidade e navegue pelas entregas concluídas.</p>
           </div>
-          <div class="projetos-filtros" role="group" aria-label="Filtrar projetos"><button class="filtro-projeto ativo"
-              type="button" data-filter="todos">Todos</button><button class="filtro-projeto" type="button"
-              data-filter="uc2">UC2</button><button class="filtro-projeto" type="button"
-              data-filter="uc4">UC4</button><button class="filtro-projeto" type="button"
-              data-filter="uc5">UC5</button><button class="filtro-projeto" type="button"
-              data-filter="uc6">UC6</button><button class="filtro-projeto" type="button" data-filter="uc7">UC7</button>
+          <div class="projetos-filtros" role="group" aria-label="Filtrar projetos"><button class="filtro-projeto ativo" type="button" data-filter="todos">Todos</button><button class="filtro-projeto" type="button" data-filter="uc2">UC2</button><button class="filtro-projeto" type="button" data-filter="uc4">UC4</button><button class="filtro-projeto" type="button" data-filter="uc5">UC5</button><button class="filtro-projeto" type="button" data-filter="uc6">UC6</button><button class="filtro-projeto" type="button" data-filter="uc7">UC7</button>
           </div>
         </div>
-        <div class="projeto-area"><button class="projeto-seta projeto-anterior" type="button"
-            aria-label="Projetos anteriores"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-          <div class="projetos-lista" id="projetosLista" aria-live="polite"></div><button
-            class="projeto-seta projeto-proximo" type="button" aria-label="Próximos projetos"><i
-              class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+
+        <div class="projeto-area"><button class="projeto-seta projeto-anterior" type="button" aria-label="Projetos anteriores"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="projetos-lista" id="projetosLista" aria-live="polite"></div><button class="projeto-seta projeto-proximo" type="button" aria-label="Próximos projetos"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
         </div>
+
         <p class="projeto-paginacao" id="projetoPaginacao" aria-live="polite"></p>
       </section>
     </section>
+
   </main>
+
   <footer>
-    <div class="footer-logos"><a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank"
-        rel="noopener noreferrer"><img src="../Assets/logo_senac.png" alt="Senac Pernambuco"></a><a
-        href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank"
-        rel="noopener noreferrer"><img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian"></a><a
-        href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank"
-        rel="noopener noreferrer"><img src="../Assets/logo_comunidade_transforme_se.png"
-          alt="Comunidade Transforme-se"></a></div>
+    <div class="footer-logos"><a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_senac.png" alt="Senac Pernambuco"></a><a href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian"></a><a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_comunidade_transforme_se.png" alt="Comunidade Transforme-se"></a></div>
     <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
+
   </footer>
   <script src="../script.js" defer></script>
 </body>
