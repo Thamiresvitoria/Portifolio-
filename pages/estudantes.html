@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os estudantes da Turma 130 e filtre por curso, interesse e formação.">
+    <meta name="theme-color" content="#090c0d">
 
     <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>Estudantes - Turma 130</title>
+    <title>Estudantes | Turma 130</title>
 </head>
 
 <body>
@@ -17,10 +19,10 @@
     <!-- Navbar do projeto-->
     <header>
         <nav>
-            <div class="logo">
-                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
-            </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img"
+                        src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130" /></a></div>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList"
+                aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -31,7 +33,7 @@
                 <li><a href="./docente.html">Docente</a></li>
                 <li><a href="./grade.html">Grade</a></li>
                 <li><a href="./roadmap.html">Roadmap</a></li>
-                <li><a href="./estudantes.html" class="active">Estudantes</a></li>
+                <li><a href="./estudantes.html" class="active" aria-current="page">Estudantes</a></li>
             </ul>
         </nav>
     </header>
@@ -52,17 +54,14 @@
                         Conheça os alunos e alunas que fazem parte da Turma 130.
                     </p>
 
-                    <!-- Pesquisa -->
-                    <div class="pesquisa-estudante">
-
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="pesquisa" placeholder="Pesquisar estudante..." autocomplete="off">
-
-                    </div>
-
                     <div class="filtros-estudante">
+                        <div class="pesquisa-estudante">
+                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                            <input type="search" id="pesquisa" aria-label="Pesquisar estudante"
+                                placeholder="Pesquisar estudante..." autocomplete="off">
+                        </div>
                         <!-- Ordem alfabética -->
-                        <select id="ordem">
+                        <select id="ordem" aria-label="Ordenar estudantes">
                             <option value="padrao">Ordem padrão</option>
                             <option value="az">A → Z</option>
                             <option value="za">Z → A</option>
@@ -70,7 +69,7 @@
 
 
                         <!-- Curso -->
-                        <select id="filtroCurso">
+                        <select id="filtroCurso" aria-label="Filtrar por curso">
 
                             <option value="todos">
                                 Todos os cursos
@@ -92,7 +91,7 @@
 
 
                         <!-- Interesse -->
-                        <select id="filtroInteresse">
+                        <select id="filtroInteresse" aria-label="Filtrar por interesse">
 
                             <option value="todos">
                                 Todos os interesses
@@ -114,7 +113,7 @@
                                 Full Stack
                             </option>
 
-                            <option value="Design">
+                            <option value="design">
                                 Design
                             </option>
 
@@ -122,7 +121,7 @@
 
 
                         <!-- Formação -->
-                        <select id="filtroFormacao">
+                        <select id="filtroFormacao" aria-label="Filtrar por formação">
 
                             <option value="todos">
                                 Todas as formações
@@ -150,14 +149,18 @@
                 <!-- CARROSSEL -->
                 <div class="carousel">
 
-                    <button class="carousel-btn anterior" id="anterior" aria-label="Estudante anterior"> </button>
+                    <button class="carousel-btn anterior" id="anterior" type="button"
+                        aria-label="Página anterior de estudantes">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                    </button>
 
                     <div class="carousel-window">
                         <div class="cards-alunos" id="cardsAlunos">
 
 
 
-                            <article class="cards-aluno" data-curso="ads" data-interesse="Design" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="ads" data-interesse="Design"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Andrea_Veronica.jpg.png" alt="">
@@ -195,22 +198,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/andreaveronica20003-source" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/andreaveronica20003-source" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://andreaveronica20003-source.github.io/andr-a_portif-lio_01/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=06a3e1c1-3b32-6b97-f237-cade95ff0f0b" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://andreaveronica20003-source.github.io/andr-a_portif-lio_01/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=06a3e1c1-3b32-6b97-f237-cade95ff0f0b"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/andreaa-veronica-29167a301/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/andreaa-veronica-29167a301/"
+                                            target="_blank" rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/caio_costa.jpg" alt="">
@@ -253,17 +260,20 @@
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.caioccosta.com.br/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=1e5e2a25-c859-ed49-25af-68c9dba526e2" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://www.caioccosta.com.br/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=1e5e2a25-c859-ed49-25af-68c9dba526e2"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/caioccesar/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/caioccesar/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend dev" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend dev"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/carlos_henrique.jpg" alt="">
@@ -306,17 +316,20 @@
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://carlhenriquex.github.io/carlbytes/experiencias.html" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://carlhenriquex.github.io/carlbytes/experiencias.html"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/carloshenriquex" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/carloshenriquex" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/dacyrrose_melo.jpg" alt="">
@@ -352,22 +365,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/Myoui-sys" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/Myoui-sys" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://dacyportfolio.vercel.app/" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://dacyportfolio.vercel.app/" target="_blank"
+                                            rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/dacyrrose-melo/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/dacyrrose-melo/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="marketing" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="marketing"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/danilo_freitas.jpg" alt="">
@@ -405,7 +422,8 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/danilodf254280-ctrl" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/danilodf254280-ctrl" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
@@ -413,14 +431,16 @@
                                         <a href="" target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/danilofreitas08" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/danilofreitas08" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/edinaldo_ramos.jpg" alt="">
@@ -458,7 +478,8 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/edinaldodasilvaramoss-collab" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/edinaldodasilvaramoss-collab" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
@@ -466,14 +487,16 @@
                                         <a href="" target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/edinaldo-ramos-a05785412" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/edinaldo-ramos-a05785412" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/evellyn_gomes.jpeg" alt="">
@@ -511,22 +534,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/evellynamelia" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/evellynamelia" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://portiflio-evellyngomes.vercel.app/" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://portiflio-evellyngomes.vercel.app/" target="_blank"
+                                            rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/evellynamélia" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/evellynamélia" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Ewerton Henrique Lima Da Silva.jpg" alt="">
@@ -564,22 +591,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://ewerton-henrique-murex-pi.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://ewerton-henrique-murex-pi.vercel.app/" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://portfolio-pessoal-z7d7.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=6d9ca319-0c6a-47a1-fc06-a476d3df433a#habilidades" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://portfolio-pessoal-z7d7.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=6d9ca319-0c6a-47a1-fc06-a476d3df433a#habilidades"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/ewerton-silva-271341313/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/ewerton-silva-271341313/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="cyberseguranca" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="cyberseguranca"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/flavio_aureliano.jpg" alt="">
@@ -617,25 +648,69 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/flavioaccf" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/flavioaccf" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://flavioaccf.github.io/portfolio-130/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=cb89bc97-fd65-5aa8-1e15-2df6c75cf105#projetos" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://flavioaccf.github.io/portfolio-130/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=cb89bc97-fd65-5aa8-1e15-2df6c75cf105#projetos"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/fl%C3%A1vio-aureliano-dev/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/fl%C3%A1vio-aureliano-dev/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="front-end" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end"
+                                data-interesse="front-end administracao financas"
+                                data-formacao="tecnico graduacao cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
-                                        <img src="../Assets/Fotos_aluno_130/joao_vitor.jpg" alt="Foto do aluno João Vitor">
+                                        <img src="../Assets/Fotos_aluno_130/Isabely_Cabral_JPG.jpeg"
+                                            alt="Foto de Isabely Cabral Sales">
+                                    </div>
+                                    <div>
+                                        <h2>Isabely Cabral Sales</h2>
+                                        <span>Estudante Front-End</span>
+                                    </div>
+                                </div>
+
+                                <div class="aluno-info">
+                                    <div>
+                                        <h3>Formação</h3>
+                                        <p>Técnica em Logística e Administração; cursando Tecnologia em Gestão
+                                            Financeira e Programação Front-End.</p>
+                                    </div>
+                                    <div>
+                                        <h3>Experiência</h3>
+                                        <p>Projetos de Front-End, Administração e área Financeira.</p>
+                                    </div>
+                                    <div>
+                                        <h3>Interesse</h3>
+                                        <p>Desenvolvimento Front-End, Administração e Gestão Financeira.</p>
+                                    </div>
+                                </div>
+
+                                <div class="redes-sociais">
+                                    <a href="https://www.linkedin.com/in/isabely-cabral-034915267" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                        LinkedIn
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="front-end"
+                                data-formacao="cursando">
+                                <div class="aluno-topo">
+                                    <div class="img">
+                                        <img src="../Assets/Fotos_aluno_130/joao_vitor.jpg"
+                                            alt="Foto do aluno João Vitor">
                                     </div>
                                     <div>
                                         <h2>
@@ -657,7 +732,8 @@
                                     <div>
                                         <h3>Experiência</h3>
                                         <p>
-                                            Conserto de eletrodomésticos, computadores, controles e componentes; desenvolvimento básico em JavaScript
+                                            Conserto de eletrodomésticos, computadores, controles e componentes;
+                                            desenvolvimento básico em JavaScript
                                         </p>
                                     </div>
                                     <div>
@@ -670,22 +746,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/jv11gomes2006-spec" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/jv11gomes2006-spec" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://jv11gomes2006-spec.github.io/portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=fa2f32fd-a064-d995-1265-6369a11e47f8" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://jv11gomes2006-spec.github.io/portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=fa2f32fd-a064-d995-1265-6369a11e47f8"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/joão-vitor-157b5b361/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/joão-vitor-157b5b361/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/KAWANNE.jpg" alt="">
@@ -728,17 +808,20 @@
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://kaw4nne.github.io/p-rtfolio-_pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=de3d8ecc-08cd-43b9-3f79-f5c0e9a4040d" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://kaw4nne.github.io/p-rtfolio-_pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=de3d8ecc-08cd-43b9-3f79-f5c0e9a4040d"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/kawanne-ketllyn-92b596172/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/kawanne-ketllyn-92b596172/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/lucas_leite.jpeg" alt="">
@@ -776,15 +859,18 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/lucasandrade21porto-ops" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/lucasandrade21porto-ops" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://lucasandrade21porto-ops.github.io/portfolio/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=3ba9ed1a-e866-b597-f903-7868c6147313#inicio" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://lucasandrade21porto-ops.github.io/portfolio/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=3ba9ed1a-e866-b597-f903-7868c6147313#inicio"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/lucas-andrade21" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/lucas-andrade21" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
@@ -829,22 +915,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/marcioart878-stack" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/marcioart878-stack" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://marcioart878-stack.github.io/portifolio-new/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=b4b73c4c-e1fe-c6c1-6371-73ce1a6663b9" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://marcioart878-stack.github.io/portifolio-new/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=b4b73c4c-e1fe-c6c1-6371-73ce1a6663b9"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/márcio-eduardo-862440302" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/márcio-eduardo-862440302" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="back-end" data-interesse="dados Design" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="back-end" data-interesse="dados Design"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Eduarda_Santana.jpg" alt="">
@@ -882,15 +972,18 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/eduardasantanacont-png" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/eduardasantanacont-png" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://eduard-santana.github.io/Portif-lio---Eduarda-Santana/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=faf0d427-6ba2-71d3-1be2-4cc2029f1ae0" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://eduard-santana.github.io/Portif-lio---Eduarda-Santana/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=faf0d427-6ba2-71d3-1be2-4cc2029f1ae0"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/eduarda-santana-cont/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/eduarda-santana-cont/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
@@ -900,7 +993,8 @@
                             <article class="cards-aluno" data-curso="" data-formacao="">
                                 <div class="aluno-topo">
                                     <div class="img">
-                                        <img src="../Assets/Fotos_aluno_130/Maria Eduarda Ferreira Da Silva.jpeg" alt="">
+                                        <img src="../Assets/Fotos_aluno_130/Maria Eduarda Ferreira Da Silva.jpeg"
+                                            alt="">
                                     </div>
                                     <div>
                                         <h2>
@@ -935,22 +1029,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/mariaeduardafoty-jpg" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/mariaeduardafoty-jpg" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://mariaeduardafoty-jpg.github.io/portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=61995054-081b-2a1d-97ee-2ec878002f9e#inicio" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://mariaeduardafoty-jpg.github.io/portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=61995054-081b-2a1d-97ee-2ec878002f9e#inicio"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/maria-eduarda-a25136412/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/maria-eduarda-a25136412/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="front-end" data-interesse="Design"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Maria_elisa.jpeg.jpg" alt="">
@@ -988,15 +1086,18 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/lisalizz2110-svg" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/lisalizz2110-svg" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://lisalizz2110-svg.github.io/meu-portifolio_maria-elisa/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=d6a102e9-3ac5-1317-9d1d-f8cef22468e3" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://lisalizz2110-svg.github.io/meu-portifolio_maria-elisa/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=d6a102e9-3ac5-1317-9d1d-f8cef22468e3"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/maria-elisa-andrade-7b36b83a1" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/maria-elisa-andrade-7b36b83a1"
+                                            target="_blank" rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
@@ -1004,7 +1105,8 @@
                             </article>
 
 
-                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/matheus_marques.jpg" alt="">
@@ -1042,22 +1144,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/Matheus-marques2" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/Matheus-marques2" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://portfolio-matheus-marques.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=e08f4b00-2c41-fe6c-6e09-229d8f4b5d10" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://portfolio-matheus-marques.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=e08f4b00-2c41-fe6c-6e09-229d8f4b5d10"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/matheus-marques-santos/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/matheus-marques-santos/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack cyberseguranca" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack"
+                                data-interesse="fullstack cyberseguranca" data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/messiaskayna.jpeg.jpeg" alt="">
@@ -1095,22 +1201,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/messiaskayna7" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/messiaskayna7" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://portf-lio-pessoal-7glo.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=fe65424c-fb36-540a-93bd-d47806ad8887#inicio" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://portf-lio-pessoal-7glo.vercel.app/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=fe65424c-fb36-540a-93bd-d47806ad8887#inicio"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/messias-kayna-7741a4352/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/messias-kayna-7741a4352/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="back-end" data-interesse="backend"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/sabrina_vitoria.jpeg" alt="">
@@ -1148,22 +1258,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/Sabrinabrr" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/Sabrinabrr" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://sabrinabrr.github.io/Meu-portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=ec0fe2bd-584a-1e68-34e7-9ab379cc1e21" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://sabrinabrr.github.io/Meu-portfolio-pessoal/?classId=91b666e3-4664-4a63-8b2c-b6d48743038e&assignmentId=d2e6f848-1537-4572-9033-ffb417b7f549&submissionId=ec0fe2bd-584a-1e68-34e7-9ab379cc1e21"
+                                            target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/sabrina-nascimento-4840a8234/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/sabrina-nascimento-4840a8234/"
+                                            target="_blank" rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="fullstack"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Thamires_vitoria.jpeg" alt="">
@@ -1188,7 +1302,9 @@
                                     <div>
                                         <h3>Experiência</h3>
                                         <p>
-                                            Projetos acadêmicos em times formados pelo Porto Digital, DIO e ETE; integrante da equipe de front-end (HTML, CSS e JavaScript) no projeto "Dulce Salgados", atuando também como uma das líderes
+                                            Projetos acadêmicos em times formados pelo Porto Digital, DIO e ETE;
+                                            integrante da equipe de front-end (HTML, CSS e JavaScript) no projeto "Dulce
+                                            Salgados", atuando também como uma das líderes
                                         </p>
                                     </div>
                                     <div>
@@ -1201,22 +1317,26 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/Thamiresvitoria" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/Thamiresvitoria" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://thamiresvitoria.github.io/Portifolio-pessoal/" target="_blank" rel="noopener noreferrer">Portfólio</a>
+                                        <a href="https://thamiresvitoria.github.io/Portifolio-pessoal/" target="_blank"
+                                            rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/thamires-vitoria-muniz-da-silva-7b3878352" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/thamires-vitoria-muniz-da-silva-7b3878352"
+                                            target="_blank" rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
                                 </div>
                             </article>
 
-                            <article class="cards-aluno" data-curso="full-stack" data-interesse="info" data-formacao="cursando">
+                            <article class="cards-aluno" data-curso="full-stack" data-interesse="info"
+                                data-formacao="cursando">
                                 <div class="aluno-topo">
                                     <div class="img">
                                         <img src="../Assets/Fotos_aluno_130/Vitor_Gabriel.JPG.JPG" alt="">
@@ -1254,7 +1374,8 @@
 
                                 <div class="redes-sociais">
                                     <button class="redes-sociais-btn">
-                                        <a href="https://github.com/02Vitinho" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://github.com/02Vitinho" target="_blank"
+                                            rel="noopener noreferrer">
                                             Github
                                         </a>
                                     </button>
@@ -1262,7 +1383,8 @@
                                         <a href="" target="_blank" rel="noopener noreferrer">Portfólio</a>
                                     </button>
                                     <button class="redes-sociais-btn">
-                                        <a href="https://www.linkedin.com/in/gabriel-dantas-93b3b5412/" target="_blank" rel="noopener noreferrer">
+                                        <a href="https://www.linkedin.com/in/gabriel-dantas-93b3b5412/" target="_blank"
+                                            rel="noopener noreferrer">
                                             LinkedIn
                                         </a>
                                     </button>
@@ -1272,7 +1394,9 @@
                         </div>
                     </div>
 
-                    <button class="carousel-btn proximo" id="proximo" aria-label="Próximo estudante">
+                    <button class="carousel-btn proximo" id="proximo" type="button"
+                        aria-label="Próxima página de estudantes">
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </button>
                 </div>
 
@@ -1295,7 +1419,8 @@
             <a href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank" rel="noopener">
                 <img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian">
             </a>
-            <a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank" rel="noopener">
+            <a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank"
+                rel="noopener">
                 <img src="../Assets/logo_comunidade_transforme_se.png" alt="Comunidade Transforme-se">
             </a>
         </div>
@@ -1306,8 +1431,8 @@
 
     </footer>
 
-    <script src="../script.js"></script>
-    <script src="../estudantes.js"></script>
+    <script src="../script.js" defer></script>
+    <script src="../estudantes.js" defer></script>
 </body>
 
 </html>

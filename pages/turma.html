@@ -1,161 +1,93 @@
-<!DOCTYPE html>
-<html lang="Pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça a Turma 130 do programa Transforme-se, sua formação, seus valores e os registros dessa jornada em Desenvolvimento Front-End.">
+  <meta name="theme-color" content="#090c0d">
+  <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <title>Portifolio - Turma 130</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Nossa turma | Turma 130</title>
 </head>
-
 <body>
-
-  <!-- Navbar do projeto-->
   <header>
-    <nav>
-      <div class="logo">
-        <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portifólio" />
-      </div>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <nav aria-label="Navegação principal">
+      <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130"></a></div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="menu" id="menuList">
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="./turma.html" class="active">Turma</a></li>
-        <li><a href="./docente.html">Docente</a></li>
-        <li><a href="./grade.html">Grade</a></li>
-        <li><a href="./roadmap.html">Roadmap</a></li>
-        <li><a href="./estudantes.html">Estudantes</a></li>
+        <li><a href="../index.html">Início</a></li><li><a href="./turma.html" aria-current="page">Turma</a></li><li><a href="./docente.html">Docente</a></li><li><a href="./grade.html">Grade</a></li><li><a href="./roadmap.html">Roadmap</a></li><li><a href="./estudantes.html">Estudantes</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Pagina principal-->
   <main>
-
-    <section id="turma">
-
-      <div class="turma">
-
-        <div class="turma-topo">
-
-          <div class="turma-header">
-            <h1>TURMA 130</h1>
-            <p>A turma 130 é formada por jovens talentos que compartilham o mesmo objetivo: se desenvolver na área de tecnologia e gerar impacto positivo no mundo.</p>
+    <section class="turma turma-nova" aria-labelledby="titulo-turma">
+      <div class="turma-hero">
+        <div class="turma-hero-conteudo">
+          <h1 id="titulo-turma">Aprendemos juntos.<br><span>Transformamos ideias.</span></h1>
+          <p>Somos 21 estudantes construindo uma nova trajetória na tecnologia. Entre desafios, projetos e muita colaboração, desenvolvemos habilidades para criar experiências digitais que fazem sentido.</p>
+          <div class="turma-acoes">
+            <a class="btn-a-turma" href="#galeria-turma">Ver nossa jornada <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+            <a class="btn-os-estudantes" href="./estudantes.html">Conhecer estudantes <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
-
-          <img class="turma-imagem" src="../Assets/foto_zeromei.jpg" alt="Foto da turma 130">
-
         </div>
-
-        <!-- Cards curso, período, etc.. -->
-        <div class="turma-cards">
-
-          <div class="card-principal">
-            <div class="card-titulo">
-              <h3>CURSO</h3>
-              <i class="fa-solid fa-graduation-cap"></i>
-            </div>
-            <p>Desenvolvimento Front-End</p>
-          </div>
-
-          <div class="card-principal">
-            <div class="card-titulo">
-              <h3>PERÍODO</h3>
-              <i class="fa-solid fa-calendar-days"></i>
-            </div>
-            <p>07/05/2026 até 15/08/2026</p>
-          </div>
-
-          <div class="card-principal">
-            <div class="card-titulo">
-              <h3>CARGA HORÁRIA</h3>
-              <i class="fa-solid fa-clock"></i>
-            </div>
-            <p>264h</p>
-            <span class="card-subtitulo">Total em disciplinas</span>
-          </div>
-
-          <div class="card-principal">
-            <div class="card-titulo">
-              <h3>LOCAL</h3>
-              <i class="fa-solid fa-map-marker-alt"></i>
-            </div>
-            <p> Senac - Santo Amaro</p>
-          </div>
-
-        </div>
-        
-        <div class="container-objetivo">
-
-     
-          <div class="objetivo">
-            <h2>OBJETIVOS DA TURMA</h2>
-
-            <ul>
-              <li>Desenvolver habilidades técnicas em Front-End</li>
-              <li>Trabalhar em equipe e projetos reais</li>
-              <li>Promover o pensamento crítico e a criatividade</li>
-              <li>Preparar para o mercado de tecnologia</li>
-            </ul>
-          </div>
-
-          <div class="grid-galeria">
-
-            <button class="seta seta-esquerda">
-              <img src="../Assets/seta.svg" alt="Foto anterior">
-            </button>
-
-            <div class="galeria">
-              <div class="galeria-grid">
-
-                <img src="../Assets/img_principal.jpg" alt="Foto da turma">
-                <img src="../Assets/img_1.jpg" alt="Foto da turma">
-                <img src="../Assets/img_2.jpg" alt="Foto da turma">
-
-                <img src="../Assets/img_3.jpg" alt="Foto da turma">
-                <img src="../Assets/img_4.jpg" alt="Foto da turma">
-                <img src="../Assets/ani.jpg" alt="Foto da turma">
-
-              </div>
-            </div>
-
-            <button class="seta seta-direita">
-              <img src="../Assets/seta.svg" alt="Próxima foto">
-            </button>
-
-          </div>
-
+        <div class="turma-hero-imagem">
+          <img src="../Assets/foto_zeromei.jpg" alt="Turma 130 reunida durante um evento do programa Transforme-se" width="1200" height="800">
+          <div class="turma-hero-selo"><strong>21</strong><span>histórias,<br>uma turma</span></div>
         </div>
       </div>
 
+      <section class="turma-identidade" aria-labelledby="titulo-identidade">
+        <div class="turma-identidade-texto">
+          <span class="secao-etiqueta">QUEM SOMOS</span>
+          <h2 id="titulo-identidade">Uma turma feita de troca, prática e evolução</h2>
+          <p>Na formação em Desenvolvimento Front-End, aprendemos muito além do código. Planejamos interfaces, resolvemos problemas e transformamos diferentes experiências em projetos coletivos.</p>
+          <p>Nosso objetivo é sair dessa jornada com repertório técnico, confiança e conexões que continuem abrindo caminhos no mercado de tecnologia.</p>
+        </div>
+        <div class="turma-valores">
+          <article><i class="fa-solid fa-people-group" aria-hidden="true"></i><div><h3>Colaboração</h3><p>Crescemos compartilhando conhecimento e apoiando cada etapa.</p></div></article>
+          <article><i class="fa-regular fa-lightbulb" aria-hidden="true"></i><div><h3>Criatividade</h3><p>Experimentamos ideias para construir soluções claras e úteis.</p></div></article>
+          <article><i class="fa-solid fa-rocket" aria-hidden="true"></i><div><h3>Futuro</h3><p>Transformamos aprendizado em novas possibilidades profissionais.</p></div></article>
+        </div>
+      </section>
+
+      <section class="galeria-turma" id="galeria-turma" aria-labelledby="titulo-galeria">
+        <div class="galeria-cabecalho">
+          <div><span class="secao-etiqueta">NOSSA JORNADA</span><h2 id="titulo-galeria">Momentos que contam nossa história</h2><p>Aulas, encontros, apresentações e conquistas registradas ao longo da formação.</p></div>
+          <span class="galeria-total" id="galeriaTotal" aria-live="polite"></span>
+        </div>
+        <div class="grid-galeria galeria-experiencia">
+          <button class="seta seta-esquerda" type="button" aria-label="Fotos anteriores"><img src="../Assets/seta.svg" alt=""></button>
+          <div class="galeria">
+            <div class="galeria-grid" aria-label="Fotos da Turma 130">
+              <button type="button" data-gallery-item><img src="../Assets/img_principal.jpg" alt="Turma 130 reunida em sala"><span class="foto-legenda">Nossa turma</span></button>
+              <button type="button" data-gallery-item><img src="../Assets/img_1.jpg" alt="Estudantes durante uma atividade do curso"><span class="foto-legenda">Aprendizado na prática</span></button>
+              <button type="button" data-gallery-item><img src="../Assets/img_2.jpg" alt="Registro de uma atividade colaborativa"><span class="foto-legenda">Trabalho em equipe</span></button>
+              <button type="button" data-gallery-item><img src="../Assets/img_3.jpg" alt="Estudantes apresentando um projeto"><span class="foto-legenda">Apresentações</span></button>
+              <button type="button" data-gallery-item><img src="../Assets/img_4.jpg" alt="Momento de aprendizagem da Turma 130"><span class="foto-legenda">Nossa rotina</span></button>
+              <button type="button" data-gallery-item><img src="../Assets/ani.jpg" alt="Confraternização dos estudantes da Turma 130"><span class="foto-legenda">Conexões</span></button>
+              <!-- Para adicionar fotos depois, duplique um botão data-gallery-item. -->
+            </div>
+          </div>
+          <button class="seta seta-direita" type="button" aria-label="Próximas fotos"><img src="../Assets/seta.svg" alt=""></button>
+        </div>
+        <div class="galeria-rodape"><span id="galeriaStatus" aria-live="polite"></span><span><i class="fa-solid fa-expand" aria-hidden="true"></i> Clique em uma foto para ampliar</span></div>
+      </section>
+    </section>
   </main>
 
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da galeria" hidden>
+    <button class="seta lightbox-prev" type="button" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+    <figure><img class="lightbox-image" alt=""><figcaption></figcaption></figure>
+    <button class="seta lightbox-next" type="button" aria-label="Próxima foto"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    <button class="seta lightbox-close" type="button" aria-label="Fechar galeria"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  </div>
+
   <footer>
-
-    <div class="footer-logos">
-        <a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank" rel="noopener">
-            <img src="../Assets/logo_senac.png" alt="Senac Fecomércio Sesc">
-        </a>
-        <a href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank" rel="noopener">
-            <img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian">
-        </a>
-        <a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank" rel="noopener">
-            <img src="../Assets/logo_comunidade_transforme_se.png" alt="Comunidade Transforme-se">
-        </a>
-    </div>
-
-    <p>
-        © 2026 Transforme-se 130. Todos os direitos reservados.
-    </p>
-
-</footer>
+    <div class="footer-logos"><a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_senac.png" alt="Senac Pernambuco"></a><a href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian"></a><a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank" rel="noopener noreferrer"><img src="../Assets/logo_comunidade_transforme_se.png" alt="Comunidade Transforme-se"></a></div>
+    <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../script.js" defer></script>
 </body>
-
-<script src="../script.js"></script>
-
 </html>

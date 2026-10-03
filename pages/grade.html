@@ -1,697 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../style.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <title>Grade Curricular - Turma 130</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Grade curricular, competências, tecnologias e projetos desenvolvidos pela Turma 130.">
+  <meta name="theme-color" content="#090c0d">
+  <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Grade e projetos | Turma 130</title>
 </head>
 
 <body>
-
-    <!-- ================= NAVBAR ================= -->
-
-    <header>
-        <nav>
-
-            <div class="logo">
-                <img id="logo_navbar_img"
-                    src="../Assets/Logo_navbar.svg"
-                    alt="Logo do Portfólio">
+  <header>
+    <nav aria-label="Navegação principal">
+      <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img"
+            src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130"></a></div><button class="menu-toggle"
+        id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="menu" id="menuList">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./turma.html">Turma</a></li>
+        <li><a href="./docente.html">Docente</a></li>
+        <li><a href="./grade.html" aria-current="page">Grade</a></li>
+        <li><a href="./roadmap.html">Roadmap</a></li>
+        <li><a href="./estudantes.html">Estudantes</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="grade" class="grade-container" aria-labelledby="titulo-grade">
+      <div class="grade-header">
+        <h1 id="titulo-grade">GRADE CURRICULAR</h1>
+        <p>Sete unidades para planejar, desenvolver e publicar experiências para a web.</p>
+      </div>
+      <div class="grade-grid">
+        <article class="disciplinas">
+          <h2>UNIDADES CURRICULARES</h2>
+          <div class="disciplina-lista">
+            <div class="disciplina"><span>UC1</span>Operar sistemas e aplicativos de escritório — 32h</div>
+            <div class="disciplina"><span>UC2</span>Desenvolver sistemas de informação — 48h</div>
+            <div class="disciplina"><span>UC3</span>Elaborar projetos de aplicações web — 36h</div>
+            <div class="disciplina"><span>UC4</span>Desenvolver aplicações para websites — 36h</div>
+            <div class="disciplina"><span>UC5</span>Codificar Front-End de aplicações web — 48h</div>
+            <div class="disciplina"><span>UC6</span>Publicar aplicações web — 36h</div>
+            <div class="disciplina"><span>UC7</span>Projeto Integrador — 24h</div>
+          </div>
+        </article>
+        <div class="grade-direita">
+          <article class="tecnologias">
+            <h2>TECNOLOGIAS</h2>
+            <div class="tecnologias-lista">
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/html-5-svgrepo-com.svg" alt=""></div>
+                <p>HTML5</p>
+              </div>
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/css-3-svgrepo-com.svg" alt=""></div>
+                <p>CSS3</p>
+              </div>
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/javascript-svgrepo-com.svg" alt=""></div>
+                <p>JavaScript</p>
+              </div>
+              <div class="tecnologia">
+                <div class="tecnologia-icone"><img src="../Assets/figma-svgrepo-com.svg" alt=""></div>
+                <p>Figma</p>
+              </div>
             </div>
-
-            <button class="menu-toggle"
-                id="menuToggle"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-            <ul class="menu" id="menuList">
-
-                <li><a href="../index.html">Início</a></li>
-                <li><a href="./turma.html">Turma</a></li>
-                <li><a href="./docente.html">Docente</a></li>
-                <li><a href="./grade.html" class="active">Grade</a></li>
-                <li><a href="./roadmap.html">Roadmap</a></li>
-                <li><a href="./estudantes.html">Estudantes</a></li>
-
-            </ul>
-
-        </nav>
-    </header>
-
-
-    <!-- ================= CONTEÚDO ================= -->
-
-    <main>
-
-        <section id="grade">
-
-            <div class="grade-container">
-
-                <!-- TÍTULO -->
-
-                <div class="grade-header">
-
-                    <h1>GRADE CURRICULAR</h1>
-
-                    <p>
-                        Conheça nossas Unidades Curriculares
-                    </p>
-
-                </div>
-
-
-                <!-- ================= GRADE ================= -->
-
-                <div class="grade-grid">
-
-                    <!-- ================= DISCIPLINAS ================= -->
-
-                    <div class="disciplinas">
-
-                        <h2>DISCIPLINAS</h2>
-
-                        <div class="disciplina-lista">
-
-                            <div class="disciplina">
-                                <span>UC1</span>
-                                Operar sistemas operacionais e aplicativos de escritório (32h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC2</span>
-                                Desenvolver sistema de informação (48h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC3</span>
-                                Elaborar projetos de aplicações web (36h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC4</span>
-                                Desenvolver aplicações para websites (36h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC5</span>
-                                Codificar Front-End de aplicações web (48h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC6</span>
-                                Publicar aplicações web (36h)
-                            </div>
-
-                            <div class="disciplina">
-                                <span>UC7</span>
-                                Projeto integrador Desenvolvedor Front-end (24h)
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ================= LADO DIREITO ================= -->
-
-                    <div class="grade-direita">
-
-                        <!-- TECNOLOGIAS -->
-
-                        <div class="tecnologias">
-
-                            <h2>TECNOLOGIAS</h2>
-
-                            <div class="tecnologias-lista">
-
-                                <div class="tecnologia">
-
-                                    <div class="tecnologia-icone html">
-                                        <img src="../Assets/html-5-svgrepo-com.svg"
-                                            alt="HTML5">
-                                    </div>
-
-                                    <p>HTML5</p>
-
-                                </div>
-
-
-                                <div class="tecnologia">
-
-                                    <div class="tecnologia-icone css">
-                                        <img src="../Assets/css-3-svgrepo-com.svg"
-                                            alt="CSS3">
-                                    </div>
-
-                                    <p>CSS3</p>
-
-                                </div>
-
-
-                                <div class="tecnologia">
-
-                                    <div class="tecnologia-icone javascript">
-                                        <img src="../Assets/javascript-svgrepo-com.svg"
-                                            alt="JavaScript">
-                                    </div>
-
-                                    <p>JAVASCRIPT</p>
-
-                                </div>
-
-
-                                <div class="tecnologia">
-
-                                    <div class="tecnologia-icone figma">
-                                        <img src="../Assets/figma-svgrepo-com.svg"
-                                            alt="Figma">
-                                    </div>
-
-                                    <p>FIGMA</p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- COMPETÊNCIAS -->
-
-                        <div class="competencias">
-
-                            <h2>COMPETÊNCIAS</h2>
-
-                            <div class="competencias-grid">
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/PC.svg"
-                                            alt="Ícone PC">
-                                    </i>
-
-                                    Operar sistemas operacionais
-
-                                </div>
-
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/paleta.svg"
-                                            alt="Ícone paleta">
-                                    </i>
-
-                                    Criar interface no Figma
-
-                                </div>
-
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/pagina_vazia.svg"
-                                            alt="Ícone página">
-                                    </i>
-
-                                    Utilizar aplicativos de escritório
-
-                                </div>
-
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/pessoas_junto.svg"
-                                            alt="Ícone pessoas">
-                                    </i>
-
-                                    Trabalhar em equipe
-
-                                </div>
-
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/mobile-dev-mode.svg"
-                                            alt="Ícone desenvolvimento">
-                                    </i>
-
-                                    Desenvolver páginas web
-
-                                </div>
-
-
-                                <div class="competencia">
-
-                                    <i class="icone">
-                                        <img src="../Assets/lampada.svg"
-                                            alt="Ícone lâmpada">
-                                    </i>
-
-                                    Resolver problemas
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ==================================================
-                     PROJETOS DA TURMA
-                     AGORA FICA ABAIXO DA GRADE / DISCIPLINAS
-                ================================================== -->
-
-                <section class="projetos-turma">
-
-                    <div class="projetos-header">
-
-                        <div class="projetos-titulo">
-
-                            <span class="projetos-label">
-                                PROJETOS DA TURMA
-                            </span>
-
-                            <h2>
-                                PROJETOS EM DESENVOLVIMENTO
-                            </h2>
-
-                            <p>
-                                Confira os projetos desenvolvidos pelas equipes da Turma 130.
-                            </p>
-
-                        </div>
-
-
-                        <!-- FILTROS -->
-
-                        <div class="projetos-filtros">
-
-                            <button class="filtro-projeto ativo">
-                                Todos
-                            </button>
-
-                            <button class="filtro-projeto">
-                                UC 1
-                            </button>
-
-                            <button class="filtro-projeto">
-                                UC 2
-                            </button>
-
-                            <button class="filtro-projeto">
-                                UC 3
-                            </button>
-
-                            <button class="filtro-projeto">
-                               UC 4
-                            </button>
-
-                            <button class="filtro-projeto">
-                                Outros
-                            </button>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ÁREA DOS PROJETOS -->
-
-                    <div class="projeto-area">
-
-                        <!-- SETA ESQUERDA -->
-
-                        <button type="button"
-                            class="projeto-seta projeto-anterior"
-                            aria-label="Projeto anterior">
-
-                            <i class="fa-solid fa-chevron-left"></i>
-
-                        </button>
-
-
-                        <!-- CARDS -->
-
-                        <div class="projetos-lista">
-
-
-                            <!-- ================= CARD 1 ================= -->
-
-                            <article class="projeto-card">
-
-                                <div class="projeto-card-topo">
-
-                                    <div class="projeto-icone">
-                                        <i class="fa-solid fa-code"></i>
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            BINGO
-                                        </h3>
-
-                                        <span class="projeto-equipe">
-                                            <i class="fa-solid fa-users"></i>
-                                            Grupo de 5 integrantes
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="projeto-tags">
-
-                                    <span class="tag-python">
-                                        javascript
-                                    </span>
-
-                                    <span class="tag-backend">
-                                        Logica
-                                    </span>
-
-                                    <span class="tag-database">
-                                        Git e Github
-                                    </span>
-
-                                </div>
-
-
-                                <p class="projeto-descricao">
-
-                                    Atividade da UC2, criação de um bingo. usando variáveis, loop de repetições, array e outros conteúdos que foram passados.
-
-                                </p>
-
-
-                                <div class="projeto-rodape">
-
-                                    <span class="projeto-status">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        Concluído
-                                    </span>
-
-                                    <a href="https://github.com/Thamiresvitoria/Bingo" 
-                                        class="projeto-botao">
-
-                                        <i class="fa-brands fa-github"></i>
-                                        GitHub
-
-                                    </a>
-
-                                </div>
-
-                            </article>
-
-
-                            <!-- ================= CARD 2 ================= -->
-
-                            <article class="projeto-card">
-
-                                <div class="projeto-card-topo">
-
-                                    <div class="projeto-icone">
-                                        <i class="fa-solid fa-desktop"></i>
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            PORTFÓLIO DA TURMA
-                                        </h3>
-
-                                        <span class="projeto-equipe">
-                                            <i class="fa-solid fa-users"></i>
-                                            Squad Integral 
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="projeto-tags">
-
-                                    <span class="tag-html">
-                                        HTML
-                                    </span>
-
-                                    <span class="tag-css">
-                                        CSS
-                                    </span>
-
-                                    <span class="tag-javascript">
-                                        JavaScript
-                                    </span>
-
-                                </div>
-
-
-                                <p class="projeto-descricao">
-
-                                    Uma Landing page que representa a turma, responsivo com informações sobre
-                                    os integrantes do grupo, projetos e formas
-                                    de contato.
-
-                                </p>
-
-
-                                <div class="projeto-rodape">
-
-                                    <span class="projeto-status">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        Concluído   
-                                    </span>
-
-                                    <a href="#"
-                                        class="projeto-botao">
-
-                                        <i class="fa-brands fa-github"></i>
-                                        GitHub
-
-                                    </a>
-
-                                </div>
-
-                            </article>
-
-
-                            <!-- ================= CARD 3 ================= -->
-
-                            <article class="projeto-card">
-
-                                <div class="projeto-card-topo">
-
-                                    <div class="projeto-icone">
-                                        <i class="fa-solid fa-database"></i>
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            APRESENTAÇÃO UC2
-                                        </h3>
-
-                                        <span class="projeto-equipe">
-                                            <i class="fa-solid fa-users"></i>
-                                            Grupo de 7 integrantes
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="projeto-tags">
-
-                                    <span class="tag-apresentacao">
-                                        Apresentação
-                                    </span>
-
-                                    <span class="tag-equipe">
-                                        Trabalho em equipe
-                                    </span>
-
-                                    <span class="tag-pratica">
-                                        Pratica
-                                    </span>
-
-                                </div>
-
-
-                                <p class="projeto-descricao">
-
-                                   Nesta atividade, cada equipe desenvolveu uma apresentação sobre estruturas condicionais e laços de repetição em JavaScript. Abordamos as estruturas if/else, o encadeamento de condições com if, else if e else e os laços de repetição for e while, explicando seus conceitos, finalidades, sintaxes e formas de utilização.
-                                </p>
-
-
-                                <div class="projeto-rodape">
-
-                                    <span class="projeto-status concluido">
-                                        <i class="fa-regular fa-circle-check"></i>
-                                        Concluído
-                                    </span>
-
-                                    <a href="#"
-                                        class="projeto-botao">
-
-                                        <i class="fa-brands fa-github"></i>
-                                        GitHub
-
-                                    </a>
-
-                                </div>
-
-                            </article>
-
-
-                            <!-- ================= CARD 4 ================= -->
-
-                           <!----> <article class="projeto-card">
-
-                                <div class="projeto-card-topo">
-
-                                    <div class="projeto-icone">
-                                        <i class="fa-solid fa-cloud"></i>
-                                    </div>
-
-                                    <div>
-
-                                        <h3>
-                                            PORTÍFOLIO PESSOAL
-                                        </h3>
-
-                                        <span class="projeto-equipe">
-                                            <i class="fa-solid fa-users"></i>
-                                            Individual
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div class="projeto-tags">
-
-                                    <span class="tag-html">
-                                        Html
-                                    </span>
-
-                                    <span class="tag-javascript">
-                                        JavaScript
-                                    </span>
-
-                                    <span class="tag-api">
-                                        Css
-                                    </span>
-
-                                </div>
-
-
-                                <p class="projeto-descricao">
-
-                                Na UC 5, foi solicitado que todos os integrantes da turma desenvolvessem um portfólio pessoal, que seria integrado ao portfólio geral da turma. O objetivo é apresentar os projetos, conhecimentos e experiências de cada estudante, permitindo que visitantes conheçam melhor o trabalho desenvolvido pela turma e tenham acesso às formas de contato de cada integrante.
-
-                                </p>
-
-
-                                <div class="projeto-rodape">
-
-                                    <span class="projeto-status">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        Concluído   
-                                    </span>
-
-                                    <a href="#"
-                                        class="projeto-botao">
-
-                                        <i class="fa-brands fa-github"></i>
-                                        GitHub
-
-                                    </a>
-
-                                </div>
-
-                            </article>
-
-
-                        </div>
-
-
-                        <!-- SETA DIREITA -->
-
-                        <button type="button"
-                            class="projeto-seta projeto-proximo"
-                            aria-label="Próximo projeto">
-
-                            <i class="fa-solid fa-chevron-right"></i>
-
-                        </button>
-
-                    </div>
-
-                </section>
-
+          </article>
+          <article class="competencias">
+            <h2>COMPETÊNCIAS</h2>
+            <div class="competencias-grid">
+              <div class="competencia"><img src="../Assets/PC.svg" alt="">Operar sistemas</div>
+              <div class="competencia"><img src="../Assets/paleta.svg" alt="">Criar interfaces</div>
+              <div class="competencia"><img src="../Assets/pagina_vazia.svg" alt="">Organizar conteúdo</div>
+              <div class="competencia"><img src="../Assets/pessoas_junto.svg" alt="">Trabalhar em equipe</div>
+              <div class="competencia"><img src="../Assets/mobile-dev-mode.svg" alt="">Desenvolver páginas</div>
+              <div class="competencia"><img src="../Assets/lampada.svg" alt="">Resolver problemas</div>
             </div>
-
-                    <!-- SETA DIREITA -->
-                    <button type="button" class="projeto-seta projeto-proximo" aria-label="Próximo projeto">
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </button>
-
-                </div>
-
-            </section>
-
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-
-            <div class="footer-logos">
-                <a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank" rel="noopener">
-                    <img src="../Assets/logo_senac.png" alt="Senac Fecomércio Sesc">
-                </a>
-                <a href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank" rel="noopener">
-                    <img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian">
-                </a>
-                <a href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank" rel="noopener">
-                    <img src="../Assets/logo_comunidade_transforme_se.png" alt="Comunidade Transforme-se">
-                </a>
-            </div>
-
-            <p>
-                © 2026 Transforme-se 130. Todos os direitos reservados.
-            </p>
-
-        </footer>
-        <script src="../script.js"></script>
-
-
+          </article>
+        </div>
+      </div>
+      <section class="projetos-turma" aria-labelledby="titulo-projetos">
+        <div class="projetos-header">
+          <div class="projetos-titulo"><span class="projetos-label">PROJETOS DA TURMA</span>
+            <h2 id="titulo-projetos">APRENDIZADO NA PRÁTICA</h2>
+            <p>Filtre por unidade e navegue pelas entregas concluídas.</p>
+          </div>
+          <div class="projetos-filtros" role="group" aria-label="Filtrar projetos"><button class="filtro-projeto ativo"
+              type="button" data-filter="todos">Todos</button><button class="filtro-projeto" type="button"
+              data-filter="uc2">UC2</button><button class="filtro-projeto" type="button"
+              data-filter="uc4">UC4</button><button class="filtro-projeto" type="button"
+              data-filter="uc5">UC5</button><button class="filtro-projeto" type="button"
+              data-filter="uc6">UC6</button><button class="filtro-projeto" type="button" data-filter="uc7">UC7</button>
+          </div>
+        </div>
+        <div class="projeto-area"><button class="projeto-seta projeto-anterior" type="button"
+            aria-label="Projetos anteriores"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="projetos-lista" id="projetosLista" aria-live="polite"></div><button
+            class="projeto-seta projeto-proximo" type="button" aria-label="Próximos projetos"><i
+              class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+        <p class="projeto-paginacao" id="projetoPaginacao" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-logos"><a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank"
+        rel="noopener noreferrer"><img src="../Assets/logo_senac.png" alt="Senac Pernambuco"></a><a
+        href="https://www.serasaexperian.com.br/" class="footer-logo-link" target="_blank"
+        rel="noopener noreferrer"><img src="../Assets/logo_serasa_experian.webp" alt="Serasa Experian"></a><a
+        href="https://www.serasaexperian.com.br/transforme-se/" class="footer-logo-link" target="_blank"
+        rel="noopener noreferrer"><img src="../Assets/logo_comunidade_transforme_se.png"
+          alt="Comunidade Transforme-se"></a></div>
+    <p>© 2026 Transforme-se 130. Todos os direitos reservados.</p>
+  </footer>
+  <script src="../script.js" defer></script>
 </body>
 
 </html>

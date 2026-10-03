@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Conheça Radássila Silva, docente da Turma 130, sua experiência, formação e tecnologias.">
+    <meta name="theme-color" content="#090c0d">
     <link rel="icon" href="../Assets/Logo_navbar.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../style.css" />
 
-    <title>Docente - Turma 130</title>
+    <title>Docente | Turma 130</title>
 </head>
 
 <body>
@@ -16,11 +19,11 @@
     <header>
         <nav>
 
-            <div class="logo">
-                <img id="logo_navbar_img" src="../Assets/Logo_navbar.svg" alt="Logo do Portfólio" />
-            </div>
+            <div class="logo"><a href="../index.html" aria-label="Ir para o início"><img id="logo_navbar_img"
+                        src="../Assets/Logo_navbar.svg" alt="Transforme-se — Turma 130" /></a></div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="menuList"
+                aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -37,7 +40,7 @@
                 </li>
 
                 <li>
-                    <a href="./docente.html" class="active">Docente</a>
+                    <a href="./docente.html" class="active" aria-current="page">Docente</a>
                 </li>
 
                 <li>
@@ -413,7 +416,7 @@
 
 
     <!-- JAVASCRIPT -->
-    <script src="../script.js"></script>
+    <script src="../script.js" defer></script>
 
 </body>
 
