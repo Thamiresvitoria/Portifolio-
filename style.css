@@ -440,8 +440,10 @@ p {
 .nossa-jornada:hover,
 .card-principal:hover,
 .cards-aluno:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent)
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 1px 0.5px 2.5px var(--accent);
+  border-color: var(--accent);
 }
 
 .arrow-right {
@@ -1332,10 +1334,18 @@ p {
   align-items: center
 }
 
-.student-photo img {
-  width: 92px;
-  height: 112px;
+.student-photo  {
+  width: 150px;
+  height: 150px;
   object-fit: cover;
+  border-radius: 12px
+}
+
+.student-photo img {
+  width:150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top; 
   border-radius: 12px
 }
 
@@ -1416,7 +1426,8 @@ p {
 
 .carousel-window {
   min-width: 0;
-  overflow: hidden
+  overflow: hidden;
+    padding-inline: 64px !important;
 }
 
 .cards-alunos {
@@ -1683,6 +1694,10 @@ footer p {
     display: none
   }
 
+  .carousel-window {
+    padding-inline: 56px !important;
+  }
+
   .details-card {
     grid-template-columns: 44px 1fr 44px
   }
@@ -1942,6 +1957,10 @@ footer p {
 
   .roadmap {
     grid-template-columns: repeat(2, 1fr)
+  }
+
+   .carousel-window {
+    padding-inline: 48px !important;
   }
 
   .details-card {
