@@ -800,6 +800,8 @@ p {
   padding: 18px
 }
 
+
+
 .docente-tecnologias:hover,
 .card-experiencia:hover,
 .card-area-atuacao:hover,
@@ -831,6 +833,8 @@ p {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+
+
 
 .grid-icones a {
   display: grid;
@@ -879,6 +883,28 @@ p {
 .card-formacao h3 {
   font-family: "Inter", sans-serif;
   font-size: .92rem;
+}
+
+.card-formacao h3 {
+  display: grid;
+  gap: 5px;
+  line-height: 1.25
+}
+
+.formacao-curso,
+.formacao-instituicao {
+  display: block
+}
+
+.formacao-instituicao {
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 500
+}
+
+.card-formacao .data {
+  display: block;
+  margin-top: 10px
 }
 
 .data {
@@ -2470,7 +2496,7 @@ footer p {
 
 .turma-hero-conteudo h1 {
   margin: 16px 0 20px;
-  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  font-size: clamp(2.65rem, 4.6vw, 4.45rem);
   letter-spacing: -.06em
 }
 
@@ -2860,7 +2886,7 @@ footer p {
 
 @media(max-width:560px) {
   .turma-hero-conteudo h1 {
-    font-size: 2.45rem
+    font-size: 2.25rem
   }
 
   .turma-acoes {
@@ -2977,7 +3003,7 @@ footer p {
   }
 
   .turma-hero-conteudo h1 {
-    font-size: clamp(3rem, 4.35vw, 4rem)
+    font-size: clamp(2.8rem, 4vw, 3.7rem)
   }
 }
 
@@ -2988,7 +3014,7 @@ footer p {
   }
 
   .turma-hero-conteudo h1 {
-    font-size: clamp(2.8rem, 5vw, 3.45rem)
+    font-size: clamp(2.6rem, 4.6vw, 3.2rem)
   }
 }
 
@@ -3003,7 +3029,7 @@ footer p {
   }
 
   .turma-hero-conteudo h1 {
-    font-size: clamp(3.7rem, 3.8vw, 4.5rem)
+    font-size: clamp(3.4rem, 3.5vw, 4.15rem)
   }
 
   .turma-hero-imagem>img {
