@@ -111,12 +111,12 @@
   if (!projectList) return;
 
   const projects = [
-    { title: "Bingo em JavaScript", uc: "UC2", team: "Equipe de 5 estudantes", technologies: ["JavaScript", "Lógica", "Git"], description: "Jogo de bingo criado para praticar variáveis, arrays, laços e condições.", icon: "fa-code", link: "https://github.com/Thamiresvitoria/Bingo" },
-    { title: "Portfólio da Turma", uc: "UC4", team: "Squad da Turma 130", technologies: ["HTML", "CSS", "JavaScript"], description: "Site colaborativo com a trajetória, os projetos e os perfis da Turma 130.", icon: "fa-display", link: "https://github.com/Thamiresvitoria/Portifolio-" },
-    { title: "Apresentação de Lógica", uc: "UC2", team: "Equipe de 7 estudantes", technologies: ["Apresentação", "Lógica", "Equipe"], description: "Apresentação prática sobre estruturas condicionais e laços de repetição.", icon: "fa-people-group" },
-    { title: "Portfólios Pessoais", uc: "UC5", team: "Projeto individual", technologies: ["HTML", "CSS", "JavaScript"], description: "Portfólios individuais para apresentar habilidades, experiências e projetos.", icon: "fa-user-astronaut" },
-    { title: "Publicação Web", uc: "UC6", team: "Turma 130", technologies: ["Deploy", "GitHub Pages", "SEO"], description: "Publicação e melhoria das aplicações web desenvolvidas durante o curso.", icon: "fa-cloud-arrow-up" },
-    { title: "Projeto Integrador", uc: "UC7", team: "Turma 130", technologies: ["Front-End", "UX", "Colaboração"], description: "Entrega final que reúne planejamento, interface, desenvolvimento e publicação.", icon: "fa-diagram-project" },
+    { title: "Bingo em JavaScript", uc: "UC2", team: "Equipe de 5 estudantes", technologies: ["JavaScript", "Lógica", "Git"], description: "Jogo de bingo criado para praticar variáveis, arrays, laços e condições.", icon: "pessoa_codigo.svg", link: "https://github.com/Thamiresvitoria/Bingo" },
+    { title: "Portfólio da Turma", uc: "UC4", team: "Squad da Turma 130", technologies: ["HTML", "CSS", "JavaScript"], description: "Site colaborativo com a trajetória, os projetos e os perfis da Turma 130.", icon: "computer.svg", link: "https://github.com/Thamiresvitoria/Portifolio-" },
+    { title: "Apresentação de Lógica", uc: "UC2", team: "Equipe de 7 estudantes", technologies: ["Apresentação", "Lógica", "Equipe"], description: "Apresentação prática sobre estruturas condicionais e laços de repetição.", icon: "pessoas_junto.svg" },
+    { title: "Portfólios Pessoais", uc: "UC5", team: "Projeto individual", technologies: ["HTML", "CSS", "JavaScript"], description: "Portfólios individuais para apresentar habilidades, experiências e projetos.", icon: "pessoa_pensante.svg" },
+    { title: "Publicação Web", uc: "UC6", team: "Turma 130", technologies: ["Deploy", "GitHub Pages", "SEO"], description: "Publicação e melhoria das aplicações web desenvolvidas durante o curso.", icon: "planeta.svg" },
+    { title: "Projeto Integrador", uc: "UC7", team: "Turma 130", technologies: ["Front-End", "UX", "Colaboração"], description: "Entrega final que reúne planejamento, interface, desenvolvimento e publicação.", icon: "grade.svg" },
   ];
 
   const filters = [...document.querySelectorAll(".filtro-projeto")];
@@ -133,16 +133,16 @@
     const article = document.createElement("article");
     article.className = "projeto-card";
     const link = project.link
-      ? `<a class="projeto-botao" href="${project.link}" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>`
+      ? `<a class="projeto-botao" href="${project.link}" target="_blank" rel="noopener noreferrer"><img src="../Assets/icones/github-svgrepo-com.svg" alt="" aria-hidden="true"> GitHub</a>`
       : `<span class="projeto-equipe">Projeto acadêmico</span>`;
     article.innerHTML = `
       <div class="projeto-card-topo">
-        <div class="projeto-icone" aria-hidden="true"><i class="fa-solid ${project.icon}"></i></div>
-        <div><h3>${project.title}</h3><span class="projeto-equipe"><i class="fa-solid fa-users" aria-hidden="true"></i> ${project.team}</span></div>
+        <div class="projeto-icone" aria-hidden="true"><img src="../Assets/icones/${project.icon}" alt=""></div>
+        <div><h3>${project.title}</h3><span class="projeto-equipe"><img src="../Assets/icones/pessoas.svg" alt="" aria-hidden="true"> ${project.team}</span></div>
       </div>
       <div class="projeto-tags">${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}</div>
       <p class="projeto-descricao">${project.description}</p>
-      <div class="projeto-rodape"><span class="projeto-status"><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Concluído</span>${link}</div>`;
+      <div class="projeto-rodape"><span class="projeto-status"><img src="../Assets/icones/estrela.svg" alt="" aria-hidden="true"> Concluído</span>${link}</div>`;
     return article;
   };
 

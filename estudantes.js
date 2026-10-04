@@ -26,9 +26,9 @@
 
   const socialIcon = (label) => {
     const normalizedLabel = normalize(label);
-    if (normalizedLabel.includes("github")) return ["fa-brands", "fa-github"];
-    if (normalizedLabel.includes("linkedin")) return ["fa-brands", "fa-linkedin-in"];
-    return ["fa-solid", "fa-arrow-up-right-from-square"];
+    if (normalizedLabel.includes("github")) return "../Assets/icones/github-svgrepo-com.svg";
+    if (normalizedLabel.includes("linkedin")) return "../Assets/icones/linkedIn.svg";
+    return "../Assets/icones/acessibildade.svg";
   };
 
   document.querySelectorAll(".redes-sociais a").forEach((link) => {
@@ -37,9 +37,11 @@
       link.remove();
       return;
     }
-    link.querySelector("i")?.remove();
-    const icon = document.createElement("i");
-    icon.classList.add(...socialIcon(link.textContent));
+    link.querySelector("i, .social-icon")?.remove();
+    const icon = document.createElement("img");
+    icon.className = "social-icon";
+    icon.src = socialIcon(link.textContent);
+    icon.alt = "";
     icon.setAttribute("aria-hidden", "true");
     link.prepend(icon);
   });
