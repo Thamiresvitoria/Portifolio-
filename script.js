@@ -161,19 +161,26 @@
       team: "Em grupo",
       technologies: ["Pitch", "Documentação", "Apresentação"],
       description:
-        "Jogo de bingo criado para praticar variáveis, arrays, laços e condições.",
+        "Apresentação de ideias impossíveis para realização convencer as pessoas.",
       icon: "pessoa_codigo.svg",
-      link: "https://github.com/Thamiresvitoria/Bingo",
     },
     {
       title: "Bingo em JavaScript",
       uc: "UC2",
-      team: "Equipe de 5 estudantes",
+      team: "Em grupo",
       technologies: ["JavaScript", "Lógica", "Git"],
       description:
-        "Jogo de bingo criado para praticar variáveis, arrays, laços e condições.",
+        "Jogo de bingo criado para praticar variáveis, arrays, laços, condições e funções.",
       icon: "pessoa_codigo.svg",
-      link: "https://github.com/Thamiresvitoria/Bingo",
+    },
+        {
+      title: "Bingo em JavaScript",
+      uc: "UC3",
+      team: "Em grupo",
+      technologies: ["JavaScript", "Lógica", "Git"],
+      description:
+        "Jogo de bingo criado para praticar variáveis, arrays, laços, condições e funções.",
+      icon: "pessoa_codigo.svg",
     },
     {
       title: "Portfólio da Turma",
