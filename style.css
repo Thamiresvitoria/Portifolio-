@@ -1530,6 +1530,11 @@ p {
   border: 3px solid var(--accent-soft)
 }
 
+.aluno-topo .img img.foto-ewerton,
+.student-modal-hero img.foto-ewerton {
+  object-position: center top
+}
+
 .aluno-topo h2 {
   min-height: 2.5em;
   font-size: .95rem
@@ -3066,7 +3071,8 @@ footer p {
 .redes-sociais a .social-icon {
   width: 15px;
   height: 15px;
-  object-fit: contain
+  object-fit: contain;
+  filter: brightness(0) invert(1)
 }
 
 .indicador-reticencias {
@@ -3437,9 +3443,21 @@ footer p {
 
 /* Estudantes — filtros compactos e setas contidas na área dos cards. */
 .filtros-estudante {
-  max-width: 1260px;
+  width: 100%;
+  max-width: 100%;
   grid-template-columns: minmax(250px, 1.25fr) repeat(4, minmax(150px, 1fr));
   gap: 9px
+}
+
+.filtros-estudante select {
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%23dce6e8' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px 8px
 }
 
 .pesquisa-estudante input,
@@ -3451,7 +3469,9 @@ footer p {
 
 .carousel {
   position: relative;
-  display: block
+  display: block;
+  overflow: hidden;
+  padding-block: 6px
 }
 
 .carousel-btn {
@@ -3464,11 +3484,11 @@ footer p {
 }
 
 .carousel-btn.anterior {
-  left: 14px
+  left: 12px
 }
 
 .carousel-btn.proximo {
-  right: 14px
+  right: 12px
 }
 
 .carousel-btn:hover:not(:disabled) {
