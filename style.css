@@ -830,7 +830,6 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-
 }
 
 .grid-icones a {
@@ -879,7 +878,7 @@ p {
 .timeline-item h3,
 .card-formacao h3 {
   font-family: "Inter", sans-serif;
-  font-size: .94rem
+  font-size: .92rem;
 }
 
 .data {
