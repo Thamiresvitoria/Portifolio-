@@ -1359,6 +1359,7 @@ p {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   font-size: .8rem;
 }
 
@@ -1490,6 +1491,7 @@ p {
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   color: #d6dddd;
   font-size: .78rem
 }
@@ -3067,7 +3069,8 @@ footer p {
   }
 
   .aluno-info p {
-    -webkit-line-clamp: 3
+    -webkit-line-clamp: 3;
+    line-clamp: 3
   }
 
   .carousel-indicators {
@@ -3267,7 +3270,8 @@ footer p {
 
   .aluno-info p {
     font-size: .84rem;
-    -webkit-line-clamp: 3
+    -webkit-line-clamp: 3;
+    line-clamp: 3
   }
 
   .redes-sociais a,
