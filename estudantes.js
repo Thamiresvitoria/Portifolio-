@@ -11,7 +11,20 @@
   const nextButton = document.querySelector("#proximo");
   const indicators = document.querySelector("#indicadores");
 
-  if (![search, order, courseFilter, interestFilter, educationFilter, container, previousButton, nextButton, indicators].every(Boolean)) return;
+  if (
+    ![
+      search,
+      order,
+      courseFilter,
+      interestFilter,
+      educationFilter,
+      container,
+      previousButton,
+      nextButton,
+      indicators,
+    ].every(Boolean)
+  )
+    return;
 
   document.querySelectorAll("button.redes-sociais-btn").forEach((button) => {
     const link = button.querySelector("a");
@@ -20,14 +33,22 @@
   });
 
   const originalCards = [...container.querySelectorAll(".cards-aluno")];
-  const normalize = (value = "") => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-  const dataHas = (value, expected) => normalize(value).split(/\s+/).includes(normalize(expected));
+  const normalize = (value = "") =>
+    value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+  const dataHas = (value, expected) =>
+    normalize(value).split(/\s+/).includes(normalize(expected));
   const nameOf = (card) => card.querySelector("h2")?.textContent.trim() || "";
 
   const socialIcon = (label) => {
     const normalizedLabel = normalize(label);
-    if (normalizedLabel.includes("github")) return "../Assets/icones/github-svgrepo-com.svg";
-    if (normalizedLabel.includes("linkedin")) return "../Assets/icones/linkedIn.svg";
+    if (normalizedLabel.includes("github"))
+      return "../Assets/icones/github-svgrepo-com.svg";
+    if (normalizedLabel.includes("linkedin"))
+      return "../Assets/icones/linkedIn.svg";
     return "../Assets/icones/acessibildade.svg";
   };
 
@@ -115,7 +136,10 @@
       if (!event.target.closest("a, button")) openStudentModal(card);
     });
     card.addEventListener("keydown", (event) => {
-      if ((event.key === "Enter" || event.key === " ") && event.target === card) {
+      if (
+        (event.key === "Enter" || event.key === " ") &&
+        event.target === card
+      ) {
         event.preventDefault();
         openStudentModal(card);
       }
@@ -154,14 +178,15 @@
 
   const renderIndicators = (totalPages) => {
     indicators.replaceChildren();
-    const maxVisible = window.innerWidth <= 560 ? 5 : window.innerWidth <= 820 ? 7 : totalPages;
+    const maxVisible =
+      window.innerWidth <= 560 ? 5 : window.innerWidth <= 820 ? 7 : totalPages;
     let pageIndexes = Array.from({ length: totalPages }, (_, index) => index);
 
     if (totalPages > maxVisible) {
       const sideCount = Math.max(1, Math.floor((maxVisible - 3) / 2));
       const nearby = Array.from(
         { length: sideCount * 2 + 1 },
-        (_, offset) => currentPage - sideCount + offset
+        (_, offset) => currentPage - sideCount + offset,
       );
       pageIndexes = [...new Set([0, ...nearby, totalPages - 1])]
         .filter((index) => index >= 0 && index < totalPages)
@@ -180,8 +205,14 @@
       button.type = "button";
       button.className = `indicador${index === currentPage ? " ativo" : ""}`;
       button.setAttribute("aria-label", `Ir para a página ${index + 1}`);
-      button.setAttribute("aria-current", index === currentPage ? "page" : "false");
-      button.addEventListener("click", () => { currentPage = index; render(); });
+      button.setAttribute(
+        "aria-current",
+        index === currentPage ? "page" : "false",
+      );
+      button.addEventListener("click", () => {
+        currentPage = index;
+        render();
+      });
       indicators.appendChild(button);
     });
   };
@@ -190,14 +221,18 @@
     const perPage = cardsPerPage();
     const totalPages = Math.max(1, Math.ceil(filteredCards.length / perPage));
     currentPage = Math.min(currentPage, totalPages - 1);
-    const visibleCards = filteredCards.slice(currentPage * perPage, (currentPage + 1) * perPage);
+    const visibleCards = filteredCards.slice(
+      currentPage * perPage,
+      (currentPage + 1) * perPage,
+    );
     container.dataset.visible = String(visibleCards.length);
     container.replaceChildren(...visibleCards);
 
     if (!visibleCards.length) {
       const empty = document.createElement("p");
       empty.className = "nenhum-estudante";
-      empty.textContent = "Nenhum estudante encontrado. Tente limpar ou alterar os filtros.";
+      empty.textContent =
+        "Nenhum estudante encontrado. Tente limpar ou alterar os filtros.";
       container.appendChild(empty);
     }
 
@@ -214,30 +249,53 @@
       const searchableText = normalize(card.textContent);
       const interest = interestFilter.value;
       const education = educationFilter.value;
-      return searchableText.includes(term)
-        && matchesCourse(card, courseFilter.value)
-        && (interest === "todos" || dataHas(card.dataset.interesse, interest))
-        && (education === "todos" || dataHas(card.dataset.formacao, education));
+      return (
+        searchableText.includes(term) &&
+        matchesCourse(card, courseFilter.value) &&
+        (interest === "todos" || dataHas(card.dataset.interesse, interest)) &&
+        (education === "todos" || dataHas(card.dataset.formacao, education))
+      );
     });
 
     if (order.value === "az" || order.value === "za") {
       const direction = order.value === "az" ? 1 : -1;
-      filteredCards.sort((a, b) => direction * nameOf(a).localeCompare(nameOf(b), "pt-BR", { sensitivity: "base" }));
+      filteredCards.sort(
+        (a, b) =>
+          direction *
+          nameOf(a).localeCompare(nameOf(b), "pt-BR", { sensitivity: "base" }),
+      );
     }
     currentPage = 0;
     render();
   };
 
-  previousButton.addEventListener("click", () => { if (currentPage > 0) currentPage--; render(); });
-  nextButton.addEventListener("click", () => { if ((currentPage + 1) * cardsPerPage() < filteredCards.length) currentPage++; render(); });
-  [search, order, courseFilter, interestFilter, educationFilter].forEach((control) => control.addEventListener(control === search ? "input" : "change", filterStudents));
+  previousButton.addEventListener("click", () => {
+    if (currentPage > 0) currentPage--;
+    render();
+  });
+  nextButton.addEventListener("click", () => {
+    if ((currentPage + 1) * cardsPerPage() < filteredCards.length)
+      currentPage++;
+    render();
+  });
+  [search, order, courseFilter, interestFilter, educationFilter].forEach(
+    (control) =>
+      control.addEventListener(
+        control === search ? "input" : "change",
+        filterStudents,
+      ),
+  );
 
   let resizeTimer;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
       const nextPerPage = cardsPerPage();
-      if (nextPerPage !== lastPerPage) { lastPerPage = nextPerPage; currentPage = 0; render(); }
+      if (nextPerPage !== lastPerPage) {
+        lastPerPage = nextPerPage;
+        currentPage = 0;
+        render();
+      }
     }, 150);
   });
 

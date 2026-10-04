@@ -156,6 +156,16 @@
 
   const projects = [
     {
+      title: "Startup Impossível",
+      uc: "UC1",
+      team: "Em grupo",
+      technologies: ["Pitch", "Documentação", "Apresentação"],
+      description:
+        "Jogo de bingo criado para praticar variáveis, arrays, laços e condições.",
+      icon: "pessoa_codigo.svg",
+      link: "https://github.com/Thamiresvitoria/Bingo",
+    },
+    {
       title: "Bingo em JavaScript",
       uc: "UC2",
       team: "Equipe de 5 estudantes",
@@ -207,8 +217,7 @@
       uc: "UC7",
       team: "Turma 130",
       technologies: ["Front-End", "UX", "Colaboração"],
-      description:
-        "Entrega final que reúne planejamento, interface, desenvolvimento e publicação.",
+      description: "Entrega final do Zero Ao Mei.",
       icon: "grade.svg",
     },
   ];

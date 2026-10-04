@@ -805,7 +805,7 @@ p {
 .docente-tecnologias:hover,
 .card-experiencia:hover,
 .card-area-atuacao:hover,
-.card-formacao:hover{
+.card-formacao:hover {
   transform: scale(1.02);
   z-index: 10;
   box-shadow: 1px 0.5px 2.5px var(--accent);
@@ -845,7 +845,7 @@ p {
   transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.grid-icones a:hover{
+.grid-icones a:hover {
   box-shadow: 0 2px 6px var(--accent);
   border-color: var(--accent-strong);
 }
@@ -857,8 +857,8 @@ p {
   transition: transform 0.2s ease-in-out;
 }
 
-.grid-icones img:hover{
-  transform:scale(1.05)
+.grid-icones img:hover {
+  transform: scale(1.05)
 }
 
 .docente-bottom {
@@ -927,7 +927,7 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.lista-pills li:hover{
+.lista-pills li:hover {
   transform: scale(1.02);
   z-index: 10;
   box-shadow: 1px 2px 5px var(--accent);
@@ -940,7 +940,7 @@ p {
   transition: transform 0.25s ease-in-out;
 }
 
-.lista-pills img:hover{
+.lista-pills img:hover {
   transform: scale(1.05);
 }
 
@@ -1427,7 +1427,7 @@ p {
   align-items: center
 }
 
-.student-photo  {
+.student-photo {
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -1435,7 +1435,7 @@ p {
 }
 
 .student-photo img {
-  width:150px;
+  width: 150px;
   height: 150px;
   object-fit: cover;
   object-position: center top;
@@ -1521,7 +1521,7 @@ p {
 .carousel-window {
   min-width: 0;
   overflow: hidden;
-    padding-inline: 64px !important;
+  padding-inline: 64px !important;
 }
 
 .cards-alunos {
@@ -2059,7 +2059,7 @@ footer p {
     grid-template-columns: repeat(2, 1fr)
   }
 
-   .carousel-window {
+  .carousel-window {
     padding-inline: 48px !important;
   }
 
