@@ -6,7 +6,7 @@
       title: "Sistemas operacionais e aplicativos de escritório",
       description:
         "Fundamentos de informática, produtividade e organização com ferramentas digitais.",
-      icon: "fa-laptop",
+      icon: "../Assets/icones/PC.svg",
       student: "Dacyrrôse Melo",
       highlight:
         "Comprometimento, organização e colaboração durante as atividades.",
@@ -16,7 +16,7 @@
       title: "Desenvolver sistemas de informação",
       description:
         "Lógica de programação e criação de soluções alinhadas às necessidades dos usuários.",
-      icon: "fa-code",
+      icon: "../Assets/icones/pessoa_codigo.svg",
       student: "Messias Kaynã",
       highlight: "Dedicação, colaboração e disposição para apoiar os colegas.",
       photo: "../Assets/Fotos_aluno_130/messiaskayna.jpeg.jpeg",
@@ -25,7 +25,7 @@
       title: "Elaborar projetos de aplicações web",
       description:
         "Planejamento de interfaces e projetos web funcionais, acessíveis e centrados no usuário.",
-      icon: "fa-pen-ruler",
+      icon: "../Assets/icones/pincel.svg",
       student: "Evellyn Gomes",
       highlight:
         "Criatividade, liderança e excelente participação nas atividades.",
@@ -35,7 +35,7 @@
       title: "Desenvolver aplicações para websites",
       description:
         "Construção do portfólio da turma com Figma, HTML, CSS e JavaScript.",
-      icon: "fa-window-maximize",
+      icon: "../Assets/icones/pagina_vazia.svg",
       student: "Carlos Henrique",
       highlight:
         "Dedicação ao desenvolvimento das interfaces e ótima colaboração com a turma.",
@@ -45,7 +45,7 @@
       title: "Codificar Front-End de aplicações web",
       description:
         "Criação dos portfólios pessoais e aplicação prática dos conhecimentos de Front-End.",
-      icon: "fa-laptop-code",
+      icon: "../Assets/icones/computer.svg",
       student: "Matheus Marques",
       highlight: "Liderança, comunicação e apoio constante às equipes.",
       photo: "../Assets/Fotos_aluno_130/matheus_marques.jpg",
@@ -54,7 +54,7 @@
       title: "Publicar aplicações web",
       description:
         "Publicação, revisão técnica e melhoria da presença das aplicações na web.",
-      icon: "fa-cloud-arrow-up",
+      icon: "../Assets/icones/planeta.svg",
       student: "Ewerton Henrique",
       highlight:
         "Destaque pelo domínio técnico, iniciativa e apoio aos colegas durante a publicação dos projetos.",
@@ -66,7 +66,7 @@
   const card = document.querySelector(".details-card");
   if (!steps.length || !card) return;
 
-  const icon = card.querySelector(".details-icon i");
+  const icon = card.querySelector(".details-icon img");
   const number = card.querySelector(".uc-number");
   const title = card.querySelector(".details-text h2");
   const status = card.querySelector(".details-text .status");
@@ -93,7 +93,7 @@
       item.classList.toggle("active", active);
       item.setAttribute("aria-pressed", String(active));
     });
-    icon.className = `fa-solid ${unit.icon}`;
+    icon.src = unit.icon;
     number.textContent = id.toUpperCase();
     title.textContent = unit.title;
     status.textContent = "CONCLUÍDO";
