@@ -174,7 +174,7 @@
       icon: "pessoa_codigo.svg",
     },
         {
-      title: "Bingo em JavaScript",
+      title: "Desenvolvimento de Solução Projeto Integrador",
       uc: "UC3",
       team: "Em grupo",
       technologies: ["JavaScript", "Lógica", "Git"],
@@ -256,8 +256,7 @@
         <div><h3>${project.title}</h3><span class="projeto-equipe"><img src="../Assets/icones/pessoas.svg" alt="" aria-hidden="true"> ${project.team}</span></div>
       </div>
       <div class="projeto-tags">${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}</div>
-      <p class="projeto-descricao">${project.description}</p>
-      <div class="projeto-rodape"><span class="projeto-status"><img src="../Assets/icones/estrela.svg" alt="" aria-hidden="true"> Concluído</span>${link}</div>`;
+      <p class="projeto-descricao">${project.description}</p>`;
     return article;
   };
 
