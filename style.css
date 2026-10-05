@@ -2672,7 +2672,8 @@ footer p {
 .turma-valor-icone img {
   width: 27px;
   height: 27px;
-  object-fit: contain
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .turma-valores h3 {
