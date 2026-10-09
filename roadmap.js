@@ -10,7 +10,7 @@
       student: "Dacyrrôse Melo",
       highlight:
         "Comprometimento, organização e colaboração durante as atividades.",
-      photo: "../Assets/Fotos_aluno_130/dacyrrose_melo.jpg",
+      photo: "../Assets/Fotos 130 das UCs/UC1/20260605_185149.jpg",
     },
     uc2: {
       title: "Desenvolver sistemas de informação",
@@ -19,7 +19,7 @@
       icon: "../Assets/icones/pessoa_codigo.svg",
       student: "Messias Kaynã",
       highlight: "Dedicação, colaboração e disposição para apoiar os colegas.",
-      photo: "../Assets/Fotos_aluno_130/messiaskayna.jpeg.jpeg",
+    photo: "../Assets/Fotos 130 das UCs/UC2/20260707_200948.jpg",
     },
     uc3: {
       title: "Elaborar projetos de aplicações web",
@@ -29,7 +29,7 @@
       student: "Evellyn Gomes",
       highlight:
         "Criatividade, liderança e excelente participação nas atividades.",
-      photo: "../Assets/Fotos_aluno_130/evellyn_gomes.jpeg",
+      photo: "../Assets/Fotos 130 das UCs/UC3/20260728_190940.jpg",
     },
     uc4: {
       title: "Desenvolver aplicações para websites",
@@ -39,7 +39,7 @@
       student: "Carlos Henrique",
       highlight:
         "Dedicação ao desenvolvimento das interfaces e ótima colaboração com a turma.",
-      photo: "../Assets/Fotos_aluno_130/carlos_henrique.jpg",
+      photo: "../Assets/Fotos 130 das UCs/UC4/20260819_193603.jpg",
     },
     uc5: {
       title: "Codificar Front-End de aplicações web",
@@ -48,7 +48,7 @@
       icon: "../Assets/icones/computer.svg",
       student: "Matheus Marques",
       highlight: "Liderança, comunicação e apoio constante às equipes.",
-      photo: "../Assets/Fotos_aluno_130/matheus_marques.jpg",
+      photo: "../Assets/Fotos 130 das UCs/UC5/20260910_193306.jpg",
     },
     uc6: {
       title: "Publicar aplicações web",
@@ -58,7 +58,7 @@
       student: "Ewerton Henrique",
       highlight:
         "Destaque pelo domínio técnico, iniciativa e apoio aos colegas durante a publicação dos projetos.",
-      photo: "../Assets/Fotos_aluno_130/Ewerton Henrique Lima Da Silva.jpg",
+      photo: "../Assets/Fotos 130 das UCs/UC6/20260929_194846.jpg",
     },
   };
 
