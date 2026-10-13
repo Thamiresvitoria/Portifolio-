@@ -48,14 +48,172 @@
     else link.removeAttribute("aria-current");
   });
 
+  const galleryCollections = {
+    UC1: [
+      "20260522_193328.jpg",
+      "20260522_202538.jpg",
+      "20260522_205731.jpg",
+      "20260527_194808.jpg",
+      "20260527_210036.jpg",
+      "20260605_185149.jpg",
+    ],
+    UC2: [
+      "20260611_162913.jpg",
+      "20260611_201232.jpg",
+      "20260611_210847.jpg",
+      "20260617_211454.jpg",
+      "20260618_190901.jpg",
+      "20260618_202244.jpg",
+      "20260707_192634.jpg",
+      "20260707_194010.jpg",
+    ],
+    UC3: [
+      "20260710_211121.jpg",
+      "20260714_210054.jpg",
+      "20260715_190856.jpg",
+      "20260715_194800.jpg",
+      "20260715_201411.jpg",
+      "20260720_200752.jpg",
+      "IMG-20260727-WA0236.jpg",
+      "mei.jpg",
+    ],
+    UC4: [
+      "20260728_190935.jpg",
+      "20260730_204608.jpg",
+      "20260731_204501.jpg",
+      "20260810_194538.jpg",
+      "20260810_204454.jpg",
+      "20260817_203049.jpg",
+      "20260819_193003.jpg",
+      "20260819_193603.jpg",
+    ],
+    UC5: [
+      "20260825_200040.jpg",
+      "20260827_205227.jpg",
+      "20260827_210615.jpg",
+      "20260910_193306.jpg",
+      "20260910_193347.jpg",
+      "IMG-20260901-WA0300.jpg",
+    ],
+    UC6: [
+      "20260917_210731.jpg",
+      "20260928_191426.jpg",
+      "20260929_193433.jpg",
+      "20260929_194846.jpg",
+      "IMG_8381.jpg",
+      "IMG_8382.jpg",
+      "IMG-20260918-WA0086.jpg",
+      "IMG-20260918-WA0095.jpg",
+    ],
+  };
+
+  const galleryThemes = {
+    UC1: "Integração e fundamentos digitais",
+    UC2: "Lógica, desafios e trabalho em equipe",
+    UC3: "Planejamento do Projeto Integrador",
+    UC4: "Desenvolvimento de aplicações web",
+    UC5: "Codificação Front-End",
+    UC6: "Publicação e apresentação dos projetos",
+  };
+
+  const gallerySpecialCaptions = {
+    "UC1/20260522_193328.jpg": "UC1 · Primeiro encontro da Turma 130 em sala",
+    "UC1/20260522_202538.jpg": "UC1 · Apresentação sobre informática básica",
+    "UC1/20260522_205731.jpg": "UC1 · Foto coletiva com a docente",
+    "UC1/20260527_194808.jpg": "UC1 · Atividade prática individual no computador",
+    "UC1/20260527_210036.jpg": "UC1 · Equipe reunida para resolver um desafio",
+    "UC1/20260605_185149.jpg": "UC1 · Apresentação de atividade da turma",
+    "UC2/20260611_162913.jpg": "UC2 · Apresentação sobre análise de dados",
+    "UC2/20260611_201232.jpg": "UC2 · Dinâmica colaborativa de lógica",
+    "UC2/20260611_210847.jpg": "UC2 · Equipe apresentando uma solução no quadro",
+    "UC2/20260617_211454.jpg": "UC2 · Foto coletiva ao final da atividade",
+    "UC2/20260618_190901.jpg": "UC2 · Equipe após apresentação de lógica",
+    "UC2/20260618_202244.jpg": "UC2 · Apresentação de solução em equipe",
+    "UC2/20260707_192634.jpg": "UC2 · Resolução de desafio em grupo",
+    "UC2/20260707_194010.jpg": "UC2 · Apresentação do bingo de programação",
+    "UC3/20260710_211121.jpg": "UC3 · Planejamento do projeto em dupla",
+    "UC3/20260714_210054.jpg": "UC3 · Brainstorm do Projeto Integrador",
+    "UC3/20260715_190856.jpg": "UC3 · Apresentação do problema do projeto",
+    "UC3/20260715_194800.jpg": "UC3 · Equipe apresentando o projeto Crescer",
+    "UC3/20260715_201411.jpg": "UC3 · Equipe apresentando o projeto Zero ao MEI",
+    "UC3/20260720_200752.jpg": "UC3 · Desenvolvimento prático no computador",
+    "UC3/IMG-20260727-WA0236.jpg": "UC3 · Foto espontânea da turma após a atividade",
+    "UC3/mei.jpg": "UC3 · Apresentação dos projetos no auditório",
+    "UC4/20260728_190935.jpg": "UC4 · Apresentação da retrospectiva da turma",
+    "UC4/20260730_204608.jpg": "UC4 · Momento espontâneo entre colegas",
+    "UC4/20260731_204501.jpg": "UC4 · Desenvolvimento da aplicação no computador",
+    "UC4/20260810_194538.jpg": "UC4 · Apresentação técnica da aplicação web",
+    "UC4/20260810_204454.jpg": "UC4 · Equipe demonstrando uma aplicação web",
+    "UC4/20260817_203049.jpg": "UC4 · Apresentação das etapas do projeto",
+    "UC4/20260819_193003.jpg": "UC4 · Equipe após uma atividade prática",
+    "UC4/20260819_193603.jpg": "UC4 · Apresentação de encerramento da unidade",
+    "UC5/20260825_200040.jpg": "UC5 · Momento espontâneo da equipe",
+    "UC5/20260827_205227.jpg": "UC5 · Construção da lógica no quadro",
+    "UC5/20260827_210615.jpg": "UC5 · Apresentação de exercício Front-End",
+    "UC5/20260910_193306.jpg": "UC5 · Apresentação dos resultados da unidade",
+    "UC5/20260910_193347.jpg": "UC5 · Premiação dos vencedores do Kahoot",
+    "UC5/IMG-20260901-WA0300.jpg": "UC5 · Turma celebrando as conquistas da formação",
+    "UC6/20260917_210731.jpg": "UC6 · Vencedora do desafio em sala",
+    "UC6/20260928_191426.jpg": "UC6 · Apresentação da turma no Senac",
+    "UC6/20260929_193433.jpg": "UC6 · Premiação dos vencedores do Kahoot",
+    "UC6/20260929_194846.jpg": "UC6 · Ewerton, aluno destaque da turma",
+    "UC6/IMG_8381.jpg": "UC6 · Turma 130 reunida com a docente",
+    "UC6/IMG_8382.jpg": "UC6 · Foto coletiva da Turma 130",
+    "UC6/IMG-20260918-WA0086.jpg": "UC6 · Apresentação de projeto no auditório",
+    "UC6/IMG-20260918-WA0095.jpg": "UC6 · Encerramento das apresentações da turma",
+  };
+
   const gallery = document.querySelector(".galeria-grid");
   if (gallery) {
+    const photos = Object.entries(galleryCollections).flatMap(([uc, files]) =>
+      files.map((file) => ({ uc, file })),
+    );
+    const dateOccurrences = new Map();
+
+    photos.forEach(({ uc, file }) => {
+      const dateKey = file.match(/(20\d{6})/)?.[1] || "sem-data";
+      const key = `${uc}/${dateKey}`;
+      dateOccurrences.set(key, (dateOccurrences.get(key) || 0) + 1);
+    });
+
+    const datePositions = new Map();
+    const galleryFragment = document.createDocumentFragment();
+
+    photos.forEach(({ uc, file }) => {
+      const dateValue = file.match(/(20\d{2})(\d{2})(\d{2})/);
+      const dateKey = dateValue?.[0] || "sem-data";
+      const sessionKey = `${uc}/${dateKey}`;
+      const position = (datePositions.get(sessionKey) || 0) + 1;
+      datePositions.set(sessionKey, position);
+
+      const formattedDate = dateValue
+        ? `${dateValue[3]}/${dateValue[2]}/${dateValue[1]}`
+        : "registro complementar";
+      const hasMultiplePhotos = (dateOccurrences.get(sessionKey) || 0) > 1;
+      const automaticCaption = `${uc} · ${galleryThemes[uc]} — ${formattedDate}${
+        hasMultiplePhotos ? ` · registro ${position}` : ""
+      }`;
+      const caption = gallerySpecialCaptions[`${uc}/${file}`] || automaticCaption;
+
+      const button = document.createElement("button");
+      const image = document.createElement("img");
+      button.type = "button";
+      button.dataset.galleryItem = "";
+      button.setAttribute("aria-label", `Ampliar foto: ${caption}`);
+      image.src = `../Assets/Fotos 130 das UCs/${uc}/${file}`;
+      image.alt = `Turma 130 — ${caption}`;
+      image.loading = "lazy";
+      image.decoding = "async";
+      button.append(image);
+      galleryFragment.append(button);
+    });
+
+    gallery.replaceChildren(galleryFragment);
     const items = [...gallery.querySelectorAll("button[data-gallery-item]")];
     const prev = document.querySelector(".seta-esquerda");
     const next = document.querySelector(".seta-direita");
     const lightbox = document.querySelector("#lightbox");
     const lightboxImage = lightbox?.querySelector(".lightbox-image");
-    const lightboxCaption = lightbox?.querySelector("figcaption");
     const galleryTotal = document.querySelector("#galeriaTotal");
     const galleryStatus = document.querySelector("#galeriaStatus");
     let activeIndex = 0;
@@ -105,10 +263,6 @@
       const image = items[activeIndex].querySelector("img");
       lightboxImage.src = image.src;
       lightboxImage.alt = image.alt;
-      if (lightboxCaption)
-        lightboxCaption.textContent =
-          items[activeIndex].querySelector(".foto-legenda")?.textContent ||
-          image.alt;
     };
 
     const openLightbox = (index) => {

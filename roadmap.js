@@ -19,7 +19,7 @@
       icon: "../Assets/icones/pessoa_codigo.svg",
       student: "Messias Kaynã",
       highlight: "Dedicação, colaboração e disposição para apoiar os colegas.",
-    photo: "../Assets/Fotos 130 das UCs/UC2/20260707_200948.jpg",
+      photo: "../Assets/Fotos 130 das UCs/UC2/20260707_200948.jpg",
     },
     uc3: {
       title: "Elaborar projetos de aplicações web",
@@ -71,13 +71,35 @@
   const title = card.querySelector(".details-text h2");
   const status = card.querySelector(".details-text .status");
   const description = card.querySelector(".details-text p");
+  const photoButton = card.querySelector(".student-photo");
   const photo = card.querySelector(".student-photo img");
   const student = card.querySelector(".student-info h3");
   const highlight = card.querySelector(".student-info p");
   const highlightLabel = card.querySelector(".highlight-title span");
   const previous = card.querySelector(".arrow.left");
   const next = card.querySelector(".arrow.right");
+  const photoModal = document.querySelector("#roadmapPhotoModal");
+  const fullPhoto = photoModal?.querySelector(".roadmap-photo-full");
+  const photoCaption = photoModal?.querySelector("figcaption");
+  const photoClose = photoModal?.querySelector(".roadmap-photo-close");
   let currentIndex = -1;
+
+  const closePhoto = () => {
+    if (!photoModal || photoModal.hidden) return;
+    photoModal.hidden = true;
+    document.body.classList.remove("roadmap-photo-open");
+    photoButton?.focus();
+  };
+
+  const openPhoto = () => {
+    if (!photoModal || !fullPhoto || !photoCaption || !photo.src) return;
+    fullPhoto.src = photo.currentSrc || photo.src;
+    fullPhoto.alt = photo.alt;
+    photoCaption.textContent = student.textContent;
+    photoModal.hidden = false;
+    document.body.classList.add("roadmap-photo-open");
+    photoClose?.focus();
+  };
 
   const showUnit = (index, shouldFocus = false) => {
     currentIndex = Math.max(0, Math.min(index, steps.length - 1));
@@ -121,6 +143,14 @@
   next.addEventListener("click", () =>
     showUnit(currentIndex === -1 ? 0 : currentIndex + 1),
   );
+  photoButton?.addEventListener("click", openPhoto);
+  photoClose?.addEventListener("click", closePhoto);
+  photoModal?.addEventListener("click", (event) => {
+    if (event.target === photoModal) closePhoto();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closePhoto();
+  });
   card.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") showUnit(currentIndex - 1);
     if (event.key === "ArrowRight") showUnit(currentIndex + 1);

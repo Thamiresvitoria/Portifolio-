@@ -675,9 +675,10 @@ p {
   inset: 0;
   z-index: 2000;
   display: grid;
-  grid-template-columns: auto minmax(0, 1100px) auto;
+  grid-template-columns: 44px minmax(0, 1100px) 44px;
+  justify-content: center;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
   padding: 28px;
   background: rgba(1, 4, 5, .94);
   backdrop-filter: blur(10px)
@@ -697,11 +698,6 @@ p {
   margin-inline: auto;
   border-radius: 14px;
   object-fit: contain
-}
-
-.lightbox figcaption {
-  margin-top: 10px;
-  color: var(--muted)
 }
 
 .lightbox-close {
@@ -2262,14 +2258,114 @@ footer p {
 }
 
 .student-content {
-  grid-template-columns: 118px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   gap: 20px
 }
 
+.student-photo {
+  width: 150px;
+  height: 180px;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: zoom-in
+}
+
 .student-photo img {
-  width: 118px;
-  height: 142px;
-  border: 2px solid var(--border)
+  width: 150px;
+  height: 180px;
+  border: 2px solid var(--border);
+  transition: transform .25s ease, border-color .25s ease
+}
+
+.student-photo:hover img,
+.student-photo:focus-visible img {
+  transform: scale(1.04);
+  border-color: var(--accent)
+}
+
+.student-photo:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 3px
+}
+
+.roadmap-photo-open {
+  overflow: hidden
+}
+
+.roadmap-photo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: rgba(2, 6, 7, .92);
+  backdrop-filter: blur(12px)
+}
+
+.roadmap-photo-modal[hidden] {
+  display: none
+}
+
+.roadmap-photo-dialog {
+  position: relative;
+  width: min(920px, 100%);
+  max-height: calc(100vh - 56px);
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .7)
+}
+
+.roadmap-photo-dialog figure {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 0
+}
+
+.roadmap-photo-full {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  border-radius: 14px;
+  object-fit: contain
+}
+
+.roadmap-photo-dialog figcaption {
+  color: var(--text);
+  font-weight: 700;
+  text-align: center
+}
+
+.roadmap-photo-close {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(17, 22, 23, .94);
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease
+}
+
+.roadmap-photo-close:hover,
+.roadmap-photo-close:focus-visible {
+  transform: scale(1.06);
+  background: var(--accent-strong)
 }
 
 .student-info h3 {
@@ -2290,12 +2386,17 @@ footer p {
   }
 
   .student-content {
-    grid-template-columns: 104px minmax(0, 1fr)
+    grid-template-columns: 120px minmax(0, 1fr)
+  }
+
+  .student-photo {
+    width: 120px;
+    height: 144px
   }
 
   .student-photo img {
-    width: 104px;
-    height: 126px
+    width: 120px;
+    height: 144px
   }
 }
 
@@ -2305,13 +2406,31 @@ footer p {
   }
 
   .student-content {
-    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-columns: 94px minmax(0, 1fr);
     gap: 12px
   }
 
+  .student-photo {
+    width: 94px;
+    height: 116px
+  }
+
   .student-photo img {
-    width: 82px;
-    height: 104px
+    width: 94px;
+    height: 116px
+  }
+
+  .roadmap-photo-modal {
+    padding: 12px
+  }
+
+  .roadmap-photo-dialog {
+    max-height: calc(100vh - 24px);
+    padding: 14px
+  }
+
+  .roadmap-photo-full {
+    max-height: calc(100vh - 105px)
   }
 
   .student-info h3 {
@@ -2739,36 +2858,8 @@ footer p {
   box-shadow: 0 8px 24px rgba(0, 0, 0, .18)
 }
 
-.galeria-experiencia .galeria-grid button::after {
-  content: "";
-  position: absolute;
-  inset: 35% 0 0;
-  background: linear-gradient(transparent, rgba(2, 5, 6, .88));
-  pointer-events: none
-}
-
 .galeria-experiencia .galeria-grid img {
   aspect-ratio: 16/10
-}
-
-.foto-legenda {
-  position: absolute;
-  z-index: 1;
-  left: 16px;
-  right: 16px;
-  bottom: 13px;
-  color: #fff;
-  font-size: .82rem;
-  font-weight: 700;
-  text-align: left;
-  transform: translateY(4px);
-  opacity: .92;
-  transition: transform .2s ease, opacity .2s ease
-}
-
-.galeria-experiencia .galeria-grid button:hover .foto-legenda {
-  transform: none;
-  opacity: 1
 }
 
 .galeria-experiencia .seta {

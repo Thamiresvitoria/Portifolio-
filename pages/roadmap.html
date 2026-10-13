@@ -92,7 +92,9 @@
             VOTO DA
             TURMA</span></div>
         <div class="student-content">
-          <div class="student-photo"><img alt=""></div>
+          <button class="student-photo" type="button" aria-label="Ampliar foto do aluno destaque">
+            <img alt="">
+          </button>
           <div class="student-info">
             <h3></h3>
             <p></p>
@@ -105,6 +107,18 @@
 
     </section>
   </main>
+
+  <div class="roadmap-photo-modal" id="roadmapPhotoModal" role="dialog" aria-modal="true"
+    aria-labelledby="roadmapPhotoCaption" hidden>
+    <div class="roadmap-photo-dialog">
+      <button class="roadmap-photo-close" type="button" aria-label="Fechar foto ampliada">&times;</button>
+      <figure>
+        <img class="roadmap-photo-full" alt="">
+        <figcaption id="roadmapPhotoCaption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-logos"><a href="https://www.pe.senac.br/" class="footer-logo-link" target="_blank"
         rel="noopener noreferrer"><img src="../Assets/logo_senac.png" alt="Senac Pernambuco"></a><a
