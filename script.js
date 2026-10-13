@@ -310,76 +310,59 @@
 
   const projects = [
     {
-      title: "Startup Impossível",
+      title: "Vitrine de Ideias",
       uc: "UC1",
       team: "Em grupo",
-      technologies: ["Pitch", "Documentação", "Apresentação"],
+      technologies: ["Ideação", "Pitch", "Apresentação"],
       description:
-        "Apresentação de ideias impossíveis para realização convencer as pessoas.",
-      icon: "pessoa_codigo.svg",
+        "Criação de startups baseadas em ideias impossíveis, apresentadas em uma vitrine para exercitar criatividade, argumentação e comunicação.",
+      icon: "lampada.svg",
     },
     {
-      title: "Bingo em JavaScript",
+      title: "Sistema de Bingo em JavaScript",
       uc: "UC2",
       team: "Em grupo",
-      technologies: ["JavaScript", "Lógica", "Git"],
+      technologies: ["JavaScript", "Lógica", "DOM"],
       description:
-        "Jogo de bingo criado para praticar variáveis, arrays, laços, condições e funções.",
-      icon: "pessoa_codigo.svg",
-    },
-        {
-      title: "Desenvolvimento de Solução Projeto Integrador",
-      uc: "UC3",
-      team: "Em grupo",
-      technologies: ["JavaScript", "Lógica", "Git"],
-      description:
-        "Jogo de bingo criado para praticar variáveis, arrays, laços, condições e funções.",
+        "Sistema interativo de bingo desenvolvido para aplicar variáveis, arrays, funções, estruturas condicionais e manipulação da página.",
       icon: "pessoa_codigo.svg",
     },
     {
-      title: "Portfólio da Turma",
+      title: "Ideação do Projeto Integrador",
+      uc: "UC3",
+      team: "Em grupo",
+      technologies: ["Pesquisa", "Ideação", "Pré-pitch"],
+      description:
+        "Definição das propostas do Projeto Integrador por equipes, com pesquisa do problema, organização da solução e entrega de um pré-pitch.",
+      icon: "pessoas_junto.svg",
+    },
+    {
+      title: "Portfólio da Turma 130",
       uc: "UC4",
-      team: "Squad da Turma 130",
+      team: "Em grupo",
       technologies: ["HTML", "CSS", "JavaScript"],
       description:
-        "Site colaborativo com a trajetória, os projetos e os perfis da Turma 130.",
+        "Desenvolvimento colaborativo deste site para reunir a trajetória, os projetos, a grade e os perfis dos estudantes da Turma 130.",
       icon: "computer.svg",
       link: "https://github.com/Thamiresvitoria/Portifolio-",
     },
     {
-      title: "Apresentação de Lógica",
-      uc: "UC2",
-      team: "Equipe de 7 estudantes",
-      technologies: ["Apresentação", "Lógica", "Equipe"],
-      description:
-        "Apresentação prática sobre estruturas condicionais e laços de repetição.",
-      icon: "pessoas_junto.svg",
-    },
-    {
-      title: "Portfólios Pessoais",
+      title: "Portfólio Pessoal",
       uc: "UC5",
       team: "Projeto individual",
       technologies: ["HTML", "CSS", "JavaScript"],
       description:
-        "Portfólios individuais para apresentar habilidades, experiências e projetos.",
+        "Criação de um portfólio profissional individual para apresentar formação, habilidades, experiências e projetos de cada estudante.",
       icon: "pessoa_pensante.svg",
     },
     {
-      title: "Publicação Web",
+      title: "Deploy do Projeto Integrador",
       uc: "UC6",
-      team: "Turma 130",
+      team: "Em grupo",
       technologies: ["Deploy", "GitHub Pages", "SEO"],
       description:
-        "Publicação e melhoria das aplicações web desenvolvidas durante o curso.",
+        "Publicação do Projeto Integrador na web, com ajustes finais, versionamento, acessibilidade, SEO e preparação para apresentação.",
       icon: "planeta.svg",
-    },
-    {
-      title: "Projeto Integrador",
-      uc: "UC7",
-      team: "Turma 130",
-      technologies: ["Front-End", "UX", "Colaboração"],
-      description: "Entrega final do Zero Ao Mei.",
-      icon: "grade.svg",
     },
   ];
 
@@ -407,7 +390,7 @@
     article.innerHTML = `
       <div class="projeto-card-topo">
         <div class="projeto-icone" aria-hidden="true"><img src="../Assets/icones/${project.icon}" alt=""></div>
-        <div><h3>${project.title}</h3><span class="projeto-equipe"><img src="../Assets/icones/pessoas.svg" alt="" aria-hidden="true"> ${project.team}</span></div>
+        <div><h3>${project.title}</h3><span class="projeto-equipe">${project.team}</span></div>
       </div>
       <div class="projeto-tags">${project.technologies.map((tech) => `<span>${tech}</span>`).join("")}</div>
       <p class="projeto-descricao">${project.description}</p>`;
