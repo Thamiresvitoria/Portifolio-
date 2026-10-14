@@ -176,9 +176,9 @@
 
   const gallery = document.querySelector(".galeria-grid");
   if (gallery) {
-    const photos = Object.entries(galleryCollections).flatMap(([uc, files]) =>
-      files.map((file) => ({ uc, file })),
-    );
+    const photos = Object.entries(galleryCollections)
+      .reverse()
+      .flatMap(([uc, files]) => files.map((file) => ({ uc, file })));
     const dateOccurrences = new Map();
 
     photos.forEach(({ uc, file }) => {
