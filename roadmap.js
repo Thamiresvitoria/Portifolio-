@@ -60,6 +60,16 @@
         "Destaque pelo domínio técnico, iniciativa e apoio aos colegas durante a publicação dos projetos.",
       photo: "../Assets/Fotos 130 das UCs/UC6/20260929_194846.jpg",
     },
+    uc7: {
+      title: "Projeto Integrador — Desenvolvedor Front-End",
+      description:
+        "Conclusão e apresentação do Projeto Integrador, reunindo planejamento, desenvolvimento e publicação da solução web.",
+      icon: "../Assets/icones/grade.svg",
+      student: "Caio Cesar Costa",
+      highlight:
+        "Escolhido pelos colegas como destaque da turma pelo comprometimento e pela colaboração durante o Projeto Integrador.",
+      photo: "../Assets/Fotos 130 das UCs/UC7/caio-cesar-destaque-uc7.png",
+    },
   };
 
   const steps = [...document.querySelectorAll(".step[data-unit]")];

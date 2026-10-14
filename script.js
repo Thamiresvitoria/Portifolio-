@@ -105,6 +105,12 @@
       "IMG-20260918-WA0086.jpg",
       "IMG-20260918-WA0095.jpg",
     ],
+    UC7: [
+      "confraternizacao-turma-uc7.png",
+      "selfie-colegas-uc7.png",
+      "dinamica-turma-uc7.png",
+      "dinamica-colega-uc7.png",
+    ],
   };
 
   const galleryThemes = {
@@ -114,6 +120,7 @@
     UC4: "Desenvolvimento de aplicações web",
     UC5: "Codificação Front-End",
     UC6: "Publicação e apresentação dos projetos",
+    UC7: "Conclusão do Projeto Integrador",
   };
 
   const gallerySpecialCaptions = {
@@ -161,6 +168,10 @@
     "UC6/IMG_8382.jpg": "UC6 · Foto coletiva da Turma 130",
     "UC6/IMG-20260918-WA0086.jpg": "UC6 · Apresentação de projeto no auditório",
     "UC6/IMG-20260918-WA0095.jpg": "UC6 · Encerramento das apresentações da turma",
+    "UC7/confraternizacao-turma-uc7.png": "UC7 · Confraternização de encerramento da turma",
+    "UC7/selfie-colegas-uc7.png": "UC7 · Registro espontâneo entre colegas",
+    "UC7/dinamica-turma-uc7.png": "UC7 · Dinâmica de encerramento com a turma",
+    "UC7/dinamica-colega-uc7.png": "UC7 · Momento da dinâmica de encerramento",
   };
 
   const gallery = document.querySelector(".galeria-grid");
